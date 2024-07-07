@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+:root{
+    --verde: #5C683A;
+    --beige: #E7BD80;
+    --azul: #3F88C5;
+    --laranja: #E94F37;
+    --esmeralda: #59CD90;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body, html{
+    background-color: var(--beige);
+    width: 100vw;
+    height: 100vh;
+}
+
+header{
+    background-color: var(--verde);
+    display:flex;
+    width: 100vw;
+    height: 15vh;
+}
+
+section{
+    color: white;
+}
+
+section#logo > img{
+    width: 15vh;
+}
+
+section#menu > nav > a{
+    display: none;
+}
