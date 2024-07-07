@@ -1,12 +1,17 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap');
+
 :root{
     --verde: #5C683A;
     --beige: #E7BD80;
     --azul: #3F88C5;
     --laranja: #E94F37;
     --esmeralda: #59CD90;
+
+    --font1: "Playwrite US Modern";
 }
+
 
 *{
     padding: 0px;
@@ -16,23 +21,33 @@
 
 body, html{
     background-color: var(--beige);
-    width: 100vw;
-    height: 100vh;
 }
 
 header{
-    background-color: var(--verde);
-    display:flex;
-    width: 100vw;
-    height: 15vh;
+    color: white;
 }
 
-section{
-    color: white;
+section#logo{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--verde);
 }
 
 section#logo > img{
     width: 15vh;
+}
+
+section#logo > h1{
+    text-align: center;
+    font-size: 0.9em;
+    width: 200px;
+    text-wrap: balance;
+    font-family: var(--font1);
 }
 
 section#menu > nav > a{
