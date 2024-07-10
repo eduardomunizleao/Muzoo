@@ -72,7 +72,30 @@ main{
     margin: auto;
     margin-top: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 1.5em;
     text-align: justify;
 }
+
+section#introducao{
+    background-color: var(--esmeralda);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.432);
+}
+
+/*
+    section#classe-animais{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        height: 251px;
+    }
+
+    section#classe-animais > div.botoes-animais > img{
+        border-radius: 50%;
+        width: 100px;
+        flex:auto;
+    }
+*/
