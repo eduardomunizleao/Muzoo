@@ -146,11 +146,13 @@ section#carroseldeimagens > div.slider > div.slides > div.slide{
     width: 25%;
     position: relative;
     transition: 2s;
+    touch-action: pan-y;
 }
 
 
 section#carroseldeimagens > div.slider > div.slides > div.slide > img{
     width: 300px;
+    -webkit-user-drag: none;
 }
 
 
