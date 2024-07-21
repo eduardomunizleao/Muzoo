@@ -14,9 +14,6 @@
 
 
     <link rel="stylesheet" href="../estilos/style.css">
-
-
-    <script src="../scripts/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -36,11 +33,52 @@
             <p>Além disso, oferecemos áreas interativas, como quizzes e jogos de memória, para que você possa aprender se divertindo um pouco. 🐗🌿</p>
         </section>
 
-        
+        <section id="carroseldeimagens">
+
+            <div class="slider">
+                <div class="slides">
+                    <!--Radio buttons-->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <!--Fim radio buttons-->
+
+                    <!--Slide images-->
+                    <div class="slide first">
+                        <img src="../media/imagens/carrosel-de-imagens/img-1.jpg" alt="img-1">
+                    </div>
+
+                    <div class="slide">
+                        <img src="../media/imagens/carrosel-de-imagens/img-2.jpg" alt="img-2">
+                    </div>
+
+                    <div class="slide">
+                        <img src="../media/imagens/carrosel-de-imagens/img-3.jpg" alt="img-3">
+                    </div>
+                    <!--Fim slide images-->
+
+                    <!--Navigation auto-->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div>
+                    <!--Fim navigation auto-->
+                </div>
+
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         
     </footer>
+
+    <script src="carrosel_imagens.js"></script>
 </body>
 </html>

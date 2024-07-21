@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
 
+/*Variáveis*/
+
 :root{
     --verde: #5C683A;
     --beige: #E7BD80;
@@ -13,6 +15,11 @@
     --font2: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+/*Fim variáveis*/
+
+
+
+/*Configurações de Gerais*/
 
 *{
     padding: 0px;
@@ -23,6 +30,12 @@
 body, html{
     background-color: var(--beige);
 }
+
+/*Fim variáveis*/
+
+
+
+/*Configurações de título*/
 
 header{
     color: white;
@@ -64,6 +77,9 @@ section#titulo > h1{
     margin-bottom: 13px;
 }
 
+/*Fim configurações de título*/
+
+
 main{
     display: flex;
     align-items: center;
@@ -90,6 +106,8 @@ section#introducao{
     border-radius: 20px;
     padding: 10px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.432);
+
+    margin-bottom: 20px;
 }
 
 section#introducao > h1{
@@ -101,4 +119,105 @@ section#introducao > h1{
 section#introducao > p{
     text-indent: 1em;
     margin-bottom: 1em;
+}
+
+
+
+
+section#carroseldeimagens > div.slider{
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+section#carroseldeimagens > div.slider > div.slides{
+    width: 400%;
+    height: 300px;
+
+    display: flex;
+}
+
+section#carroseldeimagens > div.slider > div.slides > input{
+    display: none;
+}
+
+section#carroseldeimagens > div.slider > div.slides > div.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+
+section#carroseldeimagens > div.slider > div.slides > div.slide > img{
+    width: 300px;
+}
+
+
+section#carroseldeimagens > div.slider > div.manual-navigation{
+    position: absolute;
+    width: 300px;
+    margin-top: -180px;
+    display: flex;
+    justify-content: center;
+}
+
+section#carroseldeimagens > div.slider > div.manual-navigation > label.manual-btn{
+    border: 2px solid white;;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+section#carroseldeimagens > div.slider > div.manual-navigation > label.manual-btn:not(:last-child){
+    margin-right: 8px;
+}
+
+section#carroseldeimagens > div.slider > div.manual-navigation > label.manual-btn:hover{
+    background-color: white;
+}
+
+section#carroseldeimagens > div.slider > div.slides > input#radio1:checked ~ .first{
+    margin-left: 0;
+}   
+
+section#carroseldeimagens > div.slider > div.slides > input#radio2:checked ~ .first{
+    margin-left: -25%;
+}   
+
+section#carroseldeimagens > div.slider > div.slides > input#radio3:checked ~ .first{
+    margin-left: -50%;
+}   
+
+section#carroseldeimagens > div.slider > div.slides > div.navigation-auto div{
+    border: 2px solid #20a6ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+section#carroseldeimagens > div.slider > div.slides > div.navigation-auto{
+    position: absolute;
+    width: 300px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+section#carroseldeimagens > div.slider > div.slides > div.navigation-auto div:not(:last-child){
+    margin-right: 8px;
+}
+
+section#carroseldeimagens > div.slider > div.slides > input#radio1:checked ~ div.navigation-auto .auto-btn1{
+    background-color: white;
+}
+
+section#carroseldeimagens > div.slider > div.slides > input#radio2:checked ~ div.navigation-auto .auto-btn2{
+    background-color: white;
+}
+
+section#carroseldeimagens > div.slider > div.slides > input#radio3:checked ~ div.navigation-auto .auto-btn3{
+    background-color: white;
 }
