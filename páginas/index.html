@@ -34,51 +34,59 @@
         </section>
 
         <section id="carroseldeimagens">
-
-            <div class="slider">
-                <div class="slides">
-                    <!--Radio buttons-->
-                    <input type="radio" name="radio-btn" id="radio1">
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
-                    <!--Fim radio buttons-->
-
-                    <!--Slide images-->
-                    <div class="slide first">
-                        <img src="../media/imagens/carrosel-de-imagens/img-1.jpg" alt="img-1">
-                    </div>
-
-                    <div class="slide">
-                        <img src="../media/imagens/carrosel-de-imagens/img-2.jpg" alt="img-2">
-                    </div>
-
-                    <div class="slide">
-                        <img src="../media/imagens/carrosel-de-imagens/img-3.jpg" alt="img-3">
-                    </div>
-                    <!--Fim slide images-->
-
-                    <!--Navigation auto-->
-                    <div class="navigation-auto">
-                        <div class="auto-btn1"></div>
-                        <div class="auto-btn2"></div>
-                        <div class="auto-btn3"></div>
-                    </div>
-                    <!--Fim navigation auto-->
+            <div id="slider">
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+                <input type="radio" name="slider" id="slide3">
+                <input type="radio" name="slider" id="slide4">
+                <div id="slides">
+                   <div id="overflow">
+                      <div class="inner">
+                         <div class="slide slide_1">
+                            <div class="slide-content">
+                               <h2>Slide 1</h2>
+                               <p>Content for Slide 1</p>
+                            </div>
+                         </div>
+                         <div class="slide slide_2">
+                            <div class="slide-content">
+                               <h2>Slide 2</h2>
+                               <p>Content for Slide 2</p>
+                            </div>
+                         </div>
+                         <div class="slide slide_3">
+                            <div class="slide-content">
+                               <h2>Slide 3</h2>
+                               <p>Content for Slide 3</p>
+                            </div>
+                         </div>
+                         <div class="slide slide_4">
+                            <div class="slide-content">
+                               <h2>Slide 4</h2>
+                               <p>Content for Slide 4</p>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
                 </div>
-
-                <div class="manual-navigation">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
+                <div id="controls">
+                   <label for="slide1"></label>
+                   <label for="slide2"></label>
+                   <label for="slide3"></label>
+                   <label for="slide4"></label>
                 </div>
-            </div>
+                <div id="bullets">
+                   <label for="slide1"></label>
+                   <label for="slide2"></label>
+                   <label for="slide3"></label>
+                   <label for="slide4"></label>
+                </div>
+             </div>
         </section>
     </main>
 
     <footer>
         
     </footer>
-
-    <script src="carrosel_imagens.js"></script>
 </body>
 </html>
