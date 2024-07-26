@@ -88,7 +88,6 @@ main{
     background-color: white;
     width: 100vw;
     margin: 20px 0px;
-    padding: 15px;
 
     margin: auto;
     font-family: var(--font2);
@@ -104,8 +103,9 @@ section#introducao{
     border-radius: 20px;
     padding: 10px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.432);
+    width: 93vw;
 
-    margin-bottom: 20px;
+    margin: 20px auto;
 }
 
 section#introducao > h1{
@@ -340,7 +340,8 @@ section#introducao > p{
 
 /* Responsive Design */
 
-@media screen and (max-width: 999px){
+@media screen and (max-width: 992px){
+
 
    .list .item .content{
        left: 50px;
@@ -356,10 +357,10 @@ section#introducao > p{
 
 }
 
-@media screen and (max-width: 690px){
-   header nav a{
-       font-size: 14px;
-       margin-right: 0;
+@media screen and (max-width: 768px){
+   .carousel{
+      width: 100vw;
+      margin: 0;
    }
 
    .list .item .content{
@@ -373,5 +374,16 @@ section#introducao > p{
    .content .btn button{
        padding: 8px 13px;
        font-size: 8px;
+   }
+}
+
+@media screen and (max-width: 600px){
+   .content .des{
+       font-size: 12px;
+       width: 60vw;
+   }
+
+   .list .item .content{
+      left: 10px;
    }
 }
