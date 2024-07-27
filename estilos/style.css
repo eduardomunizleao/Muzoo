@@ -43,6 +43,38 @@ body, html{
 header{
     color: white;
     background-color: #5C683A;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+header.sticky{
+   padding-top: 10px;
+   & img{
+      content: url("../media/imagens/logo/logo-deitado.png");
+      width: 15vw;
+   }
+
+   & h1{
+      display: none;
+   }
+
+   & section#titulo{
+      height: 8vh;
+      background-image: none;
+      background-color: var(--verde);
+      flex-flow: row-reverse nowrap;
+   }
+
+   & section#titulo > span{
+      position: static;
+      top: auto;
+      left: auto;
+      transform: translate(0, 0);
+      margin: 0;
+      margin-left: 55%;
+   }
 }
 
 hr{

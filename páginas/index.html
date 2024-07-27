@@ -23,6 +23,13 @@
             <img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo">
             <h1>Museu de taxidermia do IFMG</h1>
         </section>
+
+        <script type="text/javascript">
+         window.addEventListener("scroll", function(){
+            var  header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+         })
+         </script>
     </header>
     
     <main>
