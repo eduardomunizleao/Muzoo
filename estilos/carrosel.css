@@ -269,3 +269,15 @@ section#carroseldeimagens{
        left: 10px;
     }
  }
+
+
+
+/* Imagens leves */
+
+@media screen and (max-width: 600px){
+   div.list{
+      & .pecas{
+         background-image: url("../media/imagens/carrossel-imagens/peças/pecas-grande\ \(Pequeno\).png");
+      }
+   }
+}
