@@ -159,6 +159,12 @@ nav li.botao-menu a:hover{
     color: rgb(114, 114, 114);
 }
 
+ul.sticky{
+    position: absolute;
+    left: -999px;
+    top: -999px
+}
+
 #barra-lateral {
     position: fixed;
     top: 0;
@@ -182,16 +188,6 @@ nav li.botao-menu a:hover{
 
 #barra-lateral a {
     width: 100%;
-}
-
-.botao-menu {
-    display: none;
-}
-
-@media screen and (min-width: 800px){
-    .esconderNoDesktop{
-        display: none;
-    }
 }
 
 @media(max-width: 800px) {

@@ -28,12 +28,12 @@
             <li><a href="#">Feedback</a></li>
         </ul>
         <ul id="barra-navegacao">
-            <li class="esconderNoMobile"><a href="#">Blog</a></li>
-            <li class="esconderNoMobile"><a href="#">Produtos</a></li>
-            <li class="esconderNoMobile"><a href="#">Sobre</a></li>
-            <li class="esconderNoMobile"><a href="#">Fórum</a></li>
-            <li class="esconderNoMobile"><a href="#">Login</a></li>
-            <li class="botao-menu" onclick="toggleSidebar()"><a class="botao-menu" href="#">
+            <li class="esconderNoMobile"><a href="#">Peças do museu</a></li>
+            <li class="esconderNoMobile"><a href="#">Conheça o processo</a></li>
+            <li class="esconderNoMobile"><a href="#">Quem somos nós?</a></li>
+            <li class="esconderNoMobile"><a href="#">Quizzes</a></li>
+            <li class="esconderNoMobile"><a href="#">Feedback</a></li>
+            <li class="botao-menu esconderNoDesktop" onclick="toggleSidebar()"><a class="botao-menu esconderNoDesktop" href="#"></a></li>
         </ul>
     </nav>
 
@@ -49,12 +49,38 @@
 
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            if (window.scrollY > 50) {
+            const barra_navegacao = document.querySelector('#barra-navegacao')
+            if (window.scrollY > 1) {
                 header.classList.add('sticky');
+                barra_navegacao.classList.add('sticky');
             } else {
                 header.classList.remove('sticky');
+                barra_navegacao.classList.remove('sticky');
             }
         });
+
+
+        function esconderElementos() {
+        const elementos = document.querySelectorAll('.esconderNoDesktop');
+        elementos.forEach(elemento => {
+            const isSticky = elemento.classList.contains('sticky');
+            if (window.innerWidth > 800 && !isSticky) {
+                elemento.style.position = 'absolute';
+                elemento.style.left = '-999px';
+                elemento.style.top = '-999px';
+                console.debug("s");
+            } else {
+                elemento.style.position = '';
+                elemento.style.left = '';
+                elemento.style.top = '';
+                console.debug("n");
+            }
+        });
+        }
+
+        // Chama a função ao carregar a página e ao redimensionar a janela
+        window.addEventListener('load', esconderElementos);
+        window.addEventListener('resize', esconderElementos);
     </script>
     
     <main>
