@@ -67,6 +67,7 @@ header.sticky{
       background-image: none;
       background-color: var(--verde);
       flex-flow: row nowrap;
+      justify-content: space-between;
    }
 
    & section#titulo > span{
