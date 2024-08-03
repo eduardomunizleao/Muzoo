@@ -66,16 +66,13 @@ header.sticky{
       height: 8vh;
       background-image: none;
       background-color: var(--verde);
-      flex-flow: row-reverse nowrap;
+      flex-flow: row nowrap;
    }
 
    & section#titulo > span{
-      position: static;
-      top: auto;
-      left: auto;
-      transform: translate(0, 0);
-      margin: 0;
-      margin-left: 55%;
+      position: fixed;
+      top: 1px;
+      right: 10px;
    }
 }
 
@@ -106,11 +103,17 @@ section#titulo > span{
     font-size: 1.8em;
     text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.432);
     color: rgb(255, 255, 255);
+    cursor: pointer;
 
-    position: absolute;
-    top: 0;
-    left: 100%;
-    transform: translate(calc(-100% - 10px), -45%);
+    position: fixed;
+    top: 1px;
+    right: 10px;
+
+    transition: .2s;
+}
+
+section#titulo > span:hover{
+    transform: scale(1.07);
 }
 
 section#titulo > img{
