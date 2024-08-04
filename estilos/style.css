@@ -39,12 +39,16 @@ body, html {
 header {
     color: white;
     background-color: #5C683A;
+
+    overflow: hidden;
+    width: 100%;
+}
+
+header.sticky{
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10000;
-    overflow: hidden;
-    width: 100%;
 }
 
 header.sticky img {

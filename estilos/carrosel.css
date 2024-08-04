@@ -2,8 +2,12 @@
 
 /* carousel */
 
+section#carroseldeimagens{
+   margin-top: -21vh;
+}
+
 section#carroseldeimagens.sticky{
-   margin-top: 8.2vh;
+   margin-top: 21vh;
 }
 
 .carousel{

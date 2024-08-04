@@ -53,17 +53,22 @@
             const barra_navegacao = document.querySelector('#barra-navegacao');
             const carroseldeimagens = document.querySelector('#carroseldeimagens')
             const menu = document.querySelector('#menu-icon');
-            if (window.scrollY > 1) {
-                header.classList.add('sticky');
-                barra_navegacao.classList.add('sticky');
-                menu.classList.add('sticky');
-                carroseldeimagens.classList.add('sticky');
-            } else {
-                header.classList.remove('sticky');
-                barra_navegacao.classList.remove('sticky');
-                menu.classList.remove('sticky');
-                carroseldeimagens.classList.remove('sticky');
-            }
+            
+            const threshold = window.innerHeight * 0.21; // 21vh em pixels
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > threshold) {
+                    header.classList.add('sticky');
+                    barra_navegacao.classList.add('sticky');
+                    menu.classList.add('sticky');
+                    carroseldeimagens.classList.add('sticky');
+                } else if(window.scrollY == 0){
+                    header.classList.remove('sticky');
+                    barra_navegacao.classList.remove('sticky');
+                    menu.classList.remove('sticky');
+                    carroseldeimagens.classList.remove('sticky');
+                }
+            });
         });
 
 
