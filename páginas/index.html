@@ -49,16 +49,19 @@
 
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
-            const barra_navegacao = document.querySelector('#barra-navegacao')
-            const menu = document.querySelector('#menu-icon')
+            const barra_navegacao = document.querySelector('#barra-navegacao');
+            const carroseldeimagens = document.querySelector('#carroseldeimagens')
+            const menu = document.querySelector('#menu-icon');
             if (window.scrollY > 1) {
                 header.classList.add('sticky');
                 barra_navegacao.classList.add('sticky');
                 menu.classList.add('sticky');
+                carroseldeimagens.classList.add('sticky');
             } else {
                 header.classList.remove('sticky');
                 barra_navegacao.classList.remove('sticky');
                 menu.classList.remove('sticky');
+                carroseldeimagens.classList.remove('sticky');
             }
         });
 
