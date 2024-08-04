@@ -182,6 +182,10 @@ ul.sticky{
     z-index: 10001; /* Certifique-se de que a barra lateral esteja à frente de outros conteúdos */
 }
 
+#barra-navegacao a{
+    color: white;
+}
+
 #barra-lateral li {
     width: 100%;
 }
