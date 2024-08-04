@@ -1,11 +1,6 @@
 @charset "UTF-8";
 
 /* carousel */
-
-section#carroseldeimagens{
-   margin-top: 7.5vh;
-}
-
 .carousel{
     width: 86vw;
     height: 100vh;

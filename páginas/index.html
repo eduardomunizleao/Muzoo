@@ -20,7 +20,7 @@
 
     <nav>
         <ul id="barra-lateral">
-            <li onclick="toggleSidebar()"><a href="#"><span class="material-symbols-outlined">close</span></a></li>
+            <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
             <li><a href="#">Peças do museu</a></li>
             <li><a href="#">Conheça o processo</a></li>
             <li><a href="#">Quem somos nós?</a></li>
@@ -33,29 +33,32 @@
             <li class="esconderNoMobile"><a href="#">Quem somos nós?</a></li>
             <li class="esconderNoMobile"><a href="#">Quizzes</a></li>
             <li class="esconderNoMobile"><a href="#">Feedback</a></li>
-            <li class="botao-menu esconderNoDesktop" onclick="toggleSidebar()"><a class="botao-menu esconderNoDesktop" href="#"></a></li>
         </ul>
     </nav>
 
     <script>
-        function toggleSidebar(){
+        function toggleSidebar() {
             const sidebar = document.querySelector('#barra-lateral');
-            if (sidebar.style.display === 'flex') {
-                sidebar.style.display = 'none';
+            if (sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
             } else {
-                sidebar.style.display = 'flex';
+                sidebar.classList.add('active');
             }
         }
+
 
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             const barra_navegacao = document.querySelector('#barra-navegacao')
+            const menu = document.querySelector('#menu-icon')
             if (window.scrollY > 1) {
                 header.classList.add('sticky');
                 barra_navegacao.classList.add('sticky');
+                menu.classList.add('sticky');
             } else {
                 header.classList.remove('sticky');
                 barra_navegacao.classList.remove('sticky');
+                menu.classList.remove('sticky');
             }
         });
 
@@ -81,10 +84,10 @@
         // Chama a função ao carregar a página e ao redimensionar a janela
         window.addEventListener('load', esconderElementos);
         window.addEventListener('resize', esconderElementos);
+        window.addEventListener('scroll', esconderElementos);
     </script>
     
     <main>
-      <hr>
        <section id="carroseldeimagens">
            <div class="carousel">
        

@@ -70,11 +70,6 @@ header.sticky section#titulo > span {
     right: 10px;
 }
 
-hr {
-    width: 100%;
-    border: 2px solid rgb(255, 255, 255);
-}
-
 section#titulo {
     display: flex;
     flex-flow: row nowrap;
@@ -87,10 +82,10 @@ section#titulo {
     border: 1px solid rgba(0, 0, 0, 0.144);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.322);
     padding: 10px;
-    transition: height 0.3s ease-in-out;
+    transition: height 0.23s ease-in-out;
 }
 
-section#titulo span {
+#menu-icon {
     margin-top: 10px;
     font-size: 1.8em;
     text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.432);
@@ -102,7 +97,7 @@ section#titulo span {
     transition: .2s;
 }
 
-section#titulo span:hover {
+#menu-icon:hover {
     transform: scale(1.1);
     color: rgb(114, 114, 114);
 }
@@ -150,7 +145,20 @@ nav a {
     color: black;
 }
 
+#close{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
 nav a:hover:not(.botao-menu){
+    background-color: #f0f0f0;
+}
+
+#close:hover{
     background-color: #f0f0f0;
 }
 
@@ -175,22 +183,48 @@ ul.sticky{
     backdrop-filter: blur(12px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     list-style: none;
-    display: none;
+
+    transform: translateX(100vw); /* Inicialmente fora da tela */
+    opacity: 0; /* Inicialmente invisível */
+    transition: transform 0.25s ease, opacity 0.5s ease; 
+
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     z-index: 10001; /* Certifique-se de que a barra lateral esteja à frente de outros conteúdos */
 }
 
-#barra-navegacao a{
+#barra-lateral.active {
+    transform: translateX(0); /* Traz o menu de volta para a tela */
+    opacity: 1; /* Torna o menu visível */
+}
+
+ul#barra-navegacao{
+    height: 21vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+ul#barra-navegacao li{
+    height: 15%;
+}
+
+ul#barra-navegacao a{
     color: white;
 }
+
+
 
 #barra-lateral li {
     width: 100%;
 }
 
 #barra-lateral a {
+    width: 100%;
+}
+
+#close{
     width: 100%;
 }
 
