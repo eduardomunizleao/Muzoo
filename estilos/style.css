@@ -66,6 +66,8 @@ header.sticky section#titulo {
     background-color: var(--verde);
     flex-flow: row nowrap;
     justify-content: space-between;
+
+    transition: height 0.3s ease-in-out;
 }
 
 header.sticky section#titulo > span {
@@ -86,7 +88,8 @@ section#titulo {
     border: 1px solid rgba(0, 0, 0, 0.144);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.322);
     padding: 10px;
-    transition: height 0.3s ease-in-out;
+    transition: none;
+    
 }
 
 #menu-icon {
@@ -247,6 +250,7 @@ ul#barra-navegacao a{
         width: 100%;
     }
 }
+
 
 
 
