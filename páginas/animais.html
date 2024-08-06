@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peças do museu</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="shortcut icon" href="../media/imagens/logo/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+<body>
+    <header>
+        <section id="titulo">
+            <img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo">
+            <h1>Museu de taxidermia do IFMG</h1>
+            <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop" onclick="toggleSidebar()">menu</span>
+        </section>
+    </header>
+
+    <nav>
+        <ul id="barra-lateral">
+            <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
+            <li><a href="#">Peças do museu</a></li>
+            <li><a href="#">Conheça o processo</a></li>
+            <li><a href="#">Quem somos nós?</a></li>
+            <li><a href="#">Quizzes</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+        <ul id="barra-navegacao">
+            <li class="esconderNoMobile"><a href="#">Peças do museu</a></li>
+            <li class="esconderNoMobile"><a href="#">Conheça o processo</a></li>
+            <li class="esconderNoMobile"><a href="#">Quem somos nós?</a></li>
+            <li class="esconderNoMobile"><a href="#">Quizzes</a></li>
+            <li class="esconderNoMobile"><a href="#">Feedback</a></li>
+            <li class="esconderNoMobile"><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        
+        function toggleSidebar() {
+            const sidebar = document.querySelector('#barra-lateral');
+            if (sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+            } else {
+                sidebar.classList.add('active');
+            }
+        }
+
+
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const barra_navegacao = document.querySelector('#barra-navegacao');
+            const carroseldeimagens = document.querySelector('#carroseldeimagens')
+            const menu = document.querySelector('#menu-icon');
+            
+            const threshold = window.innerHeight * 0.21; // 21vh em pixels
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > threshold) {
+                    header.classList.add('sticky');
+                    barra_navegacao.classList.add('sticky');
+                    menu.classList.add('sticky');
+                    carroseldeimagens.classList.add('sticky');
+                } else if(window.scrollY <= window.innerHeight * 0.21){
+                    header.classList.remove('sticky');
+                    barra_navegacao.classList.remove('sticky');
+                    menu.classList.remove('sticky');
+                    carroseldeimagens.classList.remove('sticky');
+                }
+            });
+        });
+
+
+        function esconderElementos() {
+        const elementos = document.querySelectorAll('.esconderNoDesktop');
+        elementos.forEach(elemento => {
+            const isSticky = elemento.classList.contains('sticky');
+            if (window.innerWidth > 800 && !isSticky) {
+                elemento.style.position = 'absolute';
+                elemento.style.left = '-999px';
+                elemento.style.top = '-999px';
+            } else {
+                elemento.style.position = '';
+                elemento.style.left = '';
+                elemento.style.top = '';
+            }
+        });
+        }
+
+        // Chama a função ao carregar a página e ao redimensionar a janela
+        window.addEventListener('load', esconderElementos);
+        window.addEventListener('resize', esconderElementos);
+        window.addEventListener('scroll', esconderElementos);
+    </script>
+</body>
+</html>

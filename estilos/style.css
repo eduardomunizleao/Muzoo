@@ -206,8 +206,10 @@ ul.sticky{
     opacity: 1; /* Torna o menu visível */
 }
 
+
 ul#barra-navegacao{
     height: 21vh;
+
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
