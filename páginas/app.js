@@ -5,8 +5,8 @@ var nextBtn = document.querySelector('.next'),
     item = document.querySelectorAll('.item'),
     runningTime = document.querySelector('.carousel .timeRunning') 
 
-let timeRunning = 3000 
-let timeAutoNext = 100000000 /* 20000 */
+let timeRunning = 20000
+let timeAutoNext = 20000 /* 20000 */
 
 nextBtn.onclick = function(){
     showSlider('next')
