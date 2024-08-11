@@ -208,15 +208,17 @@ ul.sticky{
 
 
 ul#barra-navegacao{
-    height: 21vh;
+    height: 4vh;
 
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+
+    background-color: rgb(117, 117, 117);
 }
 
 ul#barra-navegacao li{
-    height: 15%;
+   height: 100%;
 }
 
 ul#barra-navegacao a{
@@ -238,6 +240,10 @@ ul#barra-navegacao a{
 }
 
 @media(max-width: 800px) {
+    #barra-navegacao{
+        margin-bottom: -4vh;
+    }
+
     .esconderNoMobile {
         display: none;
     }
@@ -278,10 +284,8 @@ main{
 
 
 section#introducao{
-    background-color: var(--esmeralda);
     border-radius: 20px;
     padding: 10px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.432);
     width: 93vw;
 
     margin: 20px auto;
@@ -290,7 +294,6 @@ section#introducao{
 section#introducao > h1{
     margin-bottom: 15px;
     font-family: var(--font2);
-    color: #2a301a;
 }
 
 section#introducao > p{
