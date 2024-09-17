@@ -84,6 +84,10 @@ section#carroseldeimagens.sticky{
    width: auto; /* Deixe o conteúdo definir a largura */
    max-width: 60vw; /* Limita a largura para 90% da viewport */
    min-width: 20vw; /* Define uma largura mínima */
+
+   /* Adiciona uma transição suave para max-width */
+   transition: max-width 0.5s ease, width 0.5s ease; 
+
 }
 
  
@@ -273,11 +277,54 @@ section#carroseldeimagens.sticky{
        left: 10px;
    }
 
+   .list .item .content{
+      max-width: 80vw;
+   }
+
    .content .des {
        font-size: 12px;
        width: 60vw;
    }
+
+   /* Remove as setas de navegação e o indicador de tempo no modo simples */
+   .timeRunning {
+      display: none;
+   }
+
+   .carousel{
+      width: 100vw;
+   }
 }
+
+@media screen and (min-width: 1494px) {
+   .list .item .content{
+      max-width: 40vw;
+   }
+}
+
+
+
+/* Estilos simplificados para dispositivos menores */
+.simple-carousel .list {
+   display: flex;
+   flex-direction: row;
+   overflow-x: scroll; /* Permite rolagem horizontal */
+   scroll-snap-type: x mandatory; /* Força a rolagem a parar em cada item */
+}
+
+.simple-carousel .list .item {
+   flex: 0 0 auto; /* Garante que os itens não se estiquem e se mantenham em uma linha */
+   width: 100vw; /* Largura total da tela para cada item */
+   height: auto; /* Ajusta a altura conforme necessário */
+   background-size: cover;
+   background-position: center;
+   scroll-snap-align: start; /* Alinha o início do item ao contêiner */
+   transition: none; /* Remove transições complexas */
+}
+
+
+
+
 
 
 

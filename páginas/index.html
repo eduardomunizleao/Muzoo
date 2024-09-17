@@ -95,6 +95,26 @@
         window.addEventListener('load', esconderElementos);
         window.addEventListener('resize', esconderElementos);
         window.addEventListener('scroll', esconderElementos);
+
+
+        let isLowPerformance = false;
+
+        function checkPerformance() {
+            let startTime = performance.now();
+            requestAnimationFrame(() => {
+            let endTime = performance.now();
+            if (endTime - startTime > 16) { // Mais de 60 FPS é 16ms por frame
+                isLowPerformance = true;
+                document.querySelector('.carousel').classList.add('simple-carousel');
+            } else {
+                isLowPerformance = false;
+                document.querySelector('.carousel').classList.remove('simple-carousel');
+            }
+            });
+        }
+
+        window.addEventListener('load', checkPerformance);
+        window.addEventListener('resize', checkPerformance);
     </script>
     
     <main>
