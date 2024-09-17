@@ -67,21 +67,25 @@ section#carroseldeimagens.sticky{
  
  
  
- .list .item .content{
-    position: absolute;
-    top: 50%;
-    left: 100px;
-    transform: translateY(-50%);
-    text-align: left;
-    color: #fff;
-    display: none;
+ .list .item .content {
+   position: absolute;
+   top: 50%;
+   left: 50px;
+   transform: translateY(-50%);
+   text-align: left;
+   color: #fff;
+   display: none;
 
-    background-color: rgba(31, 31, 31, 0.555);
-    border-radius: 40px;
-    padding: 15px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.664);
-    max-width: 400px;
- }
+   background-color: rgba(31, 31, 31, 0.555);
+   border-radius: 40px;
+   padding: 15px;
+   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.664);
+
+   width: auto; /* Deixe o conteúdo definir a largura */
+   max-width: 60vw; /* Limita a largura para 90% da viewport */
+   min-width: 20vw; /* Define uma largura mínima */
+}
+
  
  .list .item:nth-child(2) .content{
     display: block;
@@ -232,54 +236,49 @@ section#carroseldeimagens.sticky{
  
  /* Responsive Design */
  
- @media screen and (max-width: 992px){
- 
- 
-    .list .item .content{
-        left: 50px;
-    }
- 
-    .content .title, .content .name{
-        font-size: 70px;
-    }
- 
-    .content .des{
-        font-size: 16px;
-    }
- 
- }
- 
- @media screen and (max-width: 768px){
-    .carousel{
-       width: 100vw;
-       margin: 0;
-    }
- 
-    .list .item .content{
-        top: 40%;
-    }
- 
-    .content .title, .content .name{
-        font-size: 45px;
-    }
- 
-    .content .btn button{
-        padding: 8px 13px;
-        font-size: 10px;
-        border-radius: 10px;
-    }
- }
- 
- @media screen and (max-width: 600px){
-    .content .des{
-        font-size: 12px;
-        width: 60vw;
-    }
- 
-    .list .item .content{
+ @media screen and (max-width: 992px) {
+   .list .item .content {
+       left: 30px; /* Menor espaçamento à esquerda para telas menores */
+   }
+
+   .content .title, .content .name {
+       font-size: 70px;
+   }
+
+   .content .des {
+       font-size: 16px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .list .item .content {
+       top: 40%;
+       left: 20px;
+   }
+
+   .content .title, .content .name {
+       font-size: 45px;
+   }
+
+   .content .btn button {
+       padding: 8px 13px;
+       font-size: 10px;
+       border-radius: 10px;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .list .item .content {
+       top: 30%;
        left: 10px;
-    }
- }
+   }
+
+   .content .des {
+       font-size: 12px;
+       width: 60vw;
+   }
+}
+
 
 
  /* Imagens em geral */

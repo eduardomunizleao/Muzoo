@@ -223,7 +223,7 @@ ul#barra-navegacao{
 }
 
 ul#barra-navegacao li{
-   height: 100%;
+   flex: 1 1 auto
 }
 
 ul#barra-navegacao a{
