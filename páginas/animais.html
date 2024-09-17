@@ -57,20 +57,20 @@
             const barra_navegacao = document.querySelector('#barra-navegacao');
             const carroseldeimagens = document.querySelector('#carroseldeimagens')
             const menu = document.querySelector('#menu-icon');
+
+            const itens_stickys = [header, barra_navegacao, carroseldeimagens, menu]
             
             const threshold = window.innerHeight * 0.21; // 21vh em pixels
 
             window.addEventListener('scroll', () => {
                 if (window.scrollY > threshold) {
-                    header.classList.add('sticky');
-                    barra_navegacao.classList.add('sticky');
-                    menu.classList.add('sticky');
-                    carroseldeimagens.classList.add('sticky');
+                    itens_stickys.forEach(i => {
+                        i.classList.add('sticky');
+                    })
                 } else if(window.scrollY <= window.innerHeight * 0.21){
-                    header.classList.remove('sticky');
-                    barra_navegacao.classList.remove('sticky');
-                    menu.classList.remove('sticky');
-                    carroseldeimagens.classList.remove('sticky');
+                    itens_stickys.forEach(i => {
+                        i.classList.remove('sticky');
+                    })
                 }
             });
         });

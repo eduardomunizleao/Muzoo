@@ -191,19 +191,24 @@ ul.sticky{
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     list-style: none;
 
-    transform: translateX(100vw); /* Inicialmente fora da tela */
-    opacity: 0; /* Inicialmente invisível */
-    transition: transform 0.25s ease, opacity 0.5s ease; 
+    /* Rolagem vertical */
+    overflow-y: auto;
 
+    /* Mantém o menu inicialmente fora da tela */
+    transform: translateX(100vw);
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.5s ease;
+
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    z-index: 10001; /* Certifique-se de que a barra lateral esteja à frente de outros conteúdos */
+    z-index: 10001;
 }
 
 #barra-lateral.active {
-    transform: translateX(0); /* Traz o menu de volta para a tela */
-    opacity: 1; /* Torna o menu visível */
+    transform: translateX(0); /* Traz o menu para a tela */
+    opacity: 1;
 }
 
 
@@ -229,10 +234,12 @@ ul#barra-navegacao a{
 
 #barra-lateral li {
     width: 100%;
+    height: 50px;
 }
 
 #barra-lateral a {
     width: 100%;
+    height: 50px;
 }
 
 #close{

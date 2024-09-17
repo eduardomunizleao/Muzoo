@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <title>Museu de zoologia do IFMG Campus Bambuí</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta name="description" content="Explore o Museu de Taxidermia do IFMG, conheça as exposições e aprenda sobre a técnica milenar.">
+    <title>Museu de Zoologia do IFMG Campus Bambuí</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <link rel="shortcut icon" href="../media/imagens/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../estilos/style.css">
     <link rel="stylesheet" href="../estilos/carrosel.css">
@@ -14,7 +14,7 @@
     <header>
         <section id="titulo">
             <img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo">
-            <h1>Museu de taxidermia do IFMG</h1>
+            <h1>Museu de Taxidermia do IFMG</h1>
             <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop" onclick="toggleSidebar()">menu</span>
         </section>
     </header>
@@ -22,6 +22,24 @@
     <nav>
         <ul id="barra-lateral">
             <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
+            <li><a href="#">Peças do museu</a></li>
+            <li><a href="#">Conheça o processo</a></li>
+            <li><a href="#">Quem somos nós?</a></li>
+            <li><a href="#">Quizzes</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Peças do museu</a></li>
+            <li><a href="#">Conheça o processo</a></li>
+            <li><a href="#">Quem somos nós?</a></li>
+            <li><a href="#">Quizzes</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Peças do museu</a></li>
+            <li><a href="#">Conheça o processo</a></li>
+            <li><a href="#">Quem somos nós?</a></li>
+            <li><a href="#">Quizzes</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Contato</a></li>
             <li><a href="#">Peças do museu</a></li>
             <li><a href="#">Conheça o processo</a></li>
             <li><a href="#">Quem somos nós?</a></li>
@@ -56,20 +74,20 @@
             const barra_navegacao = document.querySelector('#barra-navegacao');
             const carroseldeimagens = document.querySelector('#carroseldeimagens')
             const menu = document.querySelector('#menu-icon');
+
+            const itens_stickys = [header, barra_navegacao, carroseldeimagens, menu]
             
             const threshold = window.innerHeight * 0.21; // 21vh em pixels
 
             window.addEventListener('scroll', () => {
                 if (window.scrollY > threshold) {
-                    header.classList.add('sticky');
-                    barra_navegacao.classList.add('sticky');
-                    menu.classList.add('sticky');
-                    carroseldeimagens.classList.add('sticky');
+                    itens_stickys.forEach(i => {
+                        i.classList.add('sticky');
+                    })
                 } else if(window.scrollY <= window.innerHeight * 0.21){
-                    header.classList.remove('sticky');
-                    barra_navegacao.classList.remove('sticky');
-                    menu.classList.remove('sticky');
-                    carroseldeimagens.classList.remove('sticky');
+                    itens_stickys.forEach(i => {
+                        i.classList.remove('sticky');
+                    })
                 }
             });
         });
@@ -270,7 +288,7 @@
     </main>
 
     <footer>
-        
+        <p>&copy; 2024 Museu de Zoologia do IFMG Campus Bambuí</p>
     </footer>
 </body>
 </html>
