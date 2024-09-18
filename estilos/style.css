@@ -125,12 +125,12 @@ section#titulo > h1 {
 }
 
 /* Configurações da Barra de Navegação */
-nav {
+nav#barra-lateral {
     background-color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
+nav #barra-lateral ul {
     width: 100%;
     list-style: none;
     display: flex;
@@ -138,17 +138,15 @@ nav ul {
     align-items: center;
 }
 
-nav li {
+nav #barra-lateral li {
     height: 50px;
     z-index: 99999999999999;
 }
 
-nav a {
+nav #barra-lateral a {
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
-    display: flex;
-    align-items: center;
     color: black;
 }
 
@@ -161,7 +159,7 @@ nav a {
     color: black;
 }
 
-nav a:hover:not(.botao-menu){
+nav #barra-lateral a:hover:not(.botao-menu){
     background-color: #f0f0f0;
 }
 
@@ -213,23 +211,35 @@ ul.sticky{
 
 
 ul#barra-navegacao{
-    height: 4vh;
+    height: 40px;
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-flow: row nowrap;
 
-    background-color: rgb(117, 117, 117);
+    background-color: var(--beige);
 }
 
 ul#barra-navegacao li{
-   flex: 1 1 auto
+   flex: 1 1 50px;
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: center;
+   align-items: center;
+   border-left: 2px solid rgba(0, 0, 0, 0.144);
 }
 
 ul#barra-navegacao a{
-    color: white;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    
 }
 
+ul#barra-navegacao a:hover{
+
+}
 
 
 #barra-lateral li {
