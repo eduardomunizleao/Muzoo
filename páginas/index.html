@@ -29,7 +29,7 @@
             <li><a href="#">Feedback</a></li>
             <li><a href="#">Contato</a></li>
         </ul>
-        <ul id="barra-navegacao">
+        <ul id="barra-navegacao" class="esconderNoMobile">
             <li class="esconderNoMobile"><a href="#">Peças do museu</a></li>
             <li class="esconderNoMobile"><a href="#">Conheça o processo</a></li>
             <li class="esconderNoMobile"><a href="#">Quem somos nós?</a></li>
@@ -76,10 +76,23 @@
 
 
         function esconderElementos() {
-        const elementos = document.querySelectorAll('.esconderNoDesktop');
-        elementos.forEach(elemento => {
+        const elementos_desktop = document.querySelectorAll('.esconderNoDesktop');
+        elementos_desktop.forEach(elemento => {
             const isSticky = elemento.classList.contains('sticky');
-            if (window.innerWidth > 800 && !isSticky) {
+            if (window.innerWidth > 1000 && !isSticky) {
+                elemento.style.position = 'absolute';
+                elemento.style.left = '-999px';
+                elemento.style.top = '-999px';
+            } else {
+                elemento.style.position = '';
+                elemento.style.left = '';
+                elemento.style.top = '';
+            }
+        });
+
+        const elementos_mobile = document.querySelectorAll('.esconderNoMobile');
+        elementos_mobile.forEach(elemento => {
+            if (window.innerWidth < 1000) {
                 elemento.style.position = 'absolute';
                 elemento.style.left = '-999px';
                 elemento.style.top = '-999px';

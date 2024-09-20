@@ -130,7 +130,7 @@ nav#barra-lateral {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-nav #barra-lateral ul {
+nav#barra-lateral ul {
     width: 100%;
     list-style: none;
     display: flex;
@@ -141,6 +141,9 @@ nav #barra-lateral ul {
 nav #barra-lateral li {
     height: 50px;
     z-index: 99999999999999;
+    width: 100%;
+
+
 }
 
 nav #barra-lateral a {
@@ -148,6 +151,9 @@ nav #barra-lateral a {
     padding: 0 30px;
     text-decoration: none;
     color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #close{
@@ -197,10 +203,6 @@ ul.sticky{
     opacity: 0;
     transition: transform 0.25s ease, opacity 0.5s ease;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
     z-index: 10001;
 }
 
@@ -219,11 +221,27 @@ ul#barra-navegacao{
 
     background-color: var(--beige);
     list-style: none;
+
+    border-top: 2px solid rgba(0, 0, 0, 0.144);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.144);
 }
 
 ul#barra-navegacao li{
    flex: 1 1 50px;
    border-left: 2px solid rgba(0, 0, 0, 0.144);
+
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: center;
+   align-items: center;
+
+   transition: background-color .2s, transform .2s;
+}
+
+ul#barra-navegacao li:hover{
+    cursor: pointer;
+    background-color: #b19264;
+    transform: scale(1.1);
 }
 
 ul#barra-navegacao a{
@@ -235,26 +253,12 @@ ul#barra-navegacao a{
     
 }
 
-ul#barra-navegacao a:hover{
-
-}
-
-
-#barra-lateral li {
-    width: 100%;
-    height: 50px;
-}
-
-#barra-lateral a {
-    width: 100%;
-    height: 50px;
-}
 
 #close{
     width: 100%;
 }
 
-@media(max-width: 800px) {
+@media(max-width: 1000px) {
     #barra-navegacao{
         margin-bottom: -4vh;
     }
@@ -268,7 +272,7 @@ ul#barra-navegacao a:hover{
 }
 
 
-@media(max-width: 400px) {
+@media(max-width: 600px) {
     #barra-lateral {
         width: 100%;
     }
