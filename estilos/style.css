@@ -214,18 +214,15 @@ ul#barra-navegacao{
     height: 40px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-flow: row nowrap;
 
     background-color: var(--beige);
+    list-style: none;
 }
 
 ul#barra-navegacao li{
    flex: 1 1 50px;
-   display: flex;
-   flex-flow: row nowrap;
-   justify-content: center;
-   align-items: center;
    border-left: 2px solid rgba(0, 0, 0, 0.144);
 }
 
@@ -234,6 +231,7 @@ ul#barra-navegacao a{
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
     
 }
 
