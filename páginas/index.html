@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../estilos/style.css">
     <link rel="stylesheet" href="../estilos/carrosel.css">
 </head>
-<body>
+<body class="home">
     <header>
         <section id="titulo">
             <img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo">
@@ -22,7 +22,7 @@
     <nav>
         <ul id="barra-lateral">
             <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
-            <li><a href="#">Peças do museu</a></li>
+            <li><a href="animais.html">Peças do museu</a></li>
             <li><a href="#">Conheça o processo</a></li>
             <li><a href="#">Quem somos nós?</a></li>
             <li><a href="#">Quizzes</a></li>
@@ -30,7 +30,7 @@
             <li><a href="#">Contato</a></li>
         </ul>
         <ul id="barra-navegacao" class="esconderNoMobile">
-            <li class="esconderNoMobile"><a href="#">Peças do museu</a></li>
+            <li class="esconderNoMobile"><a href="animais.html">Peças do museu</a></li>
             <li class="esconderNoMobile"><a href="#">Conheça o processo</a></li>
             <li class="esconderNoMobile"><a href="#">Quem somos nós?</a></li>
             <li class="esconderNoMobile"><a href="#">Quizzes</a></li>
@@ -39,96 +39,7 @@
         </ul>
     </nav>
 
-    <script>
-        
-        function toggleSidebar() {
-            const sidebar = document.querySelector('#barra-lateral');
-            if (sidebar.classList.contains('active')) {
-                sidebar.classList.remove('active');
-            } else {
-                sidebar.classList.add('active');
-            }
-        }
-
-
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            const barra_navegacao = document.querySelector('#barra-navegacao');
-            const carroseldeimagens = document.querySelector('#carroseldeimagens')
-            const menu = document.querySelector('#menu-icon');
-
-            const itens_stickys = [header, barra_navegacao, carroseldeimagens, menu]
-            
-            const threshold = window.innerHeight * 0.21; // 21vh em pixels
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > threshold) {
-                    itens_stickys.forEach(i => {
-                        i.classList.add('sticky');
-                    })
-                } else if(window.scrollY <= window.innerHeight * 0.21){
-                    itens_stickys.forEach(i => {
-                        i.classList.remove('sticky');
-                    })
-                }
-            });
-        });
-
-
-        function esconderElementos() {
-        const elementos_desktop = document.querySelectorAll('.esconderNoDesktop');
-        elementos_desktop.forEach(elemento => {
-            const isSticky = elemento.classList.contains('sticky');
-            if (window.innerWidth > 1000 && !isSticky) {
-                elemento.style.position = 'absolute';
-                elemento.style.left = '-999px';
-                elemento.style.top = '-999px';
-            } else {
-                elemento.style.position = '';
-                elemento.style.left = '';
-                elemento.style.top = '';
-            }
-        });
-
-        const elementos_mobile = document.querySelectorAll('.esconderNoMobile');
-        elementos_mobile.forEach(elemento => {
-            if (window.innerWidth < 1000) {
-                elemento.style.position = 'absolute';
-                elemento.style.left = '-999px';
-                elemento.style.top = '-999px';
-            } else {
-                elemento.style.position = '';
-                elemento.style.left = '';
-                elemento.style.top = '';
-            }
-        });
-        }
-
-        // Chama a função ao carregar a página e ao redimensionar a janela
-        window.addEventListener('load', esconderElementos);
-        window.addEventListener('resize', esconderElementos);
-        window.addEventListener('scroll', esconderElementos);
-
-
-        let isLowPerformance = false;
-
-        function checkPerformance() {
-            let startTime = performance.now();
-            requestAnimationFrame(() => {
-            let endTime = performance.now();
-            if (endTime - startTime > 16) { // Mais de 60 FPS é 16ms por frame
-                isLowPerformance = true;
-                document.querySelector('.carousel').classList.add('simple-carousel');
-            } else {
-                isLowPerformance = false;
-                document.querySelector('.carousel').classList.remove('simple-carousel');
-            }
-            });
-        }
-
-        window.addEventListener('load', checkPerformance);
-        window.addEventListener('resize', checkPerformance);
-    </script>
+    <script src="../javascript/funcoes-vitais.js" defer></script>
     
     <main>
        <section id="carroseldeimagens">
@@ -291,7 +202,7 @@
        
            </div>
        
-           <script src="app.js"></script>
+           <script src="../javascript/app.js" defer></script>
        </section>
 
        <section id="introducao">

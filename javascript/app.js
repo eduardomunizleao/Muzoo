@@ -59,3 +59,20 @@ function showSlider(type) {
 
 // Start the initial animation 
 resetTimeAnimation()
+
+
+let isLowPerformance = false;
+
+function adaptToDevice() {
+    const memory = navigator.deviceMemory || 4; // Memória em GB
+    const cores = navigator.hardwareConcurrency || 4; // Núcleos da CPU
+    
+    if (memory < 2 || cores <= 2) {
+    document.querySelector('.carousel').classList.add('simple-carousel');
+    } else if(document.querySelector('.carousel').classList) {
+    document.querySelector('.carousel').classList.remove('simple-carousel');
+    }
+}
+
+window.addEventListener('load', adaptToDevice);
+window.addEventListener('resize', adaptToDevice);

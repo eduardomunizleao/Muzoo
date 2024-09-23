@@ -156,6 +156,10 @@ nav #barra-lateral a {
     align-items: center;
 }
 
+nav #barra-lateral a.atual{
+    color:rgb(107, 107, 107);
+}
+
 #close{
     height: 100%;
     padding: 0 30px;
@@ -250,9 +254,11 @@ ul#barra-navegacao a{
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    
 }
 
+ul#barra-navegacao a.atual{
+    color: brown;
+}
 
 #close{
     width: 100%;
