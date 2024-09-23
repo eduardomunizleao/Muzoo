@@ -151,6 +151,11 @@ section#carroseldeimagens.sticky{
     transition: .2s;
  }
 
+ .content .btn button a{
+   text-decoration: none;
+   color: rgb(0, 0, 0);
+ }
+
  .content .btn button:hover{
    transform: scale(1.08);
 
@@ -158,6 +163,10 @@ section#carroseldeimagens.sticky{
    background-color: #0f9e48cb;
    color: rgb(255, 255, 255);
    text-decoration: underline;
+ }
+
+ .content .btn button:hover a{
+   color: white;
  }
  
  

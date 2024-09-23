@@ -157,7 +157,8 @@ nav #barra-lateral a {
 }
 
 nav #barra-lateral a.atual{
-    color:rgb(107, 107, 107);
+    color: brown;
+    background-color: white;
 }
 
 #close{
@@ -246,6 +247,10 @@ ul#barra-navegacao li:hover{
     cursor: pointer;
     background-color: #b19264;
     transform: scale(1.1);
+}
+
+ul#barra-navegacao li.home{
+    flex: 0 0 60px;
 }
 
 ul#barra-navegacao a{
