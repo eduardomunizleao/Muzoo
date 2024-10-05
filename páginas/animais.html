@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <link rel="shortcut icon" href="../media/imagens/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../estilos/style.css">
+
+    <link rel="stylesheet" href="../estilos/animais.css">
 </head>
 <body class="Peças do museu">
     <header>
@@ -21,7 +23,7 @@
     <nav>
         <ul id="barra-lateral">
             <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
-            <li class="home"><a href="index.html"><span class="material-symbols-outlined">home</span> Página inicial</a></li>
+            <li class="home"><a href="index.html"><span class="material-symbols-outlined">home</span> Página inicial </a></li>
             <li><a href="animais.html">Peças do museu</a></li>
             <li><a href="#">Conheça o processo</a></li>
             <li><a href="#">Quem somos nós?</a></li>
@@ -30,7 +32,9 @@
             <li><a href="#">Contato</a></li>
         </ul>
         <ul id="barra-navegacao" class="esconderNoMobile">
-            <li class="esconderNoMobile home"><a href="index.html"><span class="material-symbols-outlined">home</span></a></li>
+            <li class="esconderNoMobile home"><a href="index.html"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
             <li class="esconderNoMobile"><a href="animais.html">Animais</a></li>
             <li class="esconderNoMobile"><a href="#">Taxidermia</a></li>
             <li class="esconderNoMobile"><a href="#">Quem somos?</a></li>
@@ -40,23 +44,87 @@
         </ul>
     </nav>
 
-    <script src="../javascript/funcoes-vitais.js"></script>
+    <script src="../javascript/funcoes-vitais.js" defer></script>
 
     <main>
+        <div class="bg-vertical-horizontal">
+
          <section id="cabecalho-pagina">
             <div id="background">
                 <div id="caixa-de-texto"><h2 id="titulo-pagina">Animais do MUZOO</h2></div>
             </div>
          </section>
 
-         <section id="conteudo">
-            <h2>Escolha a classe de animal desejada: 
-                <span id="info" class="material-symbols-outlined esconderNoMobile" data-tooltip="Selecione uma das opções abaixo para visualizar as informações sobre o animal da classe desejada.">help</span>
-            </h2>
-            
-            
-        </section>
+            <section id="conteudo">
+                <div id="cabecalho-conteudo">
+                    <h2>Escolha a classe de animal desejada: 
+                        <span id="info" class="material-symbols-outlined esconderNoMobile" data-tooltip="Selecione uma das opções abaixo para visualizar as informações sobre o animal da classe desejada.">help</span>
+                    </h2>
+
+                </div>
+    
+                <div id="animais">
+                    <div id="mamiferos" class="representacao-animais" data-name="Mamíferos">
+                        <span>Mamíferos</span>
+                    </div>
+                    <div id="repteis" class="representacao-animais" data-name="Répteis">
+                        <span>Répteis</span>
+                    </div>
+                    <div id="aves" class="representacao-animais" data-name="Aves">
+                        <span>Aves</span>
+                    </div>
+                    <div id="anfibios" class="representacao-animais" data-name="Anfíbios">
+                        <span>Anfíbios</span>
+                    </div>
+                    <div id="peixes" class="representacao-animais" data-name="Peixes">
+                        <span>Peixes</span>
+                    </div>
+                </div>
+                
+                
+            </section>
+         </div>
         
     </main>
+
+    <footer>
+        <section id="footer-content">
+            <div class="footer-section">
+                <h3>Museu de Zoologia do IFMG</h3>
+                <p>&copy; 2024 Museu de Zoologia do IFMG Campus Bambuí</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Página Inicial</a></li>
+                    <li><a href="animais.html">Peças do Museu</a></li>
+                    <li><a href="#">Conheça o Processo</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Nos Siga</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="../media/imagens/Nova pasta/153-1536567_facebook-twitter-pinterest-facebook-logo-png-white.png" alt="Facebook"></a>
+                    <a href="#"><img src="../media/imagens/Nova pasta/448-4486682_instagram-logo-png-white-circle.png" alt="Instagram"></a>
+                    <a href="#"><img src="../media/imagens/Nova pasta/New-X-Logo.png" alt="Twitter"></a>
+                    <a href="#"><img src="../media/imagens/Nova pasta/395128.png" alt="YouTube"></a>
+                </div>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@museuzoologiaifmg.edu.br</p>
+                <p>Telefone: (37) 3431-3200</p>
+            </div>
+        </section>
+    
+        <div id="footer-bottom">
+            <p>Desenvolvido por Estudantes do IFMG Campus Bambuí - Curso Técnico em Informática</p>
+        </div>
+    </footer>
 </body>
 </html>
