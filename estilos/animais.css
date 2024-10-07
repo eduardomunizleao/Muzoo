@@ -118,11 +118,13 @@ div.representacao-animais {
 div.representacao-animais:hover {
     transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Aumenta a sombra ao passar o mouse */
-    filter: brightness(0.9); /* Escurece levemente a imagem */
+    filter: brightness(0.75); /* Escurece levemente a imagem */
 }
 
 div.representacao-animais:hover span{
     margin-bottom: calc(50% - 15px);
+    padding: 2px;
+    font-weight: bold;
 }
 
 /* Definindo as imagens de fundo dos animais */
@@ -221,7 +223,7 @@ div.representacao-animais span {
     color: white;
     text-align: center;
 
-    transition: margin 0.3s ease;
+    transition: all 0.3s ease;
 
     display: block;
 }
