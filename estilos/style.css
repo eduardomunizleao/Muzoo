@@ -28,10 +28,17 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
 }
 
 body, html {
     background-color: var(--beige);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
 /* Configurações de Título */
@@ -341,61 +348,7 @@ section#introducao > p{
     margin-bottom: 1em;
 }
 
-#info {
-    position: relative;
-    cursor: pointer;
-  }
-  
-  #info::before,
-  #info::after {
-    --scale: 0;
-    --arrow-size: 10px; /* Tamanho da seta */
-    --tooltip-color: var(--verde); /* Cor do tooltip */
-  
-    position: absolute;
-    top: -.25rem;
-    left: 50%;
-    transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
-    transition: 150ms transform;
-    transform-origin: bottom center;
-  }
-  
-  #info::before {
-    --translate-y: calc(-100% - var(--arrow-size));
-  
-    display: flex;                /* Flexbox para garantir alinhamento */
-    justify-content: center;       /* Alinhamento horizontal */
-    align-items: center;           /* Alinhamento vertical */
-  
-    content: attr(data-tooltip);
-    color: white;
-    padding: .5rem;                /* Adicionar padding sem impactar a flexibilidade da altura */
-    border-radius: .3rem;
-    text-align: center;
-    width: max-content;            /* Deixa a largura flexível, e a altura será proporcional ao texto */
-    max-width: 200px;              /* Limitar a largura máxima, se necessário */
-    background: var(--tooltip-color);
-    font-size: 14px;               /* Tamanho da fonte consistente */
-    font-family: Arial, sans-serif; /* Definir uma fonte consistente */
-    line-height: 1.2;              /* Garantir espaçamento consistente entre as linhas */
-    white-space: normal;           /* Permitir que o texto quebre em várias linhas, se necessário */
-  }
-  
-  
-  
-  #info::after {
-    --translate-y: calc(-1 * var(--arrow-size));
-  
-    content: '';
-    border: var(--arrow-size) solid transparent;
-    border-top-color: var(--tooltip-color);
-    transform-origin: top center;
-  }
-  
-  #info:hover::before,
-  #info:hover::after {
-    --scale: 1;
-  }
+
   
 
   footer {
