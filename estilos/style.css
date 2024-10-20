@@ -255,13 +255,21 @@ ul#barra-navegacao li{
    justify-content: center;
    align-items: center;
 
-   transition: background-color .2s, transform .2s;
+   overflow: hidden;
+}
+
+
+ul#barra-navegacao li a{
+    transition: color .2s, transform .2s;
 }
 
 ul#barra-navegacao li:hover{
     cursor: pointer;
-    background-color: #b19264;
+}
+
+ul#barra-navegacao li:hover a{
     transform: scale(1.1);
+    color: gray;
 }
 
 ul#barra-navegacao li.home{
@@ -424,6 +432,25 @@ section#introducao > p{
     font-size: 0.9em;
     margin: 0;
 }
+
+
+::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* color of the scroll thumb */
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* color of the scroll thumb on hover */
+}
+
 
 @media screen and (min-width: 800px){
     section#titulo > h1{
