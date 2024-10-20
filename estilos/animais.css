@@ -118,6 +118,10 @@ a.representacao-animais {
     text-decoration: none;
 }
 
+a.representacao-animais span{
+    padding: 2px;
+}
+
 a.representacao-animais:hover {
     transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Aumenta a sombra ao passar o mouse */
@@ -203,6 +207,7 @@ a#peixes {
         margin: 20px;
     }
 
+
     div#animais {
         flex-flow: row wrap;
         justify-content: space-around; /* Ajusta o espaço entre os itens */
@@ -220,6 +225,7 @@ a#peixes {
 
     #cabecalho-conteudo {
         margin-top: -10px;
+        line-height: 2em;
     }
 
     h2#titulo-pagina {
@@ -229,7 +235,6 @@ a#peixes {
     section#conteudo h2 {
         font-size: 2em;
     }
-
 
 }
 
