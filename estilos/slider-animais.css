@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider{
+    width: 1300px;
+    max-width: 100vw;
+    height: 700px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+.slider .list img{
+    width: 1300px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .28s;
+}
+
+.slider .buttons button:hover{
+    transform: scale(1.08);
+    background-color: rgba(255, 255, 255, 0.315);
+}
+
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+}
+@media screen and (max-width: 768px){
+    .slider{
+        height: 400px;
+    }
+}
+
+/* Define a posição da sobreposição de texto em cada imagem */
+.item {
+    position: relative;
+}
+
+/* Estilos gerais */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+    background-color: rgba(31, 31, 31, 0.555);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.664);
+}
+
+.nome-popular {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #14ff72cb;
+    font-weight: bold;
+    line-height: 1;
+    pointer-events: none;
+    margin-bottom: 2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.nome-cientifico {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.534);
+    pointer-events: none;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .text-overlay {
+        padding: 10px;
+    }
+
+    .nome-popular {
+        font-size: 1.5em;
+    }
+
+    .nome-cientifico {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text-overlay {
+        padding: 5px;
+    }
+
+    .nome-popular {
+        font-size: 1.2em;
+    }
+
+    .nome-cientifico {
+        font-size: 13px;
+    }
+}
+
+
+/* Estilos gerais */
+.slider .btn {
+    position: absolute;
+    top: calc(50% + 60px); /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.slider .btn button {
+    margin-top: 20px; /* Margem entre o botão e o text-overlay */
+    padding: 7px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    border: 2px solid #0fa14acb;
+    background-color: #14ff72cb;
+    color: rgb(0, 0, 0);
+    border-radius: 11px;
+    font-weight: bolder;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.473);
+    transition: .2s;
+}
+
+.slider .btn button a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.slider .btn button:hover {
+    border: 2px solid rgba(10, 100, 46, 0.796);
+    background-color: #0f9e48cb;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+.content .btn button:hover a {
+    color: white;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .slider .btn {
+        top: calc(50% + 40px); /* Ajuste conforme necessário */
+    }
+
+    .slider .btn button {
+        padding: 5px 8px;
+        font-size: 12px;
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slider .btn {
+        top: calc(50% + 30px); /* Ajuste conforme necessário */
+    }
+
+    .slider .btn button {
+        padding: 3px 6px;
+        font-size: 10px;
+        border-radius: 6px;
+        margin-top: 40px;
+    }
+}
+

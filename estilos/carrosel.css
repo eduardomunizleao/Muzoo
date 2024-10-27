@@ -2,13 +2,7 @@
 
 /* carousel */
 
-section#carroseldeimagens{
-   margin-top: 0vh;
-}
 
-section#carroseldeimagens.sticky{
-   margin-top: 21vh;
-}
 
 .carousel{
     width: 86vw;

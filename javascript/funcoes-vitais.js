@@ -10,51 +10,25 @@ function toggleSidebar() {
 }
 
 window.addEventListener('scroll', function() { 
-    const header = document.querySelector('header');
-    const barra_navegacao = document.querySelector('#barra-navegacao');
-    const carroseldeimagens = document.querySelector('#carroseldeimagens');
     const menu = document.querySelector('#menu-icon');
-    const bg_horizontal = document.querySelector('.bg-vertical-horizontal');
-
-    const itens_stickys = [header, barra_navegacao, carroseldeimagens, menu, bg_horizontal];
     
     const threshold = window.innerHeight * 0.18; // 21vh em pixels
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > threshold) {
-            // Adiciona 'sticky' quando o scroll for maior que 21vh
-            itens_stickys.forEach(i => {
-                if (i) i.classList.add('sticky');
-            });
-        } else if (window.scrollY <= (window.innerHeight * 0.08)) {
-            // Remove 'sticky' apenas quando o scroll for exatamente 0
-            itens_stickys.forEach(i => {
-                if (i) i.classList.remove('sticky');
-            });
+           menu.classList.add('sticky');
+        } else if (window.scrollY <= (window.innerHeight * 0.8)) {
+            menu.classList.remove('sticky');
         }
     });
 });
 
 
 function esconderElementos() {
-    const elementos_desktop = document.querySelectorAll('.esconderNoDesktop');
-    elementos_desktop.forEach(elemento => {
-        const isSticky = elemento.classList.contains('sticky');
-        if (window.innerWidth > 1000 && !isSticky) {
-            elemento.style.position = 'absolute';
-            elemento.style.left = '-999px';
-            elemento.style.top = '-999px';
-        } else {
-            elemento.style.position = '';
-            elemento.style.left = '';
-            elemento.style.top = '';
-        }
-    });
-
     const elementos_mobile = document.querySelectorAll('.esconderNoMobile');
     elementos_mobile.forEach(elemento => {
         const isSticky = elemento.classList.contains('sticky');
-        if (window.innerWidth < 1000 && !isSticky) {
+        if (window.innerWidth < 600 && !isSticky) {
             elemento.style.position = 'absolute';
             elemento.style.left = '-999px';
             elemento.style.top = '-999px';

@@ -236,6 +236,10 @@ a#peixes {
         font-size: 2em;
     }
 
+    div.bg-vertical-horizontal{
+        background-image: url("../media/imagens/backgrounds/pg-animais/background-verde-vertical\ \(Médio\).jpg");
+    }
+
 }
 
 @media screen and (min-width: 1200px){
