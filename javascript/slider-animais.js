@@ -37,19 +37,3 @@ dots.forEach((li, key) => {
 window.onresize = function(event) {
     reloadSlider();
 };
-
-function ajustarNomeCientifico() {
-    const nomesCientificos = document.querySelectorAll('.nome-cientifico');
-    nomesCientificos.forEach(nome => {
-        if (window.innerWidth <= 768) {
-            const texto = nome.textContent;
-            const semAno = texto.replace(/, \d{4}\)/, ')'); // Remove o ano
-            const semDescobridor = semAno.replace(/\s\w+\)$/, ')'); // Remove o nome do descobridor
-            const semParenteses = semDescobridor.replace(/[()]/g, ''); // Remove os parênteses
-            nome.textContent = semParenteses;
-        }
-    });
-}
-
-window.addEventListener('resize', ajustarNomeCientifico);
-window.addEventListener('load', ajustarNomeCientifico);
