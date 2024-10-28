@@ -1,14 +1,4 @@
-section#cabecalho-pagina div#background {
-    width: 100vw; /* Define explicitamente a largura */
-    height: 100px;
-    overflow: hidden;
-    margin: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
+
 
 /* Estilos da caixa de texto */
 section#cabecalho-pagina div#caixa-de-texto {
@@ -25,4 +15,40 @@ section#cabecalho-pagina div#caixa-de-texto {
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
+}
+
+h2#titulo-pagina {
+    font-size: 1.9em;
+    color: white;
+    text-transform: uppercase;
+}
+
+section#conteudo {
+    background-color: rgba(63, 63, 63, 0.616);
+    backdrop-filter: blur(7px);
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+    
+    border-radius: 20px 20px 0px 0px;
+}
+
+section#conteudo h2 {
+    text-align: center;
+    color: white;
+    font-size: 3em;
+}
+
+#cabecalho-conteudo {
+    backdrop-filter: blur(0px);
+    background-color: rgb(36, 36, 36);
+    border-radius: 20px 20px 0px 0px; /* Mesmo valor de section#conteudo */
+    max-width: 1200px; /* Igual a section#conteudo */
+    margin: auto; /* Centraliza para alinhar com section#conteudo */
+    margin-top: -20px; /* Ajusta o posicionamento vertical */
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
