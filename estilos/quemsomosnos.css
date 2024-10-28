@@ -1,0 +1,11 @@
+section#cabecalho-paginaq div#background {
+    width: 100vw; /* Define explicitamente a largura */
+    height: 100px;
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
