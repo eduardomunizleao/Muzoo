@@ -1,4 +1,4 @@
-section#cabecalho-pagina-quem-somos div#background {
+section#cabecalho-pagina div#background {
     width: 100vw; /* Define explicitamente a largura */
     height: 100px;
     overflow: hidden;
@@ -10,7 +10,8 @@ section#cabecalho-pagina-quem-somos div#background {
     align-items: flex-end;
 }
 
-section#cabecalho-pagina-quem-somos div#caixa-de-texto {
+/* Estilos da caixa de texto */
+section#cabecalho-pagina div#caixa-de-texto {
     background-color: rgba(134, 133, 133, 0.616);
     backdrop-filter: blur(16px);
     box-shadow: 4px 3px rgba(255, 255, 255, 0.678);
