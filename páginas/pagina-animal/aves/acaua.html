@@ -3,33 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore o Museu de Taxidermia do IFMG, conheça as exposições e aprenda sobre a técnica milenar.">
     <title>Museu de Zoologia do IFMG Campus Bambuí</title>
-    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <link rel="shortcut icon" href="../../../media/imagens/logo/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../../estilos/slider-pagina-animais.css">
     <link rel="stylesheet" href="../../../estilos/style.css">
-    <link rel="stylesheet" href="../../../estilos/pagina-animal.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <link rel="stylesheet" href="../../../estilos/slider-pagina-animais.css">
 </head>
-
-<script>
-    // Animação de tooltip para curiosidades
-    document.querySelectorAll('.tooltip').forEach((tooltip) => {
-        tooltip.addEventListener('mouseenter', () => {
-            tooltip.querySelector('.tooltiptext').style.opacity = '1';
-        });
-
-        tooltip.addEventListener('mouseleave', () => {
-            tooltip.querySelector('.tooltiptext').style.opacity = '0';
-        });
-    });
-
-</script>
-
-<body onload="AOS.init()">
+<body class="home">
     <header>
         <section id="titulo">
             <img src="../../../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo">
@@ -44,7 +25,7 @@
             <li class="home"><a href="../../index.html"><span class="material-symbols-outlined">home</span> Página inicial </a></li>
             <li><a href="../../animais.html">Peças do museu</a></li>
             <li><a href="#">Conheça o processo</a></li>
-            <li><a href="#">Quem somos nós?</a></li>
+            <li><a href="../../quemsomosnos.html">Quem somos nós?</a></li>
             <li><a href="#">Quizzes</a></li>
             <li><a href="#">Feedback</a></li>
             <li><a href="#">Contato</a></li>
@@ -55,7 +36,7 @@
                 </span></a></li>
             <li class="esconderNoMobile"><a href="../../animais.html">Peças do museu</a></li>
             <li class="esconderNoMobile"><a href="#">Taxidermia</a></li>
-            <li class="esconderNoMobile"><a href="#">Quem somos?</a></li>
+            <li class="esconderNoMobile"><a href="../../quemsomosnos.html">Quem somos?</a></li>
             <li class="esconderNoMobile"><a href="#">Quizzes</a></li>
             <li class="esconderNoMobile"><a href="#">Feedback</a></li>
             <li class="esconderNoMobile"><a href="#">Contato</a></li>
@@ -63,64 +44,32 @@
     </nav>
 
     <script src="../../../javascript/funcoes-vitais.js" defer></script>
-
+    
     <main>
-        <div id="titulo-pagina" data-aos="fade-up">
-            <h1 class="nome-cientifico"><i>Erythrolamprus aesculapii</i></h1>
-            <p class="nome-popular">Cobra Coral Falsa</p>
-        </div>
-            
-        
-        <div class="animal-info" data-aos="fade-up">
-            <div class="slider">
-                <div class="list">
-                    <div class="item">
-                        <img src="../../../media/imagens/pagina-animal/repteis/Erythrolamprus aesculapii.jpeg" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="../../../media/imagens/pagina-animal/repteis/Erythrolamprus aesculapii2.jpeg" alt="">
-                    </div>
+        <div class="slider">
+            <div class="list">
+                <div class="item">
+                    <img src="../../../media/imagens/pagina-animal/aves/acaua.jpg" alt="">
                 </div>
-                <div class="buttons">
-                    <button id="prev"><</button>
-                    <button id="next">></button>
+                <div class="item">
+                    <img src="../../../media/imagens/pagina-animal/aves/acaua-bebe.jpg" alt="">
                 </div>
-                <ul class="dots">
-                    <li class="active"></li>
-                    <li></li>
-                </ul>
-            </div>
-            <script src="../../../javascript/slider-animais.js" defer></script>
-
-            <div class="info">
-                <h2>Cobra Coral Falsa</h2>
-                <p><strong>Nome Científico:</strong> <i>Erythrolamprus aesculapii</i> Linnaeus, 1758</p>
-                <p><strong>Distribuição Geográfica:</strong> Américas Central e do Sul, principalmente em florestas tropicais.</p>
-                <p><strong>Hábitos:</strong> É uma cobra não venenosa, frequentemente encontrada em árvores e arbustos.</p>
-                <div class="conservation-bar">
-                    <span style="width: 60%;"></span> <!-- Alterar a largura conforme o status -->
+                <div class="item">
+                    <img src="../../../media/imagens/pagina-animal/aves/acaua-2.jpg" alt="">
                 </div>
-                <p><strong>Status de Conservação:</strong> Vulnerável</p>
             </div>
+            <div class="buttons">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <h2 class="titulo-animal">Acauã <i>Herpetotheres cachinnans</i></h2>
         </div>
-
-        <h2>Curiosidades</h2>
-        <div class="curiosities" data-aos="fade-up">
-            <div class="curiosity-card">
-                <p>Curiosidade 1</p>
-                <div class="curiosity-content">As cobras corais falsas são frequentemente confundidas com cobras corais verdadeiras devido à similaridade nas cores.</div>
-            </div>
-            <div class="curiosity-card">
-                <p>Curiosidade 2</p>
-                <div class="curiosity-content">Elas podem atingir até 1 metro de comprimento e são muito ágeis.</div>
-            </div>
-            <div class="curiosity-card">
-                <p>Curiosidade 3</p>
-                <div class="curiosity-content">Sua coloração vibrante é um exemplo de mimetismo, ajudando-as a evitar predadores.</div>
-            </div>
-        </div>
-        
-        </section>
+        <script src="../../../javascript/slider-animais.js" defer></script> 
     </main>
 
     <footer>
@@ -133,9 +82,10 @@
             <div class="footer-section">
                 <h3>Links Rápidos</h3>
                 <ul>
-                    <li><a href="../../../index.html">Página Inicial</a></li>
-                    <li><a href="../../../animais.html">Peças do Museu</a></li>
+                    <li><a href="../../index.html">Página Inicial</a></li>
+                    <li><a href="../../animais.html">Peças do Museu</a></li>
                     <li><a href="#">Conheça o Processo</a></li>
+                    <li><a href="../../quemsomosnos.html">Quem somos nós</a></li>
                     <li><a href="#">Quizzes</a></li>
                     <li><a href="#">Contato</a></li>
                 </ul>
@@ -162,11 +112,6 @@
             <p>Desenvolvido por Estudantes do IFMG Campus Bambuí - Curso Técnico em Informática</p>
         </div>
     </footer>
-
-    <script>
-        AOS.init({
-            duration: 1200,
-        });
-    </script>
+    
 </body>
 </html>

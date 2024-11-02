@@ -1,4 +1,7 @@
 
+main {
+    background-color: white;
+}
 
 /* Estilos da caixa de texto */
 section#cabecalho-pagina div#caixa-de-texto {
@@ -52,3 +55,4 @@ section#conteudo h2 {
     align-items: center;
     padding: 20px;
 }
+
