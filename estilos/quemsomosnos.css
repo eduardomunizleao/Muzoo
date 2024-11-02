@@ -1,9 +1,42 @@
 
-main {
+main{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+
     background-color: white;
+    width: 100vw;
+    margin: 20px 0px;
+
+    padding: 0px;
+    padding-top: 10px;
+
+    margin: auto;
+    font-family: var(--font2);
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: justify;
+
+    box-shadow: none;
 }
 
+
 /* Estilos da caixa de texto */
+
+section#cabecalho-pagina div#background {
+    width: 100vw; /* Define explicitamente a largura */
+    height: 100px;
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+
 section#cabecalho-pagina div#caixa-de-texto {
     background-color: rgba(134, 133, 133, 0.616);
     backdrop-filter: blur(16px);
@@ -13,7 +46,7 @@ section#cabecalho-pagina div#caixa-de-texto {
     min-width: 70vw;
     height: 57px;
     margin-left: 10px;
-    margin-bottom: 6px;
+    margin-bottom: 30px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -56,3 +89,61 @@ section#conteudo h2 {
     padding: 20px;
 }
 
+div.texto{
+    margin: auto;
+    margin-bottom: 60px;
+    width: 80vw;
+}
+
+@media screen and (max-width: 1200px){
+    section#conteudo {
+        padding: 15px;
+        border-radius: 0;
+    }
+
+    #cabecalho-conteudo {
+        border-radius: 0; /* Remove as bordas arredondadas */
+        width: 110%;
+        margin-top: -15px;
+        margin-left: -15px;
+    }
+
+    h2#titulo-pagina {
+        font-size: 1.5em;
+    }
+
+    section#conteudo h2 {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 800px){
+    section#cabecalho-pagina div#caixa-de-texto {
+        min-width: 90vw; /* Ajuste para tela menor */
+        margin-left: 0; /* Remove a margem à esquerda */
+        margin-bottom: 12px; /* Aumenta a margem inferior para espaçamento */
+    }
+
+    section#conteudo h2 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 600px){
+    section#conteudo {
+        padding: 10px; /* Reduz o padding */
+    }
+
+    #cabecalho-conteudo {
+        margin-top: -10px;
+        line-height: 2em;
+    }
+
+    h2#titulo-pagina {
+        font-size: 1.3em;
+    }
+
+    section#conteudo h2 {
+        font-size: 2em;
+    }
+}
