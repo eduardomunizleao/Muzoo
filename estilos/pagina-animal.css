@@ -21,6 +21,74 @@
     display: none; /* oculta a div.info-mobile por padrão */
 }
 
+.infomobile{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+}
+
+button#open{
+    position: absolute;
+    top: 50%;
+    left:100%;
+    transform: translate(calc(-100% - 20px), 0);
+
+}
+
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .28s;
+}
+
+.slider .buttons button:hover{
+    transform: scale(1.08);
+    background-color: rgba(255, 255, 255, 0.315);
+}
+
+#barra-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+
+    /* Rolagem vertical */
+    overflow-y: auto;
+
+    /* Mantém o menu inicialmente fora da tela */
+    transform: translateX(100vw);
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.5s ease;
+
+    z-index: 10001;
+}
+
+#barra-lateral.active {
+    transform: translateX(0); /* Traz o menu para a tela */
+    opacity: 1;
+}
+
 /* Media query para telas menores */
 @media screen and (max-width: 768px) {
     #info, .content {
