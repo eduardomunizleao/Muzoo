@@ -12,12 +12,14 @@
     --verde: #5C683A;
     --beige: #E7BD80;
     --azul: #3F88C5;
-    --laranja: #E94F37;
+    --laranja: #4C230A;
     --esmeralda: #59CD90;
 
     --font1: "Wittgenstein", serif;
     --font2: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     --font3: "Rokkitt", Times, serif;
+    --font4: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font5: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 }
 
 /*Fim variáveis*/
@@ -178,7 +180,7 @@ nav #barra-lateral a {
 }
 
 nav #barra-lateral a.atual{
-    color: brown;
+    color: var(--laranja);
     background-color: rgba(255, 255, 255, 0.63);
 }
 
@@ -304,7 +306,7 @@ ul#barra-navegacao a{
 }
 
 ul#barra-navegacao a.atual{
-    color: brown;
+    color: var(--laranja);
 }
 
 #close{
@@ -316,9 +318,14 @@ ul#barra-navegacao a.atual{
         margin-bottom: -4vh;
     }
 
-    .esconderNoMobile {
+    ul#barra-navegacao .esconderNoMobile {
         display: none;
     }
+
+    .esconderNoMobile{
+        display: none;
+    }
+    
     .botao-menu {
         display: block;
     }
@@ -350,8 +357,6 @@ ul#barra-navegacao a.atual{
         transform: translate(0, 10px);
     }
 }
-
-
 
 
 
@@ -400,6 +405,10 @@ section#introducao > p{
     padding: 40px 0;
     text-align: center;
     font-family: 'Arial', sans-serif;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> de8ba0151be0617a05621e53fe1003a20c8f64ef
 }
 
 #footer-content {
@@ -504,3 +513,4 @@ section#introducao > p{
         font-size: 2.5em;
     }
 }
+

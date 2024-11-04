@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museu de Zoologia do IFMG Campus Bambuí</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="shortcut icon" href="../../../media/imagens/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../estilos/slider-pagina-animais.css">
+    <link rel="stylesheet" href="../../../estilos/style.css">
+    <link rel="stylesheet" href="../../../estilos/pagina-animal.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+
+    <link rel="stylesheet" href="../../../estilos/carrossel-imagem.css">
+</head>
+
+<script>
+    // Animação de tooltip para curiosidades
+    document.querySelectorAll('.tooltip').forEach((tooltip) => {
+        tooltip.addEventListener('mouseenter', () => {
+            tooltip.querySelector('.tooltiptext').style.opacity = '1';
+        });
+
+        tooltip.addEventListener('mouseleave', () => {
+            tooltip.querySelector('.tooltiptext').style.opacity = '0';
+        });
+    });
+
+</script>
+
+<body onload="AOS.init()">
+    <header>
+        <section id="titulo">
+            <img src="../../../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo">
+            <h1>Museu de Taxidermia do IFMG</h1>
+            <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop" onclick="toggleSidebar()">menu</span>
+        </section>
+    </header>
+
+    <nav>
+        <ul id="barra-lateral">
+            <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
+            <li class="home"><a href="../../index.html"><span class="material-symbols-outlined">home</span> Página inicial </a></li>
+            <li><a href="../../animais.html">Peças do museu</a></li>
+            <li><a href="#">Conheça o processo</a></li>
+            <li><a href="#">Quem somos nós?</a></li>
+            <li><a href="#">Quizzes</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+        <ul id="barra-navegacao" class="esconderNoMobile">
+            <li class="esconderNoMobile home"><a href="../../index.html"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
+            <li class="esconderNoMobile"><a href="../../animais.html">Peças do museu</a></li>
+            <li class="esconderNoMobile"><a href="#">Taxidermia</a></li>
+            <li class="esconderNoMobile"><a href="#">Quem somos?</a></li>
+            <li class="esconderNoMobile"><a href="#">Quizzes</a></li>
+            <li class="esconderNoMobile"><a href="#">Feedback</a></li>
+            <li class="esconderNoMobile"><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+
+    <script src="../../../javascript/funcoes-vitais.js" defer></script>
+
+    <main>
+
+        <section id="carroseldeimagens">
+        <div class="carousel">
+       
+            <div class="list">
+    
+                <div class="item" style="background-image: url(../../../media/imagens/pagina-animal/repteis/Erythrolamprus\ aesculapii.jpeg);">
+                    <div class="content">
+                        <div class="title">SEÇÃO</div>
+                        <div class="name">EAGLE</div>
+                        <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                    </div>
+                    
+                </div>
+                <div class="item" style="background-image: url(../media/imagens/carrossel-imagens/eagel1.jpg); background-color: rgba(0, 0, 0, 0.534);">
+                    <div id="info" class="info content">
+                        <h2>Informações gerais</h2>
+                        <p><strong>Nome Científico:</strong> <i>Erythrolamprus aesculapii</i> Linnaeus, 1758</p>
+                        <p><strong>Distribuição Geográfica:</strong> Américas Central e do Sul, principalmente em florestas tropicais.</p>
+                        <p><strong>Hábitos:</strong> É uma cobra não venenosa, frequentemente encontrada em árvores e arbustos.</p>
+                        <div class="conservation-bar">
+                            <span style="width: 60%;"></span> <!-- Alterar a largura conforme o status -->
+                        </div>
+                        <p><strong>Status de Conservação:</strong> Vulnerável</p>
+                    </div>
+                    <div id="titulo-pagina">
+                        <h1 class="nome-cientifico"><i>Erythrolamprus aesculapii</i></h1>
+                        <p class="nome-popular">Cobra Coral Falsa</p>
+                    </div>
+            </div>
+        </div>
+
+        
+        <div id="titulo-pagina">
+            <h1 class="nome-cientifico"><i>Erythrolamprus aesculapii</i></h1>
+            <p class="nome-popular">Cobra Coral Falsa</p>
+        </div>
+
+
+        
+        
+        </section>
+        <div class="infomobile">
+            <h2>Informações gerais</h2>
+            <p><strong>Nome Científico:</strong> <i>Erythrolamprus aesculapii</i> Linnaeus, 1758</p>
+            <p><strong>Distribuição Geográfica:</strong> Américas Central e do Sul, principalmente em florestas tropicais.</p>
+            <p><strong>Hábitos:</strong> É uma cobra não venenosa, frequentemente encontrada em árvores e arbustos.</p>
+            <div class="conservation-bar">
+                <span style="width: 60%;"></span> <!-- Alterar a largura conforme o status -->
+            </div>
+            <p><strong>Status de Conservação:</strong> Vulnerável</p>
+        </div>
+    </main>
+
+    <footer>
+        <section id="footer-content">
+            <div class="footer-section">
+                <h3>Museu de Zoologia do IFMG</h3>
+                <p>&copy; 2024 Museu de Zoologia do IFMG Campus Bambuí</p>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="../../../index.html">Página Inicial</a></li>
+                    <li><a href="../../../animais.html">Peças do Museu</a></li>
+                    <li><a href="#">Conheça o Processo</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Nos Siga</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="../../../media/imagens/Nova pasta/153-1536567_facebook-twitter-pinterest-facebook-logo-png-white.png" alt="Facebook"></a>
+                    <a href="#"><img src="../../../media/imagens/Nova pasta/448-4486682_instagram-logo-png-white-circle.png" alt="Instagram"></a>
+                    <a href="#"><img src="../../../media/imagens/Nova pasta/New-X-Logo.png" alt="Twitter"></a>
+                    <a href="#"><img src="../../../media/imagens/Nova pasta/395128.png" alt="YouTube"></a>
+                </div>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@museuzoologiaifmg.edu.br</p>
+                <p>Telefone: (37) 3431-3200</p>
+            </div>
+        </section>
+    
+        <div id="footer-bottom">
+            <p>Desenvolvido por Estudantes do IFMG Campus Bambuí - Curso Técnico em Informática</p>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1200,
+        });
+    </script>
+</body>
+</html>
