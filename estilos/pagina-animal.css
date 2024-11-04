@@ -12,8 +12,48 @@
     --font5: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 }
 
+/* Estilos para .info e .info-mobile */
+#info, .content {
+    display: block; /* exibe a div.info por padrão */
+}
+
+.infomobile {
+    display: none; /* oculta a div.info-mobile por padrão */
+}
+
+/* Media query para telas menores */
+@media screen and (max-width: 768px) {
+    #info, .content {
+        display: none; /* oculta a div.info em telas menores */
+    }
+
+    .infomobile {
+        display: block; /* exibe a div.info-mobile em telas menores */
+        width: 100vw; /* Ajusta a largura para dispositivos móveis */
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #FFFFFF;
+        border-radius: 0px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Estilos de texto dentro da .info-mobile */
+    .infomobile h2 {
+        font-size: 1.8em;
+        color: var(--beige);
+        background-color: rgba(0, 0, 0, 0.849);
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .infomobile p {
+        font-size: 1em;
+        margin: 10px 0;
+    }
+}
+
 main{
-    display: block;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column wrap;
@@ -35,32 +75,36 @@ main{
 }
 
 #titulo-pagina {
-    background-color: #5C683A; /* Cor do fundo */
+    background-color: var(--verde);
     color: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    max-width: 90%; /* Ajuste para manter responsividade */
-    margin: 20px auto;
+    max-width: 90%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     line-height: 1.5em;
+    z-index: 10000;
 }
 
 .nome-cientifico {
-    font-family: 'Wittgenstein', serif; /* Fonte personalizada */
+    font-family: var(--font1);
     font-size: 2.2rem;
     margin: 0;
 }
 
 .nome-popular {
-    font-family: 'Cambria', sans-serif;
+    font-family: var(--font2);
     font-size: 1.4rem;
-    color: #E7BD80; /* Destaque para o nome popular */
+    color: var(--beige);
     margin: 5px 0 0;
 }
 
-@media (min-width:1200px){
-    #titulo-pagina{
+@media (min-width: 1200px) {
+    #titulo-pagina {
         width: 50vw;
     }
 }
@@ -69,6 +113,8 @@ main{
     #titulo-pagina {
         padding: 15px;
         font-size: 1.6rem;
+        width: 90%;
+        max-width: 90%;
     }
     .nome-cientifico {
         font-size: 1.8rem;
@@ -78,29 +124,20 @@ main{
     }
 }
 
-
-
 .animal-info {
     margin-top: 100px;
-    margin-right: 20px;
-    margin-left: 20px;
-
     font-family: var(--font5);
-
     display: flex;
     max-width: 1400px;
-    
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-
-    gap: 10px; /* Espaçamento entre itens */
+    gap: 10px;
 }
 
 .info {
     width: 600px;
     height: 400px;
-
     margin: 20px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -110,51 +147,57 @@ main{
     box-sizing: border-box;
 }
 
-.info h2{
-    color: #59CD90;
+.info h2 {
+    color: var(--beige);
+    background-color: rgba(0, 0, 0, 0.849);
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-top: -15px;
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px;
     font-size: 2.3em;
     margin-bottom: 1em;
     text-shadow: 1px 2px rgba(255, 255, 255, 0.185);
     font-family: var(--font2);
 }
 
-.info p{
+.info p {
     margin-left: 1em;
+    font-size: 1.3em;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .info {
-        width: 100vw;
-        height: 330px;
-        border-radius: 0;
+        width: 90%;
+        height: auto;
+        border-radius: 10px;
+        padding: 15px;
+        font-size: 1em;
     }
 
-    .animal-info{
+    .animal-info {
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-        margin-right: 0px;
-        margin-left: 0px;
-        margin-top: 40px;
+        margin: 0;
+        padding: 0 10px;
+        gap: 15px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .info {
-        width: 100vw;
-        height: 300px;
-        border-radius: 0;
+        width: 90%;
+        height: auto;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 0.9em;
     }
 
-    .animal-info{
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        margin-right: 0px;
-        margin-left: 0px;
+    .animal-info {
+        margin-top: 40px;
     }
 }
-
 
 .conservation-bar {
     background-color: #90BE6D;
@@ -170,7 +213,7 @@ main{
     display: block;
     height: 100%;
     background-color: #ff3300;
-    width: 60%; /* Defina o nível de extinção desejado */
+    width: 60%;
     transition: width 0.5s;
 }
 
@@ -214,11 +257,9 @@ main{
     display: block;
 }
 
-
-/* Estilos responsivos */
 @media (max-width: 768px) {
-
     .curiosity-card {
         width: 90%;
     }
 }
+

@@ -12,7 +12,7 @@
     --verde: #5C683A;
     --beige: #E7BD80;
     --azul: #3F88C5;
-    --laranja: #E94F37;
+    --laranja: #4C230A;
     --esmeralda: #59CD90;
 
     --font1: "Wittgenstein", serif;
@@ -180,7 +180,7 @@ nav #barra-lateral a {
 }
 
 nav #barra-lateral a.atual{
-    color: brown;
+    color: var(--laranja);
     background-color: rgba(255, 255, 255, 0.63);
 }
 
@@ -306,7 +306,7 @@ ul#barra-navegacao a{
 }
 
 ul#barra-navegacao a.atual{
-    color: brown;
+    color: var(--laranja);
 }
 
 #close{
@@ -510,3 +510,4 @@ section#introducao > p{
         font-size: 2.5em;
     }
 }
+
