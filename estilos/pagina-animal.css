@@ -19,14 +19,34 @@
 
 .infomobile {
     display: none; /* oculta a div.info-mobile por padrão */
-}
-
-.infomobile{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 50%;
+    right: 200%;
+    transform: translate(-50%, -50%);
     height: 100vh;
     width: 250px;
+    
+}
+
+#infomobile.active{
+    top: 50%;
+    right: 0;
+}
+
+button#open{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .28s;
+}
+
+button#open:hover{
+    background-color: rgba(255, 255, 255, 0.24);
 }
 
 button#open{
@@ -97,8 +117,6 @@ button#open{
 
     .infomobile {
         display: block; /* exibe a div.info-mobile em telas menores */
-        width: 100vw; /* Ajusta a largura para dispositivos móveis */
-        padding: 20px;
         background-color: rgba(0, 0, 0, 0.6);
         color: #FFFFFF;
         border-radius: 0px;
