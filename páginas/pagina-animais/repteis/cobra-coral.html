@@ -17,19 +17,6 @@
     <link rel="stylesheet" href="../../../estilos/carrossel-imagem.css">
 </head>
 
-<script>
-    // Animação de tooltip para curiosidades
-    document.querySelectorAll('.tooltip').forEach((tooltip) => {
-        tooltip.addEventListener('mouseenter', () => {
-            tooltip.querySelector('.tooltiptext').style.opacity = '1';
-        });
-
-        tooltip.addEventListener('mouseleave', () => {
-            tooltip.querySelector('.tooltiptext').style.opacity = '0';
-        });
-    });
-
-</script>
 
 <body onload="AOS.init()">
     <header>
@@ -67,6 +54,7 @@
     <script src="../../../javascript/funcoes-vitais.js" defer></script>
 
     <main>
+        <script src="../../../javascript/pagina-animal.js" defer></script>
 
         <section id="carroseldeimagens">
         <div class="carousel">
@@ -96,8 +84,8 @@
                         <h1 class="nome-cientifico"><i>Erythrolamprus aesculapii</i></h1>
                         <p class="nome-popular">Cobra Coral Falsa</p>
                     </div>
-                    <button id="open"><</button>
-                    <div class="infomobile">
+                    <button id="open" onclick="toggleinfo()"><</button>
+                    <div class="infomobile" id="infomobile">
                         <h2>Informações gerais</h2>
                         <p><strong>Nome Científico:</strong> <i>Erythrolamprus aesculapii</i> Linnaeus, 1758</p>
                         <p><strong>Distribuição Geográfica:</strong> Américas Central e do Sul, principalmente em florestas tropicais.</p>
