@@ -1,0 +1,333 @@
+:root{
+    --verde: #5C683A;
+    --beige: #E7BD80;
+    --azul: #3F88C5;
+    --laranja: #E94F37;
+    --esmeralda: #59CD90;
+
+    --font1: "Wittgenstein", serif;
+    --font2: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --font3: "Rokkitt", Times, serif;
+    --font4: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font5: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+}
+
+/* Estilos para .info e .info-mobile */
+#info, .content {
+    display: block; /* exibe a div.info por padrão */
+}
+
+.infomobile {
+    display: none; /* oculta a div.info-mobile por padrão */
+}
+
+.infomobile{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+}
+
+button#open{
+    position: absolute;
+    top: 50%;
+    left:100%;
+    transform: translate(calc(-100% - 20px), 0);
+
+}
+
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .28s;
+}
+
+.slider .buttons button:hover{
+    transform: scale(1.08);
+    background-color: rgba(255, 255, 255, 0.315);
+}
+
+#barra-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+
+    /* Rolagem vertical */
+    overflow-y: auto;
+
+    /* Mantém o menu inicialmente fora da tela */
+    transform: translateX(100vw);
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.5s ease;
+
+    z-index: 10001;
+}
+
+#barra-lateral.active {
+    transform: translateX(0); /* Traz o menu para a tela */
+    opacity: 1;
+}
+
+/* Media query para telas menores */
+@media screen and (max-width: 768px) {
+    #info, .content {
+        display: none; /* oculta a div.info em telas menores */
+    }
+
+    .infomobile {
+        display: block; /* exibe a div.info-mobile em telas menores */
+        width: 100vw; /* Ajusta a largura para dispositivos móveis */
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #FFFFFF;
+        border-radius: 0px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Estilos de texto dentro da .info-mobile */
+    .infomobile h2 {
+        font-size: 1.8em;
+        color: var(--beige);
+        background-color: rgba(0, 0, 0, 0.849);
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .infomobile p {
+        font-size: 1em;
+        margin: 10px 0;
+    }
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+
+    background-color: white;
+    width: 100vw;
+    margin: 20px 0px;
+
+    padding: 0px;
+    padding-top: 10px;
+
+    margin: auto;
+    font-family: var(--font2);
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: justify;
+
+    box-shadow: none;
+}
+
+#titulo-pagina {
+    background-color: var(--verde);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 90%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    line-height: 1.5em;
+    z-index: 10000;
+}
+
+.nome-cientifico {
+    font-family: var(--font1);
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.nome-popular {
+    font-family: var(--font2);
+    font-size: 1.4rem;
+    color: var(--beige);
+    margin: 5px 0 0;
+}
+
+@media (min-width: 1200px) {
+    #titulo-pagina {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #titulo-pagina {
+        padding: 15px;
+        font-size: 1.6rem;
+        width: 90%;
+        max-width: 90%;
+    }
+    .nome-cientifico {
+        font-size: 1.8rem;
+    }
+    .nome-popular {
+        font-size: 1.2rem;
+    }
+}
+
+.animal-info {
+    margin-top: 100px;
+    font-family: var(--font5);
+    display: flex;
+    max-width: 1400px;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.info {
+    width: 600px;
+    height: 400px;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.info h2 {
+    color: var(--beige);
+    background-color: rgba(0, 0, 0, 0.849);
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-top: -15px;
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px;
+    font-size: 2.3em;
+    margin-bottom: 1em;
+    text-shadow: 1px 2px rgba(255, 255, 255, 0.185);
+    font-family: var(--font2);
+}
+
+.info p {
+    margin-left: 1em;
+    font-size: 1.3em;
+}
+
+@media screen and (max-width: 768px) {
+    .info {
+        width: 90%;
+        height: auto;
+        border-radius: 10px;
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    .animal-info {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0 10px;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .info {
+        width: 90%;
+        height: auto;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .animal-info {
+        margin-top: 40px;
+    }
+}
+
+.conservation-bar {
+    background-color: #ff3300;
+    border-radius: 5px;
+    height: 25px;
+    width: calc(100% - 1em);
+    margin: 0.5em 1em;
+    position: relative;
+    overflow: hidden;
+}
+
+.conservation-bar span {
+    display: block;
+    height: 100%;
+    background-color: #90BE6D;
+    width: 60%;
+    transition: width 0.5s;
+}
+
+.curiosities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.curiosity-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    width: 220px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.curiosity-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.curiosity-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.curiosity-card:hover .curiosity-content {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .curiosity-card {
+        width: 90%;
+    }
+}
+
