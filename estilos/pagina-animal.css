@@ -12,28 +12,50 @@
     --font5: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 }
 
+
 /* Estilos para .info e .info-mobile */
 #info, .content {
     display: block; /* exibe a div.info por padrão */
 }
 
 .infomobile {
-    display: none; /* oculta a div.info-mobile por padrão */
-    position: absolute;
+    /* Posição e layout mantidos */
+    position: fixed;
     top: 50%;
-    right: 200%;
+    left: 58%;
     transform: translate(-50%, -50%);
-    height: 100vh;
-    width: 250px;
     
+    /* Estilização visual */
+    width: 80vw; /* Ocupa 90% da largura da tela para responsividade */
+    max-width: 400px; /* Limite de largura */
+    padding: 20px;
+    background-color: rgba(36, 36, 36, 0.95); /* Fundo escuro com leve transparência */
+    color: #ffffff; /* Texto branco */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6); /* Sombra para destacar */
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    z-index: 10;
+    display: none; /* Padrão escondido */
 }
 
-#infomobile.active{
-    top: 50%;
-    right: 0;
+/* Exibe o .infomobile quando ativo */
+.infomobile.active {
+    display: block;
 }
+
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+    .infomobile {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}
+
 
 button#open{
+    display: none;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -43,19 +65,88 @@ button#open{
     font-family: monospace;
     font-weight: bold;
     transition: .28s;
+    
+    position: absolute;
+    top: 50%;
+    left:100%;
+    transform: translate(calc(-100% - 20px), 0);
 }
 
 button#open:hover{
     background-color: rgba(255, 255, 255, 0.24);
 }
 
-button#open{
-    position: absolute;
+button#open.active{
+    margin-right: 20px; /* Ajuste o valor conforme necessário */
+    position: relative;
     top: 50%;
-    left:100%;
-    transform: translate(calc(-100% - 20px), 0);
-
+    left: 50vw;
+    transform: translate(calc(-100% - 130px), -50%);
 }
+
+
+
+/*------ Settings ------*/
+.container {
+  --color: #a5a5b0;
+  --size: 22px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--size);
+  user-select: none;
+  fill: var(--color);
+}
+
+.container .chevron-right {
+  position: absolute;
+  animation: keyframes-return .5s backwards;
+}
+
+/* ------ On check event ------ */
+.container input:checked ~ .chevron-right {
+  animation: keyframes-rotate .5s backwards;
+  transform: rotate(180deg);
+}
+
+/* ------ Hide the default checkbox ------ */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* ------ Animation ------ */
+@keyframes keyframes-rotate {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes keyframes-return {
+  0% {
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+
 
 .slider .buttons{
     position: absolute;
@@ -109,19 +200,17 @@ button#open{
     opacity: 1;
 }
 
+
 /* Media query para telas menores */
 @media screen and (max-width: 768px) {
+    button#open{
+        display: block;
+    }
+
     #info, .content {
         display: none; /* oculta a div.info em telas menores */
     }
 
-    .infomobile {
-        display: block; /* exibe a div.info-mobile em telas menores */
-        background-color: rgba(0, 0, 0, 0.6);
-        color: #FFFFFF;
-        border-radius: 0px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    }
 
     /* Estilos de texto dentro da .info-mobile */
     .infomobile h2 {
@@ -173,7 +262,7 @@ main{
     transform: translate(-50%, -50%);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     line-height: 1.5em;
-    z-index: 10000;
+    z-index: 100;
 }
 
 .nome-cientifico {
@@ -197,16 +286,17 @@ main{
 
 @media (max-width: 768px) {
     #titulo-pagina {
+        top: 10%;
         padding: 15px;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         width: 90%;
         max-width: 90%;
     }
     .nome-cientifico {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
     .nome-popular {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 }
 
