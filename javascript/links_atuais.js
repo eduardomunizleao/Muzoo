@@ -40,10 +40,47 @@ function esconderElementos() {
     });
 }
 
-// Chama a função ao carregar a página e ao redimensionar a janela
-window.addEventListener('load', esconderElementos);
-window.addEventListener('resize', esconderElementos);
-window.addEventListener('scroll', esconderElementos);
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtém o nome da página atual
+    const path = window.location.pathname.split("/").pop();
+
+    // Seleciona todos os links da barra de navegação
+    const links = document.querySelectorAll('#barra-lateral a');
+
+    let currentLink = null;
+
+    // Identifica o link da página atual
+    links.forEach(link => {
+        const href = link.getAttribute('href').split("/").pop();
+
+        if (href === path) {
+            link.classList.add('atual'); // Adiciona a classe 'atual' ao link correspondente
+            link.setAttribute('data-current', 'true'); // Marca o link como o atual
+            currentLink = link; // Armazena uma referência ao link atual
+        }
+    });
+
+    // Adiciona eventos de hover aos links
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            // Remove temporariamente o estilo do link atual
+            if (currentLink) {
+                currentLink.classList.remove('atual');
+            }
+            // Aplica o estilo ao link em hover
+            link.classList.add('atual');
+        });
+
+        link.addEventListener('mouseleave', () => {
+            // Remove o estilo do link hover
+            link.classList.remove('atual');
+            // Restaura o estilo ao link da página atual
+            if (currentLink) {
+                currentLink.classList.add('atual');
+            }
+        });
+    });
+});
 
 document.addEventListener("DOMContentLoaded", function() {
     // Obtém o nome da página atual
@@ -62,7 +99,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Verifica se o href corresponde ao nome da página atual
         if (href !== "#" && href === path) {
             console.log("Página correspondente encontrada:", href);  // Debug: Exibe qual link corresponde à página atual
-            link.classList.add('atual');  // Adiciona a classe 'active' ao link correspondente
+            link.classList.add('exibida');  // Adiciona a classe 'active' ao link correspondente
         }
     });
 });
+

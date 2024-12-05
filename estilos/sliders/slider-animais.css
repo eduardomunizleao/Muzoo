@@ -78,11 +78,28 @@
 .slider .dots li.active{
     width: 30px;
 }
+
 @media screen and (max-width: 768px){
     .slider{
         height: 400px;
     }
+
+    .slider .dots li{
+        list-style: none;
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+        margin: 5px;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+
+    .slider .dots li.active{
+        width: 20px;
+    }
 }
+
+
 
 /* Define a posição da sobreposição de texto em cada imagem */
 .item {
@@ -156,15 +173,11 @@
 
 /* Estilos gerais */
 .slider .btn {
-    position: absolute;
-    top: calc(50% + 60px); /* Ajuste conforme necessário */
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 1;
 }
 
 .slider .btn button {
-    margin-top: 20px; /* Margem entre o botão e o text-overlay */
+    margin-top: 19px; /* Margem entre o botão e o text-overlay */
     padding: 7px 10px;
     border: none;
     cursor: pointer;
@@ -196,10 +209,6 @@
 
 /* Estilos responsivos */
 @media screen and (max-width: 768px) {
-    .slider .btn {
-        top: calc(50% + 40px); /* Ajuste conforme necessário */
-    }
-
     .slider .btn button {
         padding: 5px 8px;
         font-size: 12px;
@@ -208,15 +217,11 @@
 }
 
 @media screen and (max-width: 480px) {
-    .slider .btn {
-        top: calc(50% + 30px); /* Ajuste conforme necessário */
-    }
-
     .slider .btn button {
         padding: 3px 6px;
         font-size: 10px;
         border-radius: 6px;
-        margin-top: 40px;
+        margin-top: 12px;
     }
 }
 

@@ -334,11 +334,11 @@
  /* Imagens em geral */
 
  .pecas{
-   background-image: url("../media/imagens/carrossel-imagens/peças/pecas-grande.png");
+   background-image: url("../../media/imagens/carrossel-imagens/peças/pecas-grande.png");
  }
 
  .taxidermia{
-   background-image: url("../media/imagens/carrossel-imagens/taxidermia/taxidermia-grande.jpg");
+   background-image: url("../../media/imagens/carrossel-imagens/taxidermia/taxidermia-grande.jpg");
  }
 
 
@@ -347,11 +347,11 @@
 @media screen and (max-width: 600px){
    div.list{
       & .pecas{
-         background-image: url("../media/imagens/carrossel-imagens/peças/pecas-grande\ \(Pequeno\).png");
+         background-image: url("../../media/imagens/carrossel-imagens/peças/pecas-grande (Pequeno).png");
       }
 
       & .taxidermia{
-         background-image: url("../media/imagens/carrossel-imagens/taxidermia/taxidermia-grande\ \(Pequeno\).jpg");
+         background-image: url("../../media/imagens/carrossel-imagens/taxidermia/taxidermia-grande (Pequeno).jpg");
       }
    }
 }

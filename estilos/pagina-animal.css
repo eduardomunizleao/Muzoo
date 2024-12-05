@@ -1,9 +1,16 @@
 :root{
-    --verde: #5C683A;
-    --beige: #E7BD80;
-    --azul: #3F88C5;
-    --laranja: #E94F37;
-    --esmeralda: #59CD90;
+    --verde: #606C38;
+    --beige: #283618;
+    --azul: #FEFAE0;
+    --laranja: #DDA15E;
+    --esmeralda: #BC6C25;
+    /*
+        --verde: #5C683A;
+        --beige: #E7BD80;
+        --azul: #3F88C5;
+        --laranja: #4C230A;
+        --esmeralda: #59CD90;
+    */
 
     --font1: "Wittgenstein", serif;
     --font2: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -173,32 +180,6 @@ button#open.active{
     background-color: rgba(255, 255, 255, 0.315);
 }
 
-#barra-lateral {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    list-style: none;
-
-    /* Rolagem vertical */
-    overflow-y: auto;
-
-    /* Mantém o menu inicialmente fora da tela */
-    transform: translateX(100vw);
-    opacity: 0;
-    transition: transform 0.25s ease, opacity 0.5s ease;
-
-    z-index: 10001;
-}
-
-#barra-lateral.active {
-    transform: translateX(0); /* Traz o menu para a tela */
-    opacity: 1;
-}
 
 
 /* Media query para telas menores */
@@ -215,7 +196,7 @@ button#open.active{
     /* Estilos de texto dentro da .info-mobile */
     .infomobile h2 {
         font-size: 1.8em;
-        color: var(--beige);
+        color: var(--laranja);
         background-color: rgba(0, 0, 0, 0.849);
         padding: 15px;
         border-radius: 10px;
@@ -274,7 +255,7 @@ main{
 .nome-popular {
     font-family: var(--font2);
     font-size: 1.4rem;
-    color: var(--beige);
+    color: var(--laranja);
     margin: 5px 0 0;
 }
 
@@ -324,7 +305,7 @@ main{
 }
 
 .info h2 {
-    color: var(--beige);
+    color: var(--laranja);
     background-color: rgba(0, 0, 0, 0.849);
     width: calc(100% + 30px);
     margin-left: -15px;

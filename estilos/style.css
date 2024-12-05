@@ -9,11 +9,18 @@
 /*Variáveis*/
 
 :root{
-    --verde: #5C683A;
-    --beige: #E7BD80;
-    --azul: #3F88C5;
-    --laranja: #4C230A;
-    --esmeralda: #59CD90;
+    --verde: #606C38;
+    --beige: #283618;
+    --azul: #FEFAE0;
+    --laranja: #DDA15E;
+    --esmeralda: #BC6C25;
+    /*
+        --verde: #5C683A;
+        --beige: #E7BD80;
+        --azul: #3F88C5;
+        --laranja: #4C230A;
+        --esmeralda: #59CD90;
+    */
 
     --font1: "Wittgenstein", serif;
     --font2: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -46,7 +53,7 @@ body{
 /* Configurações de Título */
 header {
     color: white;
-    background-color: #5C683A;
+    background-color: var(--verde);
 
     overflow: hidden;
     width: 100%;
@@ -92,7 +99,7 @@ section#titulo {
     position: relative;
     width: 100vw;
     height: 21vh;
-    background-image: linear-gradient(to bottom, var(--verde) 60%, #839254c9);
+    background-image: linear-gradient(to bottom, var(--verde) 60%, #606C38);
     border: 1px solid rgba(0, 0, 0, 0.144);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.322);
     padding: 10px;
@@ -132,7 +139,7 @@ section#titulo {
     opacity: 100%;
 }
 
-section#titulo > img {
+section#titulo img {
     width: 12vh;
 }
 
@@ -142,10 +149,11 @@ section#titulo > h1 {
     text-align: center;
     font-size: 1.2em;
     text-wrap: balance;
-    font-family: var(--font3);
+    font-family: var(--font2);
     text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.363);
     margin: 5px 0 13px 0;
 }
+
 
 /* Configurações da Barra de Navegação */
 nav#barra-lateral {
@@ -165,24 +173,20 @@ nav #barra-lateral li {
     height: 50px;
     z-index: 99999999999999;
     width: 100%;
-
-
+    
+    
 }
 
 nav #barra-lateral a {
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-nav #barra-lateral a.atual{
-    color: var(--laranja);
-    background-color: rgba(255, 255, 255, 0.63);
-}
 
 #close{
     height: 100%;
@@ -190,18 +194,32 @@ nav #barra-lateral a.atual{
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: black;
-}
-
-nav #barra-lateral a:hover:not(.botao-menu){
-    background-color: #f0f0f0;
-    outline: 2px solid rgba(97, 165, 42, 0.411);
+    color: white;
+    transition: 0.2s;
 }
 
 #close:hover{
-    background-color: #f0f0f0;
-    outline: 2px solid rgba(97, 165, 42, 0.411);
+    background-color: rgba(0, 0, 0, 0.76);
+    color: white;
+    cursor: pointer;
 }
+
+
+/* Estilo para o link ativo (atual) */
+nav #barra-lateral a.atual {
+    color: rgb(27, 27, 27);
+    outline: 2px solid #fefae088;
+    background-color: rgba(255, 255, 255, 0.76);
+}
+
+/* Estilo ao passar o mouse sobre outros links */
+nav #barra-lateral a:hover {
+    background-color: rgba(255, 255, 255, 0.76);
+    outline: 2px solid #fefae088;
+    color: rgb(27, 27, 27);
+}
+
+
 
 nav li.botao-menu a:hover{
     transform: scale(1.1);
@@ -220,19 +238,19 @@ ul.sticky{
     right: 0;
     height: 100vh;
     width: 250px;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(104, 104, 104, 0.685);
     backdrop-filter: blur(12px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     list-style: none;
-
+    
     /* Rolagem vertical */
     overflow-y: auto;
-
+    
     /* Mantém o menu inicialmente fora da tela */
     transform: translateX(100vw);
     opacity: 0;
     transition: transform 0.25s ease, opacity 0.5s ease;
-
+    
     z-index: 10001;
 }
 
@@ -251,33 +269,41 @@ ul.sticky{
 
 ul#barra-navegacao{
     height: 40px;
-
+    
     display: flex;
     justify-content: center;
     flex-flow: row nowrap;
-
+    
     background-color: var(--beige);
     list-style: none;
-
+    
     border-top: 2px solid rgba(0, 0, 0, 0.144);
     border-bottom: 2px solid rgba(0, 0, 0, 0.144);
 }
 
 ul#barra-navegacao li{
-   flex: 1 1 50px;
-   border-left: 2px solid rgba(0, 0, 0, 0.144);
-
-   display: flex;
-   flex-flow: row nowrap;
-   justify-content: center;
-   align-items: center;
-
-   overflow: hidden;
+    flex: 1 1 50px;
+    border-left: 2px solid rgba(0, 0, 0, 0.144);
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    overflow: hidden;
 }
 
 
 ul#barra-navegacao li a{
     transition: color .2s, transform .2s;
+    color: var(--azul);
+    font-family: var(--font3);
+}
+
+@media screen and (max-width: 800px) {
+    ul#barra-navegacao li a{
+        font-size: 14px;
+    }
 }
 
 ul#barra-navegacao li:hover{
@@ -305,8 +331,8 @@ ul#barra-navegacao a{
     
 }
 
-ul#barra-navegacao a.atual{
-    color: var(--laranja);
+ul#barra-navegacao a.exibida{
+    color: var(--esmeralda);
 }
 
 #close{
