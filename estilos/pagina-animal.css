@@ -1,4 +1,4 @@
-:root{
+:root {
     --verde: #606C38;
     --beige: #283618;
     --azul: #FEFAE0;
@@ -11,412 +11,170 @@
         --laranja: #4C230A;
         --esmeralda: #59CD90;
     */
-
+        
     --font1: "Wittgenstein", serif;
     --font2: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     --font3: "Rokkitt", Times, serif;
     --font4: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --font5: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
-}
-
-
-/* Estilos para .info e .info-mobile */
-#info, .content {
-    display: block; /* exibe a div.info por padrão */
-}
-
-.infomobile {
-    /* Posição e layout mantidos */
-    position: fixed;
-    top: 50%;
-    left: 58%;
-    transform: translate(-50%, -50%);
-    
-    /* Estilização visual */
-    width: 80vw; /* Ocupa 90% da largura da tela para responsividade */
-    max-width: 400px; /* Limite de largura */
-    padding: 20px;
-    background-color: rgba(36, 36, 36, 0.95); /* Fundo escuro com leve transparência */
-    color: #ffffff; /* Texto branco */
-    border-radius: 12px; /* Bordas arredondadas */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6); /* Sombra para destacar */
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    z-index: 10;
-    display: none; /* Padrão escondido */
-}
-
-/* Exibe o .infomobile quando ativo */
-.infomobile.active {
-    display: block;
-}
-
-/* Ajuste para telas pequenas */
-@media (max-width: 600px) {
-    .infomobile {
-        padding: 15px;
-        font-size: 0.9rem;
-    }
-}
-
-
-button#open{
-    display: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #fff5;
-    color: #fff;
-    border: none;
-    font-family: monospace;
-    font-weight: bold;
-    transition: .28s;
-    
-    position: absolute;
-    top: 50%;
-    left:100%;
-    transform: translate(calc(-100% - 20px), 0);
-}
-
-button#open:hover{
-    background-color: rgba(255, 255, 255, 0.24);
-}
-
-button#open.active{
-    margin-right: 20px; /* Ajuste o valor conforme necessário */
-    position: relative;
-    top: 50%;
-    left: 50vw;
-    transform: translate(calc(-100% - 130px), -50%);
-}
-
-
-
-/*------ Settings ------*/
-.container {
-  --color: #a5a5b0;
-  --size: 22px;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-  font-size: var(--size);
-  user-select: none;
-  fill: var(--color);
-}
-
-.container .chevron-right {
-  position: absolute;
-  animation: keyframes-return .5s backwards;
-}
-
-/* ------ On check event ------ */
-.container input:checked ~ .chevron-right {
-  animation: keyframes-rotate .5s backwards;
-  transform: rotate(180deg);
-}
-
-/* ------ Hide the default checkbox ------ */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* ------ Animation ------ */
-@keyframes keyframes-rotate {
-  0% {
-    transform: rotate(0deg);
-    opacity: 0;
-  }
-
-  100% {
-    transform: rotate(180deg);
-  }
-}
-
-@keyframes keyframes-return {
-  0% {
-    transform: rotate(180deg);
-    opacity: 0;
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-
-
-
-.slider .buttons{
-    position: absolute;
-    top: 45%;
-    left: 5%;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-}
-.slider .buttons button{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #fff5;
-    color: #fff;
-    border: none;
-    font-family: monospace;
-    font-weight: bold;
-    transition: .28s;
-}
-
-.slider .buttons button:hover{
-    transform: scale(1.08);
-    background-color: rgba(255, 255, 255, 0.315);
-}
-
-
-
-/* Media query para telas menores */
-@media screen and (max-width: 768px) {
-    button#open{
-        display: block;
-    }
-
-    #info, .content {
-        display: none; /* oculta a div.info em telas menores */
-    }
-
-
-    /* Estilos de texto dentro da .info-mobile */
-    .infomobile h2 {
-        font-size: 1.8em;
-        color: var(--laranja);
-        background-color: rgba(0, 0, 0, 0.849);
-        padding: 15px;
-        border-radius: 10px;
-    }
-
-    .infomobile p {
-        font-size: 1em;
-        margin: 10px 0;
-    }
+    --font5: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column wrap;
-
-    background-color: white;
-    width: 100vw;
-    margin: 20px 0px;
-
-    padding: 0px;
-    padding-top: 10px;
-
-    margin: auto;
-    font-family: var(--font2);
-    font-size: 1em;
-    line-height: 1.5em;
-    text-align: justify;
-
+    margin: 0;
+    display: block;
     box-shadow: none;
 }
 
-#titulo-pagina {
-    background-color: var(--verde);
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 90%;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    line-height: 1.5em;
-    z-index: 100;
-}
-
-.nome-cientifico {
-    font-family: var(--font1);
-    font-size: 2.2rem;
-    margin: 0;
-}
-
-.nome-popular {
-    font-family: var(--font2);
-    font-size: 1.4rem;
-    color: var(--laranja);
-    margin: 5px 0 0;
-}
-
-@media (min-width: 1200px) {
-    #titulo-pagina {
-        width: 50vw;
-    }
-}
-
-@media (max-width: 768px) {
-    #titulo-pagina {
-        top: 10%;
-        padding: 15px;
-        font-size: 1.4rem;
-        width: 90%;
-        max-width: 90%;
-    }
-    .nome-cientifico {
-        font-size: 1.4rem;
-    }
-    .nome-popular {
-        font-size: 1.1rem;
-    }
-}
-
-.animal-info {
-    margin-top: 100px;
-    font-family: var(--font5);
-    display: flex;
-    max-width: 1400px;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.info {
-    width: 600px;
-    height: 400px;
-    margin: 20px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    color: #FFFFFF;
+body{
+    overflow-x: hidden;
     box-sizing: border-box;
 }
 
-.info h2 {
-    color: var(--laranja);
-    background-color: rgba(0, 0, 0, 0.849);
-    width: calc(100% + 30px);
-    margin-left: -15px;
-    margin-top: -15px;
-    border-radius: 20px 20px 0px 0px;
-    padding: 20px;
-    font-size: 2.3em;
-    margin-bottom: 1em;
-    text-shadow: 1px 2px rgba(255, 255, 255, 0.185);
+div#tituloEimagem {
+    margin-right: auto;
+    margin-left: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100vw;
+    max-width: 1400px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+div#infogeral {
+    margin-left: 40px;
+    flex: 1 1 600px;
+}
+
+div#imagem-animal {
+    background-image: url("../media/imagens/pagina-animal/repteis/Erythrolamprus\ aesculapii.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: block;
+    width: 700px;
+    height: 400px;
+    border-radius: 20px;
+
+    flex: 1 1 700px;
+
+    border: 10px solid #283618;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.267);
+}
+
+div#imagem-animal div#titulo-imagem{
+    display: none;
+    margin-left: auto; margin-right: auto;
+    background-color: #283618;
+    border-radius: 0px 0px 10px 10px;
+}
+
+div#titulo-imagem {
+    background-color: var(--verde);
+    color: white;
+    padding: 14px;
+    border-radius: 10px;
+    text-align: center;
+
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    line-height: 1.5em;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div#titulo-imagem h2 {
+    font-family: var(--font1);
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+div#titulo-imagem h3 {
     font-family: var(--font2);
+    font-size: 1.3rem;
+    color: var(--laranja);
+    margin: 5px 0 0;
+
+    width: 30vw;
 }
 
-.info p {
-    margin-left: 1em;
-    font-size: 1.3em;
+div#descricao {
+    background-color: rgba(0, 0, 0, 0.726);
+    color: white;
+    text-align: justify;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.582);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.671);
 }
 
-@media screen and (max-width: 768px) {
-    .info {
-        width: 90%;
-        height: auto;
-        border-radius: 10px;
-        padding: 15px;
-        font-size: 1em;
+div#descricao h2 {
+    color: var(--laranja);
+}
+
+div#descricao p {
+    margin-top: 6px;
+    text-indent: 1.5em;
+}
+
+/* Media Query for screens smaller than 1400px */
+@media (max-width: 1400px) {
+    div#tituloEimagem {
+        flex-flow: column wrap;
     }
 
-    .animal-info {
-        flex-flow: column nowrap;
+    div#infogeral, div#imagem-animal {
+        max-width: 100%;
+        flex: 1 1 auto;
+        margin-left: 0;
+    }
+
+    div#imagem-animal{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:700px){
+    div#imagem-animal{
+        border-radius: 0px;
+        margin-top: 0px;
+
+        border-bottom: 30px solid #283618;
+    }
+
+    div#tituloEimagem{
+        margin-top: 0px;
         justify-content: center;
         align-items: center;
-        margin: 0;
-        padding: 0 10px;
-        gap: 15px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .info {
-        width: 90%;
-        height: auto;
-        border-radius: 10px;
-        padding: 10px;
-        font-size: 0.9em;
     }
 
-    .animal-info {
-        margin-top: 40px;
+    div#titulo-imagem {
+        display: none;
+        width: 70%;
+        padding: 7px;
+    }
+
+    div#titulo-imagem h2{
+        font-size: 1.5rem;
+    }
+
+    div#titulo-imagem h3{
+        font-size: 1.1rem;
+    }
+
+    div#imagem-animal div#titulo-imagem{
+        display: block;
+        
     }
 }
-
-.conservation-bar {
-    background-color: #ff3300;
-    border-radius: 5px;
-    height: 25px;
-    width: calc(100% - 1em);
-    margin: 0.5em 1em;
-    position: relative;
-    overflow: hidden;
-}
-
-.conservation-bar span {
-    display: block;
-    height: 100%;
-    background-color: #90BE6D;
-    width: 60%;
-    transition: width 0.5s;
-}
-
-.curiosities {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 15px;
-}
-
-.curiosity-card {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 15px;
-    width: 220px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-}
-
-.curiosity-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-.curiosity-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    width: 100%;
-}
-
-.curiosity-card:hover .curiosity-content {
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .curiosity-card {
-        width: 90%;
-    }
-}
-
