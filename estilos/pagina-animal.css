@@ -23,6 +23,7 @@ main{
     margin: 0;
     display: block;
     box-shadow: none;
+    background-color: var(--azul)
 }
 
 body{
@@ -84,6 +85,7 @@ div#titulo-imagem {
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
     line-height: 1.5em;
     z-index: 2;
+
     margin-left: auto;
     margin-right: auto;
 
@@ -149,8 +151,11 @@ div#descricao p {
     div#imagem-animal{
         border-radius: 0px;
         margin-top: 0px;
+        margin-bottom: 0px;
 
         border-bottom: 30px solid #283618;
+
+        box-shadow: none;
     }
 
     div#tituloEimagem{
@@ -161,8 +166,14 @@ div#descricao p {
 
     div#titulo-imagem {
         display: none;
-        width: 70%;
+        width: 100%;
+        box-shadow: none;
         padding: 7px;
+        border-radius: 0px;
+    }
+
+    div#imagem-animal div#titulo-imagem{
+        border-radius: 0;
     }
 
     div#titulo-imagem h2{
@@ -171,10 +182,31 @@ div#descricao p {
 
     div#titulo-imagem h3{
         font-size: 1.1rem;
+        width: 100%;
     }
 
     div#imagem-animal div#titulo-imagem{
         display: block;
         
+    }
+
+    div#descricao{
+        margin: 0px;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+
+        font-size: 1.2em;
+    }
+
+    div#descricao h2{
+        font-size: 1.4em;
+        margin-bottom: 18px;
+        line-height: 1.2em;
+    }
+
+    div#descricao p{
+        width: 90%;
+        margin: auto;
     }
 }
