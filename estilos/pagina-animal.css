@@ -1,3 +1,4 @@
+
 :root {
     --verde: #606C38;
     --beige: #283618;
@@ -17,6 +18,7 @@
     --font3: "Rokkitt", Times, serif;
     --font4: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --font5: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
 }
 
 main{
@@ -130,6 +132,11 @@ div#descricao p {
     text-indent: 1.5em;
 }
 
+.nature-title{
+    display: none;
+}
+
+
 /* Media Query for screens smaller than 1400px */
 @media (max-width: 1400px) {
     div#tituloEimagem {
@@ -200,13 +207,111 @@ div#descricao p {
     }
 
     div#descricao h2{
-        font-size: 1.4em;
-        margin-bottom: 18px;
-        line-height: 1.2em;
+        display: none;
     }
 
     div#descricao p{
         width: 90%;
         margin: auto;
+        margin-top: 30px;
     }
+
+    .nature-title:first-of-type{
+        margin-top: -15px;
+    }
+
+    .nature-title {
+        display: block;
+        width: 100vw;
+        margin-left: -15px;
+
+
+        background-color: #48512c;
+        color: var(--azul);
+        padding: 5px 10px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        font-size: 3em;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        border: 3px solid #303a22;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        font-size: 1.4em;
+        margin-bottom: 18px;
+        line-height: 1.2em;
+    }
+    .nature-title::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+        transform: rotate(30deg);
+        animation: spin 10s linear infinite;
+        z-index: -1;
+    }
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    .nature-title::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(72, 81, 44, 0.8), rgba(48, 58, 34, 0.8));
+        border-radius: 13px;
+        z-index: 0;
+    }
+    .nature-title span {
+        position: relative;
+        z-index: 2;
+    }
+
+    div#descricao{
+        color: black;
+        background-color: white;
+    }
+}
+
+
+.class-cien {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.class-cien h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+.class-cien p {
+    line-height: 1.6;
+    color: #555;
+}
+.class-cien .classification-list {
+    margin-left: 20px;
+}
+.class-cien .classification-list strong {
+    display: inline-block;
+    width: 120px;
+    color: #333;
+}
+.class-cien .classification-list p {
+    margin: 5px 0;
 }
