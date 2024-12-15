@@ -204,6 +204,7 @@ div#descricao p {
         box-shadow: none;
 
         font-size: 1.2em;
+        
     }
 
     div#descricao h2{
@@ -214,6 +215,9 @@ div#descricao p {
         width: 90%;
         margin: auto;
         margin-top: 30px;
+
+        line-height: 1.6; /* Alterado para consistência */
+        color: #555; /* Mesma cor */
     }
 
     .nature-title:first-of-type{
@@ -291,14 +295,17 @@ div#descricao p {
     margin: 0 auto;
     padding: 30px;
     border: 1px solid #ccc;
+    border-top:none;
     border-radius: 12px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .class-cien h2 {
     text-align: center;
-    color: #333;
+    color: #bc6c25;
     margin-bottom: 20px;
+
+    font-size: 1.7em;
 }
 .class-cien p {
     line-height: 1.6;
@@ -314,4 +321,45 @@ div#descricao p {
 }
 .class-cien .classification-list p {
     margin: 5px 0;
+}
+
+
+div.reproducao h2 {
+    text-align: center;
+    color: #bc6c25;
+    margin-bottom: 20px;
+
+    font-size: 1.7em;
+    margin-bottom: 30px;
+}
+div.reproducao .reproducao {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+div.reproducao p {
+    line-height: 1.6; /* Alterado para consistência */
+    color: #555; /* Mesma cor */
+}
+div.reproducao .caracteristicas {
+    background-color: #e0f7fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border-left: 5px solid #606C38;
+}
+div.reproducao ul {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+div.reproducao li {
+    margin-bottom: 10px;
+}
+div.reproducao .separador {
+    height: 2px;
+    background-color: #606C38;
+    margin: 30px 0;
 }
