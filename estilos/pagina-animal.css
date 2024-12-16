@@ -25,7 +25,7 @@ main{
     margin: 0;
     display: block;
     box-shadow: none;
-    background-color: var(--azul)
+    background-color: white;
 }
 
 body{
