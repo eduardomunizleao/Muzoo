@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+
+
+
+section#conteudo-especifico > div.template{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    border-top:none;
+    border-radius: 12px;
+    background-color: var(--azul);
+}
+
+section#conteudo-especifico > div.template h2 {
+    text-align: center;
+    color: #bc6c25;
+    margin-bottom: 30px;
+    font-size: 1.7em;
+}
+
+section#conteudo-especifico > div.template h3 {
+    color: #555;
+    margin-top: 20px;
+    font-size: 20px;
+} 
+
+section#conteudo-especifico > div.template p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1rem; /* Tamanho padrão para telas pequenas */
+}
+section#conteudo-especifico > div.template strong {
+    color: #606C38;
+}
+
+section#conteudo-especifico > div.template strong.preto{
+    color: #555;
+}
+
+section#conteudo-especifico > div.template strong.f{
+    color: #5B85AA;
+}
+
+section#conteudo-especifico > div.template strong.diferente {
+    color: #555;
+    font-size: 20px;
+}
+
+section#conteudo-especifico > div.template i {
+    color: #49622c;
+}
+
+
+
+
+.class-cien .classification-list {
+    margin-left: 20px;
+}
+.class-cien .classification-list strong {
+    display: inline-block;
+    width: 120px;
+    color: #333;
+}
+.class-cien .classification-list p {
+    margin: 5px 0;
+}
+
+.class-cien a{
+    text-decoration: none;
+    color: #3FA7D6;
+    font-style: italic;
+}
+
+.class-cien a:hover{
+    color: #2a6e8d;
+}
+
+
+div.reproducao .caracteristicas {
+    background-color: var(--azul);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border-left: 5px solid #606C38;
+}
+div.reproducao ul {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+div.reproducao li {
+    margin-bottom: 10px;
+}
+div.reproducao .separador {
+    height: 2px;
+    background-color: #606C38;
+    margin: 30px 0;
+}
+
+
+
+
+div.ocorrencia .bioma {
+    margin-bottom: 15px;
+}
+
+div.ocorrencia img {
+    display: block;
+    margin: 20px auto;
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px;
+}
+
+div.ocorrencia a.mapa-completo {
+    color: #283618;
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    max-width: 300px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7px; margin-top: 7px;
+    display: block;
+    text-transform: uppercase;
+
+    background-color: #cbc8b9;
+    padding: 9px;
+    border-radius: 9px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.253);
+    border: 2px solid #b5b2a4;
+  }
+  
+  div.ocorrencia a.mapa-completo::before{
+    margin-left: auto;
+  }
+
+  div.ocorrencia a.mapa-completo:hover{
+    cursor: pointer;
+  }
+  
+  div.ocorrencia a.mapa-completo::after, a.mapa-completo::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #BC6C25;
+    display: block;
+    transition: 0.5s;
+  }
+  
+  div.ocorrencia a.mapa-completo:hover::after, a.mapa-completo:hover::before {
+    width: 100%;
+  }
+
+
+
+div.dieta ul {
+    color: #555;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+div.dieta li {
+    margin-bottom: 10px;
+}
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 5px solid #fff;
+}
+
+.image-container .caption {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+div.morfologia .highlight {
+    background-color: var(--azul);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    border-left: 5px solid #606C38;
+}
+
+div.morfologia em {
+    color: #FF6347;
+}
+
+@media (min-width: 1024px) {
+    section#conteudo-especifico > div.template p {
+        font-size: 1.2rem; /* Aumenta o tamanho da fonte para telas grandes */
+    }
+}

@@ -41,7 +41,7 @@
 }
 
 body, html {
-    background-color: white;
+    background-color: var(--azul);
 }
 
 body{
