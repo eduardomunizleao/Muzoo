@@ -68,12 +68,7 @@ div#imagem-animal {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.267);
 }
 
-div#imagem-animal div#titulo-imagem{
-    display: none;
-    margin-left: auto; margin-right: auto;
-    background-color: #283618;
-    border-radius: 0px 0px 10px 10px;
-}
+
 
 div#titulo-imagem {
     background-color: var(--verde);
