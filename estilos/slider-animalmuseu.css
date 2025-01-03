@@ -42,7 +42,7 @@
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    pointer-events: none;
+    pointer-events: none; /* Certifique-se de que os botões filhos possam ser clicados */
 }
 
 .slider-btn {
@@ -52,7 +52,7 @@
     padding: 10px;
     font-size: 18px;
     cursor: pointer;
-    pointer-events: all;
+    pointer-events: all; /* Garantido */
 }
 
 /* Responsiveness */
@@ -65,14 +65,11 @@
 
 /* Título e Descrição */
 #tituloEimagem {
-    margin-right: auto;
-    margin-left: auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     width: 100vw;
     max-width: 1400px;
-    margin-bottom: 40px;
-    margin-top: 30px;
+    margin: 30px auto 40px auto; /* Simplificado */
 }

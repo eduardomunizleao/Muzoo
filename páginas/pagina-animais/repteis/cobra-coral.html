@@ -30,7 +30,8 @@
     <nav>
         <ul id="barra-lateral">
             <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
-            <li class="home"><a href="../../index.html"><span class="material-symbols-outlined">home</span> Página inicial </a></li>
+            <li class="home"><a href="../../index.html"><span class="material-symbols-outlined">home</span> Página
+                    inicial </a></li>
             <li><a href="../../animais.html">Animais</a></li>
             <li><a href="#">Conheça o processo</a></li>
             <li><a href="../../quemsomosnos.html">Quem somos nós?</a></li>
@@ -40,8 +41,8 @@
         </ul>
         <ul id="barra-navegacao" class="esconderNoMobile">
             <li class="esconderNoMobile home"><a href="../../index.html"><span class="material-symbols-outlined">
-                home
-                </span></a></li>
+                        home
+                    </span></a></li>
             <li class="esconderNoMobile"><a href="../../animais.html">Animais</a></li>
             <li class="esconderNoMobile"><a href="#">Taxidermia</a></li>
             <li class="esconderNoMobile"><a href="../../quemsomosnos.html">Quem somos?</a></li>
@@ -58,12 +59,14 @@
         <div id="tituloEimagem">
             <div id="imagem-animal" class="slider">
                 <div class="slider-track">
-                    <div class="slide" style="background-image: url('../../../media/imagens/animal-especifico/repteis/Erythrolamprus_aesculapii/Erythrolamprus aesculapii.jpeg');">
+                    <div class="slide"
+                        style="background-image: url('../../../media/imagens/animal-especifico/repteis/Erythrolamprus_aesculapii/Erythrolamprus aesculapii.jpeg');">
                         <div class="caption">
                             <span>Foto do animal na vida real</span>
                         </div>
                     </div>
-                    <div class="slide" style="background-image: url('../../../media/imagens/animal-especifico/repteis/Erythrolamprus_aesculapii/Erythrolamprus\ aesculapii-museu.jpeg');">
+                    <div class="slide"
+                        style="background-image: url('../../../media/imagens/animal-especifico/repteis/Erythrolamprus_aesculapii/Erythrolamprus\ aesculapii-museu.jpeg');">
                         <div class="caption">
                             <span>Foto do animal no museu</span>
                         </div>
@@ -75,57 +78,89 @@
                 </div>
             </div>
 
-            <script defer>
-                const slider = document.querySelector('.slider');
-                const track = document.querySelector('.slider-track');
-                const slides = Array.from(document.querySelectorAll('.slide'));
-                const prevBtn = document.querySelector('.prev');
-                const nextBtn = document.querySelector('.next');
-
-                let currentIndex = 0;
-                const totalSlides = slides.length;
-
-                // Atualizar a posição do slider
-                function updateSliderPosition() {
-                    const translateX = -currentIndex * 100;
-                    track.style.transform = `translateX(${translateX}%)`;
-                }
-
-                // Avançar slide
-                nextBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex + 1) % totalSlides;
-                    updateSliderPosition();
-                });
-
-                // Voltar slide
-                prevBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-                    updateSliderPosition();
-                });
-
-                // Funcionalidade de swipe
-                let startX = 0;
-                let endX = 0;
-
-                slider.addEventListener('touchstart', (e) => {
-                    startX = e.touches[0].clientX;
-                });
-
-                slider.addEventListener('touchmove', (e) => {
-                    endX = e.touches[0].clientX;
-                });
-
-                slider.addEventListener('touchend', () => {
-                    if (startX - endX > 50) {
-                        currentIndex = (currentIndex + 1) % totalSlides; // Avança
-                    } else if (endX - startX > 50) {
-                        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Retorna
-                    }
-                    updateSliderPosition();
-                });
-
-            </script>
             
+
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const slider = document.querySelector(".slider");
+                    const track = document.querySelector(".slider-track");
+                    const slides = Array.from(document.querySelectorAll(".slide"));
+                    const prevBtn = document.querySelector(".prev");
+                    const nextBtn = document.querySelector(".next");
+        
+                    let currentIndex = 0;
+                    const totalSlides = slides.length;
+        
+                    let isAnimating = false;
+
+                    function updateSliderPosition() {
+                        const translateX = -currentIndex * 100;
+                        track.style.transform = `translateX(${translateX}%)`;
+
+                        isAnimating = true;
+                        setTimeout(() => {
+                            isAnimating = false;
+                        }, 400); // Deve corresponder à duração da transição em ms
+                    }
+
+                    function goToNextSlide() {
+                        if (isAnimating) return; // Bloqueia se ainda estiver animando
+                        currentIndex = (currentIndex + 1) % totalSlides;
+                        updateSliderPosition();
+                    }
+
+                    function goToPrevSlide() {
+                        if (isAnimating) return; // Bloqueia se ainda estiver animando
+                        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                        updateSliderPosition();
+                    }
+
+        
+                    // Eventos para botões
+                    function addButtonListeners() {
+                        if (nextBtn && prevBtn) {
+                            nextBtn.addEventListener("click", goToNextSlide);
+                            prevBtn.addEventListener("click", goToPrevSlide);
+        
+                            // Para dispositivos touchscreen, garantir que os botões respondam
+                            nextBtn.addEventListener("touchend", goToNextSlide, { passive: true });
+                            prevBtn.addEventListener("touchend", goToPrevSlide, { passive: true });
+                        } else {
+                            console.error("Botões de navegação não encontrados!");
+                        }
+                    }
+        
+                    // Funcionalidade de swipe para dispositivos móveis
+                    let startX = 0;
+                    let endX = 0;
+        
+                    slider.addEventListener("touchstart", (e) => {
+                        startX = e.touches[0].clientX;
+                    });
+        
+                    slider.addEventListener("touchmove", (e) => {
+                        endX = e.touches[0].clientX;
+                    });
+        
+                    slider.addEventListener("touchend", () => {
+                        if (startX - endX > 50) {
+                            goToNextSlide(); // Avança
+                        } else if (endX - startX > 50) {
+                            goToPrevSlide(); // Retorna
+                        }
+                    });
+        
+                    // Ajuste automático ao redimensionar a tela
+                    window.addEventListener("resize", () => {
+                        updateSliderPosition();
+                    });
+        
+                    // Inicializa a posição correta do slider e eventos
+                    updateSliderPosition();
+                    addButtonListeners();
+                });
+            </script>
+
             <div id="infogeral">
                 <div id="titulo-imagem">
                     <h2>Cobra Coral Falsa</h2>
@@ -145,32 +180,46 @@
 
         <hr style="height: 4px; background-color: #283618; margin-bottom: 10px;">
 
-        <section id="conteudo-especifico">  <!-- Parte de texto puro -->
+        <section id="conteudo-especifico"> <!-- Parte de texto puro -->
 
 
 
             <div class="class-cien template">
                 <h2>1. Classificação Científica</h2>
                 <p>
-                    <strong class="f">Nome Científico:</strong>   <i>Erythrolamprus aesculapii</i> (Linnaeus, 1758)<br>
+                    <strong class="f">Nome Científico:</strong> <i>Erythrolamprus aesculapii</i> (Linnaeus, 1758)<br>
                     <strong class="f">Nomes Populares:</strong> Cobra-coral-falsa, coral-falsa, cobra-coral-de-leite<br>
                     <strong>Classificação Taxonômica:</strong>
                 <div class="classification-list">
-                    <p><strong class="preto">Domínio:</strong> <a href="https://www.infoescola.com/biologia/eucariontes/" target="_blank" rel="external">Eukaryota</a></p>
+                    <p><strong class="preto">Domínio:</strong> <a
+                            href="https://www.infoescola.com/biologia/eucariontes/" target="_blank"
+                            rel="external">Eukaryota</a></p>
 
-                    <p><strong class="preto">Reino:</strong> <a href="https://www.infoescola.com/biologia/introducao-ao-reino-animal/" target="_blank" rel="external">Animalia</a></p>
+                    <p><strong class="preto">Reino:</strong> <a
+                            href="https://www.infoescola.com/biologia/introducao-ao-reino-animal/" target="_blank"
+                            rel="external">Animalia</a></p>
 
-                    <p><strong class="preto">Filo:</strong> <a href="https://www.infoescola.com/biologia/cordados-chordata/" target="_blank" rel="external">Chordata</a></p>
+                    <p><strong class="preto">Filo:</strong> <a
+                            href="https://www.infoescola.com/biologia/cordados-chordata/" target="_blank"
+                            rel="external">Chordata</a></p>
 
-                    <p><strong class="preto">Classe:</strong> <a href="https://www.infoescola.com/biologia/repteis-classe-reptilia/" target="_blank" rel="external">Reptilia</a></p>
+                    <p><strong class="preto">Classe:</strong> <a
+                            href="https://www.infoescola.com/biologia/repteis-classe-reptilia/" target="_blank"
+                            rel="external">Reptilia</a></p>
 
-                    <p><strong class="preto">Ordem:</strong> <a href="https://www.infoescola.com/animais/repteis-escamados/" target="_blank" rel="external">Squamata</a></p>
+                    <p><strong class="preto">Ordem:</strong> <a
+                            href="https://www.infoescola.com/animais/repteis-escamados/" target="_blank"
+                            rel="external">Squamata</a></p>
 
-                    <p><strong class="preto">Família:</strong> <a href="https://pt.wikipedia.org/wiki/Dipsadidae" target="_blank" rel="external">Dipsadidae</a></p>
+                    <p><strong class="preto">Família:</strong> <a href="https://pt.wikipedia.org/wiki/Dipsadidae"
+                            target="_blank" rel="external">Dipsadidae</a></p>
 
-                    <p><strong class="preto">Gênero:</strong> <a href="https://pt.wikipedia.org/wiki/Erythrolamprus" target="_blank" rel="external">Erythrolamprus</a></p>
+                    <p><strong class="preto">Gênero:</strong> <a href="https://pt.wikipedia.org/wiki/Erythrolamprus"
+                            target="_blank" rel="external">Erythrolamprus</a></p>
 
-                    <p><strong class="preto">Espécie:</strong> <a href="https://pt.wikipedia.org/wiki/Erythrolamprus_aesculapii" target="_blank" rel="external">Erythrolamprus aesculapii</a></p>
+                    <p><strong class="preto">Espécie:</strong> <a
+                            href="https://pt.wikipedia.org/wiki/Erythrolamprus_aesculapii" target="_blank"
+                            rel="external">Erythrolamprus aesculapii</a></p>
                 </div>
                 </p>
             </div>
@@ -182,16 +231,24 @@
             <div class="reproducao template">
                 <h2>2. Aspectos Reprodutivos</h2>
                 <div class="reproducao">
-                    <p>A <i>Erythrolamprus aesculapii</i> é conhecida por sua reprodução ovípara. As fêmeas depositam ovos em locais protegidos, como sob folhas, troncos caídos ou cavidades no solo. Seus filhotes nascem completamente independentes, já aptos a caçar e se proteger desde os primeiros dias de vida. A temporada de reprodução é influenciada pelas condições climáticas, com maior atividade durante a estação chuvosa, quando há maior disponibilidade de presas e condições favoráveis para a incubação.</p>
+                    <p>A <i>Erythrolamprus aesculapii</i> é conhecida por sua reprodução ovípara. As fêmeas depositam
+                        ovos em locais protegidos, como sob folhas, troncos caídos ou cavidades no solo. Seus filhotes
+                        nascem completamente independentes, já aptos a caçar e se proteger desde os primeiros dias de
+                        vida. A temporada de reprodução é influenciada pelas condições climáticas, com maior atividade
+                        durante a estação chuvosa, quando há maior disponibilidade de presas e condições favoráveis para
+                        a incubação.</p>
 
                     <div class="separador"></div>
                     <div class="caracteristicas">
                         <p><strong>Características Reprodutivas:</strong></p>
                         <ul>
                             <li>As fêmeas geralmente depositam entre 6 e 10 ovos por postura.</li>
-                            <li>Ao nascer, os filhotes são independentes, aptos a se alimentar e se defender sozinhos.</li>
-                            <li>Os ovos são depositados em locais protegidos, como sob folhas, troncos caídos ou cavidades no solo.</li>
-                            <li>A temporada de reprodução ocorre principalmente durante a estação chuvosa, quando as condições são mais favoráveis.</li>
+                            <li>Ao nascer, os filhotes são independentes, aptos a se alimentar e se defender sozinhos.
+                            </li>
+                            <li>Os ovos são depositados em locais protegidos, como sob folhas, troncos caídos ou
+                                cavidades no solo.</li>
+                            <li>A temporada de reprodução ocorre principalmente durante a estação chuvosa, quando as
+                                condições são mais favoráveis.</li>
                         </ul>
                     </div>
                 </div>
@@ -205,7 +262,8 @@
                 <h2>3. Risco de extinção</h2>
 
                 <p>
-                    O status de conservação da <i>Erythrolamprus aesculapii</i> é classificado como <strong>Pouco Preocupante
+                    O status de conservação da <i>Erythrolamprus aesculapii</i> é classificado como <strong>Pouco
+                        Preocupante
                         (LC)</strong> pela IUCN. Apesar de sua ampla distribuição pela América do Sul, a espécie pode
                     enfrentar ameaças devido à destruição de habitats naturais, como desmatamento e mudanças no uso do
                     solo, que podem afetar suas populações no longo prazo.
@@ -219,18 +277,24 @@
             <div class="ocorrencia template">
                 <h2>4. Ocorrência</h2>
                 <p>A cobra-coral-falsa ocorre em diversos biomas da América do Sul, com destaque para:</p>
-                <div class="bioma"><strong>Amazônia:</strong> florestas tropicais densas e biodiversidade abundante.</div>
+                <div class="bioma"><strong>Amazônia:</strong> florestas tropicais densas e biodiversidade abundante.
+                </div>
                 <div class="bioma"><strong>Cerrado:</strong> savanas e vegetação arbustiva, onde exibe um padrão de
                     coloração díade (duas faixas pretas).</div>
                 <div class="bioma"><strong>Mata Atlântica:</strong> florestas úmidas e clima tropical.</div>
                 <div class="bioma"><strong>Pantanal:</strong> áreas alagadas com rica fauna.</div>
                 <p>
-                    Em termos de distribuição geográfica no Brasil, a espécie abrange estados como <strong class="preto">Distrito Federal, Minas Gerais, Mato Grosso, Mato Grosso do Sul, Paraná, Rio de Janeiro e São Paulo</strong>. Essa ampla distribuição reflete sua capacidade de adaptação a
+                    Em termos de distribuição geográfica no Brasil, a espécie abrange estados como <strong
+                        class="preto">Distrito Federal, Minas Gerais, Mato Grosso, Mato Grosso do Sul, Paraná, Rio de
+                        Janeiro e São Paulo</strong>. Essa ampla distribuição reflete sua capacidade de adaptação a
                     diferentes condições climáticas e ambientais.
                 </p>
 
-                <img src="../../../media/imagens/animal-especifico/repteis/Erythrolamprus_aesculapii/distribution.jpg" alt="Distribuição da Cobra-Coral-Falsa">
-                <a class="mapa-completo" href="https://portal-espacial.sibbr.gov.br/spatial-hub/?q=lsid:212428" rel="external" target="_blank" onclick="alert('Esse recurso pode não funcionar bem em alguns dispositivos!')">
+                <img src="../../../media/imagens/animal-especifico/repteis/Erythrolamprus_aesculapii/distribution.jpg"
+                    alt="Distribuição da Cobra-Coral-Falsa">
+                <a class="mapa-completo" href="https://portal-espacial.sibbr.gov.br/spatial-hub/?q=lsid:212428"
+                    rel="external" target="_blank"
+                    onclick="alert('Esse recurso pode não funcionar bem em alguns dispositivos!')">
                     Ver mapa interativo
                 </a>
             </div>
@@ -241,7 +305,8 @@
 
             <div class="dieta template">
                 <h2>5. Dieta e Hábitos Alimentares</h2>
-                <p><strong class="diferente">Hábitos Alimentares:</strong> A <i>Erythrolamprus aesculapii</i> é uma predadora
+                <p><strong class="diferente">Hábitos Alimentares:</strong> A <i>Erythrolamprus aesculapii</i> é uma
+                    predadora
                     ativa, utilizando
                     sua agilidade para capturar presas vivas, que são engolidas inteiras. Sua alimentação varia conforme
                     a disponibilidade de presas em seu habitat.</p>
@@ -257,8 +322,10 @@
                 </ul>
 
                 <div class="image-container">
-                    <img src="../../../media/imagens/animal-especifico/repteis/Erythrolamprus_aesculapii/alimentacao.jpg" alt="Registro de predação da Erythrolamprus aesculapii alimentando-se de uma cobra">
-                    <div class="caption">Registro de predação da <i style="color: white;">Erythrolamprus aesculapii</i> alimentando-se de outra cobra</div>
+                    <img src="../../../media/imagens/animal-especifico/repteis/Erythrolamprus_aesculapii/alimentacao.jpg"
+                        alt="Registro de predação da Erythrolamprus aesculapii alimentando-se de uma cobra">
+                    <div class="caption">Registro de predação da <i style="color: white;">Erythrolamprus aesculapii</i>
+                        alimentando-se de outra cobra</div>
                 </div>
             </div>
 
@@ -271,8 +338,11 @@
                 <h3>Coloração:</h3>
                 <p>A <i>Erythrolamprus aesculapii</i> apresenta um padrão característico de anéis alternados
                     vermelhos, pretos e brancos ou amarelos, imitando a coloração das cobras-corais verdadeiras
-                    (<a href="https://www.infoescola.com/repteis/cobra-coral/" rel="external" target="_blank" style="text-decoration: none;"><em>Micrurus spp.</em></a>). Essa estratégia de mimetismo batesiano a protege de predadores, que a
-                    confundem com espécies venenosas. Além disso, durante comportamentos de defesa, a cobra utiliza movimentos sinuosos com a cauda e achata o corpo para reforçar essa aparência ameaçadora.</p>
+                    (<a href="https://www.infoescola.com/repteis/cobra-coral/" rel="external" target="_blank"
+                        style="text-decoration: none;"><em>Micrurus spp.</em></a>). Essa estratégia de mimetismo
+                    batesiano a protege de predadores, que a
+                    confundem com espécies venenosas. Além disso, durante comportamentos de defesa, a cobra utiliza
+                    movimentos sinuosos com a cauda e achata o corpo para reforçar essa aparência ameaçadora.</p>
 
                 <h3>Morfologia:</h3>
                 <div class="highlight">
@@ -295,16 +365,24 @@
 
             <div class="nutricao template">
                 <h2>7. Nutrição</h2>
-                <p>A cobra-coral-falsa possui uma dieta <strong>estritamente carnívora</strong>, composta principalmente por vertebrados, o que garante uma alimentação rica em proteínas. Esses nutrientes são <strong>fundamentais</strong> para o crescimento, a manutenção corporal e a reprodução da espécie, permitindo que ela sustente sua atividade predatória e se desenvolva plenamente em seu habitat natural.</p>
+                <p>A cobra-coral-falsa possui uma dieta <strong>estritamente carnívora</strong>, composta principalmente
+                    por vertebrados, o que garante uma alimentação rica em proteínas. Esses nutrientes são
+                    <strong>fundamentais</strong> para o crescimento, a manutenção corporal e a reprodução da espécie,
+                    permitindo que ela sustente sua atividade predatória e se desenvolva plenamente em seu habitat
+                    natural.
+                </p>
             </div>
 
             <hr style="height: 4px; background-color: #283618; margin-bottom: 40px;">
 
             <div class="importancia template">
                 <h2>8. Papel ecológico</h2>
-                <p>A <i>Erythrolamprus aesculapii</i> atua como uma predadora secundária, desempenhando um papel crucial no controle das populações de pequenos vertebrados, como lagartos, anfíbios e outras serpentes. Essa função contribui diretamente para a manutenção do equilíbrio ecológico em seus habitats, regulando cadeias alimentares e evitando o crescimento excessivo de suas presas.</p>
+                <p>A <i>Erythrolamprus aesculapii</i> atua como uma predadora secundária, desempenhando um papel crucial
+                    no controle das populações de pequenos vertebrados, como lagartos, anfíbios e outras serpentes. Essa
+                    função contribui diretamente para a manutenção do equilíbrio ecológico em seus habitats, regulando
+                    cadeias alimentares e evitando o crescimento excessivo de suas presas.</p>
             </div>
-            
+
 
 
 
@@ -334,13 +412,16 @@
             <div class="footer-section">
                 <h3>Nos Siga</h3>
                 <div class="social-icons">
-                    <a target="_blank" href="https://www.instagram.com/geas_ifmg/?hl=pt-br"><img src="../../../media/imagens/icones/448-4486682_instagram-logo-png-white-circle.png" alt="Instagram"></a>
+                    <a target="_blank" href="https://www.instagram.com/geas_ifmg/?hl=pt-br"><img
+                            src="../../../media/imagens/icones/448-4486682_instagram-logo-png-white-circle.png"
+                            alt="Instagram"></a>
                 </div>
             </div>
 
             <div class="footer-section">
                 <h3>Contato</h3>
-                <p>Email: <a href="mailto:clarice.silva@ifmg.edu.br" style="text-decoration: none; color: #5B85AA">clarice.silva@ifmg.edu.br</a></p>
+                <p>Email: <a href="mailto:clarice.silva@ifmg.edu.br"
+                        style="text-decoration: none; color: #5B85AA">clarice.silva@ifmg.edu.br</a></p>
             </div>
         </section>
 
