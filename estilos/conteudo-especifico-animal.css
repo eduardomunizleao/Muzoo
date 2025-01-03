@@ -185,9 +185,12 @@ div.dieta li {
 
 .image-container .caption {
     position: absolute;
+    margin: auto;
+
+    width: 90%;
     bottom: 15px;
-    left: 10px;
-    right: 10px;
+    left: 0px;
+    right: 0px;
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
     padding: 10px;
@@ -207,6 +210,26 @@ div.morfologia .highlight {
 
 div.morfologia em {
     color: #FF6347;
+}
+
+div.morfologia .caracteristicas {
+    background-color: var(--azul);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border-left: 5px solid #606C38;
+}
+div.morfologia ul {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+div.morfologia li {
+    margin-bottom: 10px;
+}
+div.morfologia .separador {
+    height: 2px;
+    background-color: #606C38;
+    margin: 30px 0;
 }
 
 @media (min-width: 1024px) {
