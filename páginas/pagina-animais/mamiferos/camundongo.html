@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../../estilos/pagina-animal.css">
 
     <link rel="stylesheet" href="../../../estilos/conteudo-especifico-animal.css">
-    <link rel="stylesheet" href="../../../estilos/slider-animalmuseu.css">
+    <link rel="stylesheet" href="../../../estilos/sliders/slider-animalmuseu.css">
 </head>
 
 
@@ -75,56 +75,7 @@
                 </div>
             </div>
 
-            <script defer>
-                const slider = document.querySelector('.slider');
-                const track = document.querySelector('.slider-track');
-                const slides = Array.from(document.querySelectorAll('.slide'));
-                const prevBtn = document.querySelector('.prev');
-                const nextBtn = document.querySelector('.next');
-
-                let currentIndex = 0;
-                const totalSlides = slides.length;
-
-                // Atualizar a posição do slider
-                function updateSliderPosition() {
-                    const translateX = -currentIndex * 100;
-                    track.style.transform = `translateX(${translateX}%)`;
-                }
-
-                // Avançar slide
-                nextBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex + 1) % totalSlides;
-                    updateSliderPosition();
-                });
-
-                // Voltar slide
-                prevBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-                    updateSliderPosition();
-                });
-
-                // Funcionalidade de swipe
-                let startX = 0;
-                let endX = 0;
-
-                slider.addEventListener('touchstart', (e) => {
-                    startX = e.touches[0].clientX;
-                });
-
-                slider.addEventListener('touchmove', (e) => {
-                    endX = e.touches[0].clientX;
-                });
-
-                slider.addEventListener('touchend', () => {
-                    if (startX - endX > 50) {
-                        currentIndex = (currentIndex + 1) % totalSlides; // Avança
-                    } else if (endX - startX > 50) {
-                        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Retorna
-                    }
-                    updateSliderPosition();
-                });
-
-            </script>
+            <script src="../../../javascript/slider-animalmuseu.js"></script>
 
             <div id="infogeral">
                 <div id="titulo-imagem">
