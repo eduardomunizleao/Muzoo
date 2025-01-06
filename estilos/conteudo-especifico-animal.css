@@ -208,7 +208,7 @@ div.morfologia .highlight {
     border-left: 5px solid #606C38;
 }
 
-div.morfologia em {
+em {
     color: #FF6347;
 }
 
@@ -231,9 +231,31 @@ div.morfologia .separador {
     background-color: #606C38;
     margin: 30px 0;
 }
+div.predadores .caracteristicas {
+    background-color: var(--azul);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border-left: 5px solid #606C38;
+}
+
+div.predadores ul {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+
+div.predadores li {
+    margin-bottom: 10px;
+}
+
+div.predadores .separador {
+    height: 2px;
+    background-color: #606C38;
+    margin: 30px 0;
+}
 
 @media (min-width: 1024px) {
     section#conteudo-especifico > div.template p {
-        font-size: 1.2rem; /* Aumenta o tamanho da fonte para telas grandes */
+        font-size: 1.2rem;
     }
 }
