@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Avaliação: </h1>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="feedback.css">
     
     <?php
     $nome = $_POST["txtnome"];
