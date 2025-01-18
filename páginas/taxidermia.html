@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxidermia</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="shortcut icon" href="../media/imagens/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="../estilos/taxidermia.css">
+</head>
+<body class="home">
+    <header>
+        <section id="titulo">
+            <a href="index.html"><img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo"></a>
+            <h1>Museu de Taxidermia do IFMG</h1>
+            <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop" onclick="toggleSidebar()">menu</span>
+        </section>
+    </header>
+
+    <nav>
+        <ul id="barra-lateral">
+            <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
+            <li class="home"><a href="index.html"><span class="material-symbols-outlined">home</span> Página inicial </a></li>
+            <li><a href="animais.html">Animais</a></li>
+            <li><a href="taxidermia.html">Conheça o processo</a></li>
+            <li><a href="quemsomosnos.html">Quem somos nós?</a></li>
+            <li><a href="#">Jogos interativos</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="cadastro.html">Contato</a></li>
+        </ul>
+        <ul id="barra-navegacao" class="esconderNoMobile">
+            <li class="esconderNoMobile home"><a href="index.html"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
+            <li class="esconderNoMobile"><a href="animais.html">Animais</a></li>
+            <li class="esconderNoMobile"><a href="taxidermia.html">Taxidermia</a></li>
+            <li class="esconderNoMobile"><a href="quemsomosnos.html">Quem somos?</a></li>
+            <li class="esconderNoMobile"><a href="#">Jogos interativos</a></li>
+            <li class="esconderNoMobile"><a href="feedback.html">Feedback</a></li>
+            <li class="esconderNoMobile"><a href="cadastro.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <script src="../javascript/links_atuais.js" defer></script>
+    
+    <main>
+        <div id="tituloEimagem">
+            <div id="imagem-animal" class="slider">
+                <div class="slider-track">
+                    <div class="slide" style="background-image: url('https://via.placeholder.com/800x400?text=Taxidermia+1');">
+                        <div class="caption">
+                            <span>Exemplo de taxidermia 1</span>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('https://via.placeholder.com/800x400?text=Taxidermia+2');">
+                        <div class="caption">
+                            <span>Exemplo de taxidermia 2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <button class="slider-btn prev">❮</button>
+                    <button class="slider-btn next">❯</button>
+                </div>
+            </div>
+            <div id="infogeral">
+                <div id="titulo-imagem">
+                    <h2>Taxidermia</h2>
+                    <h3><i>Preservação Artística de Animais</i></h3>
+                </div>
+                <div id="descricao">
+                    <div class="nature-title"><span>Introdução</span></div>
+                    <h2>Introdução</h2>
+                    <p>A taxidermia é uma técnica artística que envolve a preservação e montagem de animais mortos, geralmente para fins educacionais ou decorativos. Essa prática remonta a milênios e tem sido usada por diversas culturas ao longo da história.</p>
+                </div>
+            </div>
+        </div>
+        <hr style="height: 4px; background-color: #283618; margin-bottom: 10px;">
+        <section id="conteudo-especifico">
+            <div class="class-cien template">
+                <h2>1. História da Taxidermia</h2>
+                <p>A taxidermia tem raízes antigas, com evidências de práticas semelhantes encontradas em civilizações antigos como os egípcios e gregos. No entanto, foi no século XIX que a técnica moderna de taxidermia começou a se desenvolver, principalmente na Inglaterra, com avanços na embalagem e preservação dos corpos.</p>
+            </div>
+            <div class="class-cien template">
+                <h2>2. Processo de Taxidermia</h2>
+                <p>O processo de taxidermia envolve vários passos, incluindo a preparação do corpo, a escultura do músculo, a aplicação da pele e o acabamento final. Ferramentas específicas, como escultores de músculos e tintas, são utilizadas para alcançar um resultado realista.</p>
+            </div>
+            <div class="class-cien template">
+                <h2>3. Importância da Taxidermia</h2>
+                <p>A taxidermia desempenha um papel importante na educação, permitindo que as pessoas estudem animais de perto sem o risco de interações vivas. Além disso, é uma forma de preservar espécies em perigo de extinção.</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sliderTrack = document.querySelector('.slider-track');
+            const slides = document.querySelectorAll('.slide');
+            const slideWidth = slides[0].clientWidth;
+            let currentIndex = 0;
+
+            document.querySelector('.next').addEventListener('click', () => {
+                if (currentIndex < slides.length - 1) {
+                    currentIndex++;
+                    sliderTrack.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+                }
+            });
+
+            document.querySelector('.prev').addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    sliderTrack.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+                }
+            });
+        });
+    </script>
+
+    <footer>
+        <section id="footer-content">
+            <div class="footer-section">
+                <h3>Museu de Zoologia do IFMG</h3>
+                <p>&copy; 2024 Museu de Zoologia do IFMG Campus Bambuí</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="animais.html">Animais</a></li>
+                    <li><a href="taxidermia.html">Conheça o processo</a></li>
+                    <li><a href="quemsomosnos.html">Quem somos nós?</a></li>
+                    <li><a href="#">Jogos interativos</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="cadastro.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Nos Siga</h3>
+                <div class="social-icons">
+                    <a target="_blank" href="https://www.instagram.com/geas_ifmg/?hl=pt-br"><img src="../media/imagens/icones/448-4486682_instagram-logo-png-white-circle.png" alt="Instagram"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: <a href="mailto:clarice.silva@ifmg.edu.br" style="text-decoration: none; color: #5B85AA">clarice.silva@ifmg.edu.br</a></p>
+            </div>
+        </section>
+
+        <div id="footer-bottom">
+            <p>Desenvolvido por Estudantes do IFMG Campus Bambuí - Curso Técnico em Informática</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
