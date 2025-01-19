@@ -1,143 +1,161 @@
-:root {
-    --azul: #e0f7fa;
+div#infogeral > div#titulo-imagem{
+    margin-bottom: -10px;
+    border-radius: 10px 10px 0 0;
 }
+
+div#infogeral > div#descricao{
+    border: none;
+    box-shadow: none;
+    border-radius:  0 0 20px 20px ;
+}
+
+div#infogeral > div#descricao p{
+    text-align: center;
+    text-indent: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
+    background-color: #e4e1d2;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
-main {
-    padding: 20px;
-}
-#tituloEimagem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#imagem-animal {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.slider-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-.slide {
-    min-width: 100%;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-.caption {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 0 0 12px 12px;
-}
-.slider-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-.slider-btn {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-.slider-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-#infogeral {
-    margin-top: 20px;
-    max-width: 800px;
-    text-align: center;
-}
-#titulo-imagem h2 {
-    margin: 0;
-    color: #bc6c25;
-}
-#titulo-imagem h3 {
-    margin: 5px 0 0;
-    color: #555;
-}
-#descricao {
-    margin-top: 20px;
-    text-align: justify;
-}
-.nature-title span {
-    display: block;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #606C38;
-}
-hr {
-    height: 4px;
+section#conteudo-especifico nav {
     background-color: #283618;
-    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
 }
-section#conteudo-especifico > div.template {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px;
-    border-top: none;
-    border-radius: 12px;
-    background-color: var(--azul);
-}
-section#conteudo-especifico > div.template h2 {
+section#conteudo-especifico nav a {
+    color: white;
     text-align: center;
-    color: #bc6c25;
-    margin-bottom: 30px;
-    font-size: 1.7em;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin: 0 10px;
 }
-section#conteudo-especifico > div.template h3 {
-    color: #555;
+section#conteudo-especifico nav a:hover {
+    background-color: #606C38;
+    border-radius: 5px;
+}
+section#conteudo-especifico .container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+section#conteudo-especifico section {
+    margin-bottom: 40px;
+    position: relative;
+}
+section#conteudo-especifico section::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #606C38;
     margin-top: 20px;
-    font-size: 20px;
 }
-section#conteudo-especifico > div.template p {
-    color: #555;
+section#conteudo-especifico h2 {
+    color: #283618;
+    margin-bottom: 20px;
+}
+section#conteudo-especifico p {
     line-height: 1.6;
-    margin-bottom: 15px;
-    font-size: 1rem;
 }
-section#conteudo-especifico > div.template strong {
-    color: #606C38;
+section#conteudo-especifico ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
-section#conteudo-especifico > div.template strong.preto {
-    color: #555;
+section#conteudo-especifico .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
 }
-section#conteudo-especifico > div.template strong.f {
-    color: #5B85AA;
+section#conteudo-especifico .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #283618;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
 }
-section#conteudo-especifico > div.template strong.diferente {
-    color: #555;
-    font-size: 20px;
+section#conteudo-especifico .timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
 }
-section#conteudo-especifico > div.template i {
-    color: #49622c;
+section#conteudo-especifico .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #283618;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
 }
-@media (min-width: 1024px) {
-    section#conteudo-especifico > div.template p {
-        font-size: 1.2rem;
+section#conteudo-especifico .timeline-item.left {
+    left: 0;
+}
+section#conteudo-especifico .timeline-item.right {
+    left: 50%;
+}
+section#conteudo-especifico .timeline-item.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid transparent;
+    border-width: 13px;
+    border-color: transparent transparent transparent #283618;
+}
+section#conteudo-especifico .timeline-item.right::after {
+    left: -16px;
+}
+@media screen and (max-width: 600px) {
+    section#conteudo-especifico .timeline-item {
+        width: 100%;
+        left: 0;
     }
+    section#conteudo-especifico .timeline-item.right::after {
+        left: 16px;
+    }
+    section#conteudo-especifico .timeline-item.right::before {
+        left: 15px;
+        border-color: transparent #283618 transparent transparent;
+    }
+}
+section#conteudo-especifico .curiosity {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+section#conteudo-especifico .curiosity h3 {
+    color: #BC6C25;
+    margin-top: 0;
+}
+section#conteudo-especifico .info-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+section#conteudo-especifico .info-box h3 {
+    color: #283618;
+    margin-top: 0;
+}
+section#conteudo-especifico .info-box p {
+    margin: 10px 0;
 }
