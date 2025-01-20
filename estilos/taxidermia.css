@@ -1,3 +1,5 @@
+
+
 div#infogeral > div#titulo-imagem{
     margin-bottom: -10px;
     border-radius: 10px 10px 0 0;
@@ -24,6 +26,7 @@ body {
 section#conteudo-especifico nav {
     background-color: #283618;
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     padding: 10px 0;
 }
@@ -158,4 +161,36 @@ section#conteudo-especifico .info-box h3 {
 }
 section#conteudo-especifico .info-box p {
     margin: 10px 0;
+}
+
+@media screen and (max-width:700px){
+    section#conteudo-especifico nav{
+        padding: 5px 0;
+    }
+    section#conteudo-especifico nav a{
+        padding: 6px 7px;
+    }
+
+    section#conteudo-especifico p{
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        font-size: 1rem; /* Tamanho padrão para telas pequenas */
+        font-family: var(--font2);
+    }
+
+    section#conteudo-especifico p {
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+        line-height: 1.6;
+        color: #555;
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1024px) {
+    section#conteudo-especifico p {
+        font-size: 1.2rem;
+    }
 }
