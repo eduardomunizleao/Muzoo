@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,19 +12,22 @@
     <link rel="stylesheet" href="../estilos/sliders/slider-animalmuseu.css">
     <link rel="stylesheet" href="../estilos/pagina-animal.css">
 </head>
+
 <body class="home">
     <header>
         <section id="titulo">
             <a href="../index.html"><img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo"></a>
             <h1>Museu de Taxidermia do IFMG</h1>
-            <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop" onclick="toggleSidebar()">menu</span>
+            <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop"
+                onclick="toggleSidebar()">menu</span>
         </section>
     </header>
 
     <nav>
         <ul id="barra-lateral">
             <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
-            <li class="home"><a href="../index.html"><span class="material-symbols-outlined">home</span> Página inicial </a></li>
+            <li class="home"><a href="../index.html"><span class="material-symbols-outlined">home</span> Página inicial
+                </a></li>
             <li><a href="../animais.html">Animais</a></li>
             <li><a href="../taxidermia.html">Conheça o processo</a></li>
             <li><a href="../quemsomosnos.html">Quem somos nós?</a></li>
@@ -33,8 +37,8 @@
         </ul>
         <ul id="barra-navegacao" class="esconderNoMobile">
             <li class="esconderNoMobile home"><a href="../index.html"><span class="material-symbols-outlined">
-                home
-                </span></a></li>
+                        home
+                    </span></a></li>
             <li class="esconderNoMobile"><a href="../animais.html">Animais</a></li>
             <li class="esconderNoMobile"><a href="../taxidermia.html">Taxidermia</a></li>
             <li class="esconderNoMobile"><a href="../quemsomosnos.html">Quem somos?</a></li>
@@ -47,86 +51,236 @@
     <script src="../javascript/links_atuais.js" defer></script>
 
     <main>
-        <div id="tituloEimagem">
-            <div id="imagem-animal" class="slider">
-                <div class="slider-track">
-                    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1584813470613-5b1c1cad3d69?q=80&w=1470&auto=format&fit=crop');">
-                        <div class="caption">
-                            <span>Processo de taxidermização</span>
+        <!-- Seção Hero -->
+        <section class="hero">
+            <div class="imagem-hero">
+                <img src="../media/imagens/carrossel-imagens/taxidermia/taxidermia-grande.jpg"
+                    alt="Arte da Taxidermia">
+                <div class="overlay"></div>
+            </div>
+            <div class="conteudo-hero">
+                <h1>Taxidermia</h1>
+                <p>Uma jornada pela arte e ciência da preservação natural</p>
+            </div>
+        </section>
+
+        <!-- Navegação Local -->
+        <nav id="navegacao-local">
+            <div class="container">
+                    <ul class="menu-desktop">
+                        <li><a href="#introducao">Introdução</a></li>
+                        <li><a href="#historia">História</a></li>
+                        <li><a href="#educacao">Educação</a></li>
+                        <li><a href="#conservacao">Conservação</a></li>
+                        <li><a href="#tecnicas">Técnicas</a></li>
+                        <li><a href="#curiosidades">Curiosidades</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Seção de Introdução -->
+        <section id="introducao" class="secao fundo-claro">
+            <div class="container">
+                <h2 class="destaque">O que é a Taxidermia?</h2>
+                <p class="destaque">
+                    A taxidermia é uma prática que combina arte e ciência, dedicada à preservação de animais para fins
+                    educacionais, científicos e artísticos. Esta técnica ancestral permite manter as características
+                    físicas dos animais, criando representações realistas que servem como importantes ferramentas de
+                    estudo e conscientização sobre a biodiversidade.
+                </p>
+                <div class="cards">
+                    <div class="card">
+                        <div class="icone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 3a2 2 0 0 0-2 2" />
+                                <path d="M19 3a2 2 0 0 1 2 2" />
+                                <path d="M21 19a2 2 0 0 1-2 2" />
+                                <path d="M5 21a2 2 0 0 1-2-2" />
+                                <path d="M9 3h1" />
+                                <path d="M9 21h1" />
+                                <path d="M14 3h1" />
+                                <path d="M14 21h1" />
+                                <path d="M3 9v1" />
+                                <path d="M21 9v1" />
+                                <path d="M3 14v1" />
+                                <path d="M21 14v1" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
                         </div>
+                        <h3>Relevância Científica</h3>
+                        <p>Auxilia no estudo e preservação de espécies extintas e ameaçadas.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+                            </svg>
+                        </div>
+                        <h3>Valor Educacional</h3>
+                        <p>Facilita a compreensão da biodiversidade e promove conscientização ambiental.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                            </svg>
+                        </div>
+                        <h3>Expressão Artística</h3>
+                        <p>Peças taxidermizadas são consideradas obras de arte, destacando a beleza natural.</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div id="infogeral">
-                <div id="titulo-imagem">
-                    <h2>Taxidermia</h2>
-                    <h3><i>Preservação Artística de Animais</i></h3>
-                </div>
-                <div id="descricao">
-                    <div class="nature-title"><span>Introdução</span></div>
-                    <p>A taxidermia é uma técnica artística que envolve a preservação e montagem de animais mortos, geralmente para fins educacionais ou decorativos. Essa prática remonta a milênios e tem sido usada por diversas culturas ao longo da história.</p>
+        <!-- Linha do Tempo Histórica -->
+        <section id="historia" class="secao fundo-escuro">
+            <div class="container">
+                <h2>História da Taxidermia</h2>
+                <div class="linha-do-tempo" id="linha-do-tempo">
+                    <!-- Itens da linha do tempo serão inseridos aqui por JavaScript -->
                 </div>
             </div>
-        </div>
+        </section>
 
-        <section id="conteudo-especifico">
-            <nav id="barra-local">
-                <a href="#introducao">Introdução</a>
-                <a href="#historia">História</a>
-                <a href="#tecnicas">Técnicas</a>
-                <a href="#educacional">Educação</a>
-                <a href="#conservacao">Conservação</a>
-                <a href="#etica">Ética</a>
-                <a href="#linha-do-tempo">Linha do Tempo</a>
-                <a href="#taxidermia-mundo">Mundo</a>
-                <a href="#curiosidades">Curiosidades</a>
-                <a href="#tipos-taxidermia">Tipos de Taxidermia</a>
-                <a href="#desafios-futuros">Desafios e Futuro</a>
-            </nav>
-
+        <!-- Papel Educacional e Científico -->
+        <section id="educacao" class="secao fundo-claro">
             <div class="container">
-                <section id="introducao">
-                    <h2>Introdução à Taxidermia</h2>
-                    <p>
-                        A taxidermia é uma prática multifacetada que combina ciência, arte e conservação. 
-                        Consiste na preparação e preservação de animais mortos para manter sua aparência natural, 
-                        desempenhando um papel fundamental na pesquisa científica, educação e exposições culturais. 
-                        Além de ser uma ferramenta pedagógica, a taxidermia é uma forma de celebrar a biodiversidade e conscientizar sobre a preservação ambiental.
-                    </p>
-                </section>
+                <h2>Papel Educacional e Científico</h2>
+                <div class="grid">
+                    <div class="card">
+                        <div class="icone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                            </svg>
+                        </div>
+                        <h3>Educação</h3>
+                        <ul>
+                            <li>Permite estudo detalhado da anatomia animal</li>
+                            <li>Facilita a compreensão da biodiversidade</li>
+                            <li>Cria exposições interativas em museus</li>
+                            <li>Auxilia no ensino de biologia e zoologia</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="icone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M2 2a5 5 0 0 1 5 5v3a3 3 0 0 1-3 3h-1" />
+                                <path d="M7 17a5 5 0 0 0-5-5" />
+                                <path d="M22 2a5 5 0 0 0-5 5v3a3 3 0 0 0 3 3h1" />
+                                <path d="M17 17a5 5 0 0 1 5-5" />
+                                <path d="M12 17v-1a2 2 0 1 1 0-4" />
+                                <path d="M12 12a2 2 0 1 1 0-4" />
+                            </svg>
+                        </div>
+                        <h3>Ciência</h3>
+                        <ul>
+                            <li>Preservação de espécimes raros</li>
+                            <li>Documentação de espécies extintas</li>
+                            <li>Estudo de variações morfológicas</li>
+                            <li>Pesquisa em evolução e adaptação</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <section id="historia">
-                    <h2>História da Taxidermia</h2>
-                    <p>
-                        A história da taxidermia remonta ao Egito Antigo, onde técnicas rudimentares de preservação foram utilizadas para embalsamar corpos humanos e animais. 
-                        No entanto, foi apenas no século XIX que a prática foi formalizada, principalmente na Europa, quando naturalistas começaram a documentar espécies para museus e coleções científicas.
-                        A partir daí, a técnica evoluiu, incorporando novos materiais e tecnologias para alcançar níveis elevados de realismo.
-                    </p>
-                </section>
+        <!-- Conservação e Ética -->
+        <section id="conservacao" class="secao fundo-escuro">
+            <div class="container">
+                <h2>Conservação e Ética</h2>
+                <div class="grid">
+                    <div class="card">
+                        <div class="icone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M17 14V2" />
+                                <path d="M9 18.12 3 14v-4" />
+                                <path d="M13 9v9" />
+                                <path d="m9 18 6 3" />
+                                <path d="m21 6-6-3" />
+                                <path d="m9 18-6-3" />
+                                <path d="m21 18-6-3" />
+                                <path d="M21 14v-4" />
+                                <path d="M21 22v-4" />
+                            </svg>
+                        </div>
+                        <h3>Conservação Ambiental</h3>
+                        <ul>
+                            <li>Documentação de espécies ameaçadas</li>
+                            <li>Conscientização sobre biodiversidade</li>
+                            <li>Preservação de espécimes históricos</li>
+                            <li>Apoio a projetos de conservação</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="icone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M8 21h12a2 2 0 0 0 2-2v-2H10v2a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v3h4" />
+                                <path d="M19 17V5a2 2 0 0 0-2-2H4" />
+                                <path d="M15 8h-5" />
+                                <path d="M15 12h-5" />
+                            </svg>
+                        </div>
+                        <h3>Práticas Éticas</h3>
+                        <ul>
+                            <li>Uso apenas de animais de origem natural</li>
+                            <li>Respeito às regulamentações ambientais</li>
+                            <li>Documentação adequada da origem</li>
+                            <li>Preservação responsável</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <section id="tecnicas">
-                    <h2>Técnicas e Métodos</h2>
-                    <p>
-                        A taxidermia moderna envolve um processo detalhado, que pode incluir:
-                    </p>
-                    <ul>
-                        <li><strong>Preparação inicial:</strong> Remoção da pele, limpeza e preservação básica com agentes químicos.</li>
-                        <li><strong>Construção da estrutura:</strong> Criação de moldes precisos usando materiais como espuma, argila ou impressão 3D.</li>
-                        <li><strong>Montagem:</strong> Fixação da pele tratada ao molde e adição de detalhes anatômicos, como olhos de vidro e pintura realista.</li>
-                        <li><strong>Ambiente natural:</strong> Criação de cenários que imitam o habitat do animal para exibição em museus.</li>
-                    </ul>
-                </section>
+        <!-- Seção de Técnicas -->
+        <section id="tecnicas" class="secao fundo-claro">
+            <div class="container">
+                <h2>Técnicas e Métodos</h2>
+                <div class="tecnicas" id="tecnicas">
+                    <!-- Técnicas serão inseridas aqui por JavaScript -->
+                </div>
+            </div>
+        </section>
 
-                <section id="educacional">
-                    <h2>Papel Educacional e Científico</h2>
-                    <p>
-                        Peças taxidermizadas desempenham um papel essencial na educação e ciência. Elas permitem o estudo detalhado da anatomia animal e ajudam na preservação da memória de espécies extintas ou em risco. 
-                        Em museus, essas peças proporcionam experiências interativas e promovem a conscientização sobre biodiversidade e conservação.
-                    </p>
-                </section>
+        <!-- Curiosidades -->
+        <section id="curiosidades" class="secao fundo-escuro">
+            <div class="container">
+                <h2>Curiosidades</h2>
+                <div class="curiosidades" id="curiosidades">
+                    <!-- Curiosidades serão inseridas aqui por JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria de Processo -->
+        <section id="galeriacontainer" class="secao fundo-claro">
+            <div class="container">
+                <h2>O Processo em Imagens</h2>
+                <div class="galeria" id="galeria">
+                    <!-- Itens da galeria serão inseridos aqui por JavaScript -->
+                </div>
             </div>
         </section>
     </main>
+    <script src="../javascript/taxidermia.js"></script>
 </body>
+
 </html>
