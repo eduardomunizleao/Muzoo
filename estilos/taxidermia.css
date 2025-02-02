@@ -113,6 +113,11 @@ h3 {
     font-size: 0.97rem;
     padding-left: 8px;
   }
+
+  #navegacao-local .container{
+    padding: 0;
+    width: 100%;
+  }
 }
 
 
@@ -286,11 +291,15 @@ section#historia h2 {
 
 @media (max-width: 768px) {
   .timeline-content {
-      width: 80%;
+      width: 100%;
   }
+
+  .timeline-item:nth-child(even) .timeline-content {
+    margin-left: 0rem;
+}
   
   .timeline-line {
-      left: 2rem;
+      left: 0.5rem;
   }
   
   .timeline-item,
@@ -301,16 +310,19 @@ section#historia h2 {
   
   .timeline-dot {
       left: 2rem;
-      transform: translateX(-317%);
+      transform: translateX(-417%);
   }
   
   .timeline-item:nth-child(odd) .timeline-content,
   .timeline-item:nth-child(even) .timeline-content {
-      margin-left: 2rem;
       margin-right: 0;
   }
 
   .timeline-description{
+    text-align: center;
+  }
+
+  .timeline-era{
     text-align: center;
   }
 }
