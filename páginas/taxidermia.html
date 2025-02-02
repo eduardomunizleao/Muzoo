@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxidermia</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="shortcut icon" href="../media/imagens/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="../estilos/taxidermia.css">
+    <link rel="stylesheet" href="../estilos/sliders/slider-animalmuseu.css">
+    <link rel="stylesheet" href="../estilos/pagina-animal.css">
+</head>
+
+<body class="home">
+    <header>
+        <section id="titulo">
+            <a href="../index.html"><img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo"></a>
+            <h1>Museu de Taxidermia do IFMG</h1>
+            <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop"
+                onclick="toggleSidebar()">menu</span>
+        </section>
+    </header>
+
+    <nav>
+        <ul id="barra-lateral">
+            <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
+            <li class="home"><a href="../index.html"><span class="material-symbols-outlined">home</span> Página inicial
+                </a></li>
+            <li><a href="../animais.html">Animais</a></li>
+            <li><a href="../taxidermia.html">Conheça o processo</a></li>
+            <li><a href="../quemsomosnos.html">Quem somos nós?</a></li>
+            <li><a href="#">Jogos interativos</a></li>
+            <li><a href="../feedback.html">Feedback</a></li>
+            <li><a href="../cadastro.html">Contato</a></li>
+        </ul>
+        <ul id="barra-navegacao" class="esconderNoMobile">
+            <li class="esconderNoMobile home"><a href="../index.html"><span class="material-symbols-outlined">
+                        home
+                    </span></a></li>
+            <li class="esconderNoMobile"><a href="../animais.html">Animais</a></li>
+            <li class="esconderNoMobile"><a href="../taxidermia.html">Taxidermia</a></li>
+            <li class="esconderNoMobile"><a href="../quemsomosnos.html">Quem somos?</a></li>
+            <li class="esconderNoMobile"><a href="#">Jogos interativos</a></li>
+            <li class="esconderNoMobile"><a href="../feedback.html">Feedback</a></li>
+            <li class="esconderNoMobile"><a href="../cadastro.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <script src="../javascript/links_atuais.js" defer></script>
+
+    <main>
+        <!-- Seção Hero -->
+        <section class="hero">
+            <div class="imagem-hero">
+                <img src="../media/imagens/carrossel-imagens/taxidermia/taxidermia-grande.jpg"
+                    alt="Arte da Taxidermia">
+                <div class="overlay"></div>
+            </div>
+            <div class="conteudo-hero">
+                <h1>Taxidermia</h1>
+                <p>Uma jornada pela arte e ciência da preservação natural</p>
+            </div>
+        </section>
+
+        <!-- Navegação Local -->
+        <nav id="navegacao-local">
+            <div class="container">
+                    <ul class="menu-desktop">
+                        <li><a href="#introducao">Introdução</a></li>
+                        <li><a href="#historia">História</a></li>
+                        <li><a href="#educacao">Educação</a></li>
+                        <li><a href="#conservacao">Conservação</a></li>
+                        <li><a href="#tecnicas">Técnicas</a></li>
+                        <li><a href="#curiosidades">Curiosidades</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Seção de Introdução -->
+        <section id="introducao" class="secao fundo-claro">
+            <div class="container">
+                <h2 class="destaque">O que é a Taxidermia?</h2>
+                <p class="destaque">
+                    A taxidermia é uma prática que combina arte e ciência, dedicada à preservação de animais para fins
+                    educacionais, científicos e artísticos. Esta técnica ancestral permite manter as características
+                    físicas dos animais, criando representações realistas que servem como importantes ferramentas de
+                    estudo e conscientização sobre a biodiversidade.
+                </p>
+                <div class="cards">
+                    <div class="card">
+                        <div class="icone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 3a2 2 0 0 0-2 2" />
+                                <path d="M19 3a2 2 0 0 1 2 2" />
+                                <path d="M21 19a2 2 0 0 1-2 2" />
+                                <path d="M5 21a2 2 0 0 1-2-2" />
+                                <path d="M9 3h1" />
+                                <path d="M9 21h1" />
+                                <path d="M14 3h1" />
+                                <path d="M14 21h1" />
+                                <path d="M3 9v1" />
+                                <path d="M21 9v1" />
+                                <path d="M3 14v1" />
+                                <path d="M21 14v1" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </div>
+                        <h3>Relevância Científica</h3>
+                        <p>Auxilia no estudo e preservação de espécies extintas e ameaçadas.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+                            </svg>
+                        </div>
+                        <h3>Valor Educacional</h3>
+                        <p>Facilita a compreensão da biodiversidade e promove conscientização ambiental.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                            </svg>
+                        </div>
+                        <h3>Expressão Artística</h3>
+                        <p>Peças taxidermizadas são consideradas obras de arte, destacando a beleza natural.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Linha do Tempo Histórica -->
+        <section id="historia" class="secao fundo-escuro">
+            <div class="container">
+                <h2>História da Taxidermia</h2>
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    <div id="timeline-items"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Seção de Técnicas -->
+        <section id="tecnicaspai" class="secao fundo-claro">
+            <section id="processosContainer">
+                <div id="navegacaoProcessos">
+                    <ul id="listaProcessos"></ul>
+                </div>
+                <article id="conteudoProcessos">
+                    <!-- Seção Existente -->
+                    <div class="processo" id="preparacao">
+                        <h3>1. Preparação do Espécime</h3>
+                        <p>A preparação inicia-se com a coleta e conservação adequada do animal. Imediatamente após a morte, o espécime deve ser refrigerado ou congelado para retardar a decomposição. No caso de animais silvestres, é fundamental seguir normas legais, como a obtenção de licenças ambientais, para evitar problemas com órgãos reguladores.</p>
+                        <p>O esfolamento é uma etapa delicada, que exige precisão para evitar danos à pele. Em mamíferos, realiza-se uma incisão ventral ou dorsal, dependendo do tamanho e da espécie, para separar a pele do corpo. Para aves, as incisões são feitas nas laterais do corpo, preservando a integridade das penas. Em seguida, tecidos residuais e gordura são removidos manualmente com bisturi ou curetas, enquanto áreas mais delicadas, como o entorno dos olhos ou ouvidos, podem receber tratamento com enzimas ou produtos químicos, como o borax, para garantir uma limpeza eficaz.</p>
+                    </div>
+        
+                    <!-- Novas Seções -->
+                    <div class="processo" id="preservacao">
+                        <h3>2. Preservação da Pele</h3>
+                        <p>A preservação da pele é essencial para garantir durabilidade. O processo de curtimento químico utiliza taninos vegetais ou sintéticos para transformar a pele em couro resistente. Antes disso, a salga é aplicada para desidratar o material e inibir o crescimento bacteriano. Conservantes como formol (em baixas concentrações), álcool ou ácido bórico também são usados para prevenir fungos e deterioração.</p>
+                        <p>Após o tratamento químico, a pele passa por uma secagem controlada. Em mamíferos, ela é esticada em moldes ou prensas para manter a forma natural. Para aves, o preenchimento com algodão ou espuma ajuda a preservar o volume das penas durante a secagem, garantindo um resultado anatomicamente fiel.</p>
+                    </div>
+        
+                    <div class="processo" id="estrutura">
+                        <h3>3. Construção da Estrutura (Manequim)</h3>
+                        <p>A estrutura interna, ou manequim, é responsável por dar forma ao animal taxidermizado. Métodos tradicionais utilizam materiais como argila, madeira ou arame para moldar o corpo, seguidos de preenchimento com estopa, serragem ou fibra sintética.</p>
+                        <p>Já as técnicas modernas incluem o uso de espuma de poliuretano, moldada conforme a anatomia do animal, e impressão 3D, que permite criar réplicas precisas a partir de escaneamento digital do espécime original. Para espécies comuns, também estão disponíveis manequins comerciais pré-fabricados, que agilizam o processo.</p>
+                    </div>
+        
+                    <div class="processo" id="montagem">
+                        <h3>4. Montagem da Pele</h3>
+                        <p>Na montagem, a pele preservada é cuidadosamente ajustada sobre o manequim. O taxidermista alinha a pele para garantir simetria e posicionamento anatômico correto, realizando pontos de costura em áreas menos visíveis, como o ventre ou as laterais do corpo.</p>
+                        <p>Detalhes como olhos artificiais (fabricados em vidro ou acrílico) são inseridos nas órbitas para restaurar a expressão realista. Partes como bicos, garras e chifres passam por limpeza, polimento ou reconstrução com resina, caso apresentem danos.</p>
+                    </div>
+        
+                    <div class="processo" id="acabamento">
+                        <h3>5. Acabamento e Realismo</h3>
+                        <p>O acabamento busca aprimorar a autenticidade do espécime. A texturização é feita com aerógrafo para replicar nuances de cor da pele ou pelagem, enquanto verniz é aplicado em regiões como narinas e língua para simular umidade natural.</p>
+                        <p>O posicionamento dinâmico é crucial: membros são articulados para imitar posturas características, como aves em voo ou predadores em alerta. Em alguns casos, o animal é integrado a bases com elementos naturais (galhos, rochas) ou dioramas, criando um contexto visual que reforça o realismo.</p>
+                    </div>
+        
+                    <div class="processo" id="tecnicas">
+                        <h3>6. Técnicas Específicas por Grupo Animal</h3>
+                        <p>Cada grupo animal exige abordagens distintas. Aves, por exemplo, demandam cuidados extras com as penas: o uso de talco evita oleosidade, e fios de náilon ajudam a alinhá-las durante a secagem. Para peixes, técnicas como a reconstrução de escamas com resina epóxi ou a montagem total em fibra de vidro são comuns. Mamíferos de pelagem longa, como ovelhas, recebem tratamentos com condicionadores para evitar embaraçamento dos pelos.</p>
+                    </div>
+        
+                    <div class="processo" id="orgaos">
+                        <h3>7. Preservação de Órgãos Internos</h3>
+                        <p>Em casos científicos, órgãos ou pequenos animais podem ser preservados por liofilização (congelamento a vácuo) ou plastinação — técnica em que líquidos corporais são substituídos por polímeros à base de silicone, mantendo a estrutura original. Esses métodos são frequentemente usados em exposições educativas.</p>
+                    </div>
+        
+                    <div class="processo" id="manutencao">
+                        <h3>8. Manutenção Pós-Taxidermia</h3>
+                        <p>Espécimes taxidermizados requerem cuidados contínuos. O ambiente deve ser controlado: luz solar direta e umidade excessiva devem ser evitadas, assim como o contato com pragas como traças. A limpeza periódica é feita com pincéis macios ou aspiradores de baixa potência para remover poeira sem danificar detalhes delicados.</p>
+                    </div>
+        
+                    <div class="processo" id="inovacoes">
+                        <h3>9. Inovações na Taxidermia</h3>
+                        <p>A tecnologia trouxe avanços significativos. Escaneamento 3D e realidade aumentada permitem estudar anatomia sem manipulação física dos espécimes. Além disso, materiais sustentáveis, como produtos químicos biodegradáveis, estão substituindo substâncias tóxicas, alinhando a prática a padrões ecológicos.</p>
+                    </div>
+        
+                    <div class="processo" id="aspectos">
+                        <h3>10. Aspectos Legais e Éticos</h3>
+                        <p>A taxidermia deve respeitar regulamentações rigorosas. Licenças ambientais são obrigatórias para espécies protegidas (convenções como a CITES), e a origem dos animais deve ser prioritariamente natural (mortes acidentais) ou de criadouros autorizados, evitando a caça ilegal.</p>
+                    </div>
+                </article>
+            </section>
+        </section>
+
+        <!-- Curiosidades -->
+        <section id="curiosidadespai" class="secao fundo-escuro">
+            <h1 id="tituloPrincipal">Curiosidades sobre Taxidermia</h1>
+            <div id="gridCuriosidades">
+                <!-- As curiosidades serão inseridas via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Galeria de Processo -->
+        <section id="galeriacontainer" class="secao fundo-claro">
+            <div class="container">
+                <h2>O Processo em Imagens</h2>
+                <div class="galeria" id="galeria">
+                    <!-- Itens da galeria serão inseridos aqui por JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../javascript/taxidermia.js"></script>
+</body>
+
+</html>
