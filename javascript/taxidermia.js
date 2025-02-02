@@ -70,54 +70,88 @@ document.addEventListener('DOMContentLoaded', createTimelineItems);
 const curiosidades = [
   {
       numero: "01",
-      titulo: "Origem Histórica",
-      texto: "A taxidermia tem origens no Antigo Egito, onde era usada para preservar animais sagrados e múmias há mais de 4.000 anos!"
+      titulo: "Gigante Preservado",
+      texto: "O maior animal taxidermizado é um elefante-africano de 4 metros de altura no Smithsonian Museum, pesando 8 toneladas. O processo levou 16 meses para ser concluído!"
   },
   {
       numero: "02",
-      titulo: "Processo de Preservação",
-      texto: "O processo moderno envolve a remoção cuidadosa da pele do animal, tratamento químico para preservação e remontagem sobre uma forma artificial que imita a anatomia original."
+      titulo: "Supervivente do Titanic",
+      texto: "O único animal taxidermizado que sobreviveu ao naufrágio do Titanic é um papagaio-da-carolina, agora exposto no Maritime Museum of the Atlantic."
   },
   {
       numero: "03",
-      titulo: "Uso Científico",
-      texto: "Museus de história natural usam a taxidermia para criar coleções de referência, permitindo o estudo de espécies extintas e a documentação da biodiversidade."
+      titulo: "Taxidermia Radical",
+      texto: "Artistas modernos criam 'rogue taxidermy' - animais mitológicos como unicórnios e dragões, usando partes reais de diferentes espécies."
   },
   {
       numero: "04",
-      titulo: "Arte e Ciência",
-      texto: "A taxidermia combina conhecimentos de anatomia, escultura e pintura. Os taxidermistas precisam entender profundamente a anatomia animal e ter habilidades artísticas excepcionais."
+      titulo: "Recorde de Longevidade",
+      texto: "O alce taxidermizado mais antigo (1696) está no Castelo de Gripsholm, Suécia - ainda mantém seus pelos originais após 328 anos!"
   },
   {
       numero: "05",
-      titulo: "Preservação Histórica",
-      texto: "Espécimes taxidermizados em museus são verdadeiras cápsulas do tempo, permitindo que cientistas estudem animais extintos e mudanças evolutivas ao longo dos séculos."
+      titulo: "Técnica Extrema para Peixes",
+      texto: "Para preservar peixes abissais que se desintegram na superfície, taxidermistas usam resinas especiais injetadas diretamente no corpo do animal ainda no navio."
   },
   {
       numero: "06",
-      titulo: "Técnicas Modernas",
-      texto: "Hoje, a taxidermia utiliza materiais sintéticos avançados e técnicas de preservação que garantem maior durabilidade e realismo aos espécimes preservados."
+      titulo: "Faraó das Aves",
+      texto: "O pássaro Huia da Nova Zelândia, extinto em 1907, tem skins taxidermizadas valendo até US$ 50.000 no mercado negro de colecionadores."
+  },
+  {
+      numero: "07",
+      titulo: "Múmia Moderna",
+      texto: "O cachorro de estimação de Walt Disney, Lady, foi taxidermizado em 1937 e serviu de modelo para animações clássicas da Disney."
+  },
+  {
+      numero: "08",
+      titulo: "Operação Secreta",
+      texto: "Museus usam micro-câmeras endoscópicas para taxidermizar animais ocos (como polvos) sem incisões visíveis."
   }
 ];
 
-// Gallery Data
-const galleryData = [
-  {
-    url: "../media/imagens/taxidermia/preparacao.jpeg",
-    title: "Preparação Inicial",
-    description: "Documentação e planejamento"
-  },
-  {
-    url: "../media/imagens/taxidermia/preenchimento.jpeg",
-    title: "Processo de Preservação",
-    description: "Tratamento e conservação"
-  },
-  {
-    url: "../media/imagens/taxidermia/acabamento.jpeg",
-    title: "Resultado Final",
-    description: "Montagem e acabamento"
-  }
-];
+document.addEventListener('DOMContentLoaded', function() {
+  const itensGaleria = [
+      {
+          etapa: 'Etapa 1',
+          imagem: '../media/imagens/taxidermia/preparacao.jpeg',
+          descricao: 'Preparação Inicial'
+      },
+      {
+          etapa: 'Etapa 2',
+          imagem: '../media/imagens/taxidermia/preenchimento.jpeg',
+          descricao: 'Processo de Preservação'
+      },
+      {
+          etapa: 'Etapa 3',
+          imagem: '../media/imagens/taxidermia/acabamento.jpeg',
+          descricao: 'Resultado Final'
+      }
+  ];
+
+  const galeriaContainer = document.getElementById('galeriaImagens');
+
+  itensGaleria.forEach(item => {
+      const itemGaleria = document.createElement('div');
+      itemGaleria.className = 'itemGaleria';
+
+      itemGaleria.innerHTML = `
+          <div class="containerImagem">
+              <img class="imagemGaleria" 
+                   src="${item.imagem}" 
+                   alt="${item.descricao}">
+              <div class="overlayGaleria">
+                  <div class="textoOverlay">${item.descricao}</div>
+              </div>
+          </div>
+          <div class="protuberanciaEtapa">
+              <span class="textoEtapa">${item.etapa}</span>
+          </div>
+      `;
+
+      galeriaContainer.appendChild(itemGaleria);
+  });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
   const processos = [
@@ -199,18 +233,3 @@ function criarCuriosidades() {
 
 // Inicializar as curiosidades quando a página carregar
 document.addEventListener('DOMContentLoaded', criarCuriosidades);
-
-// Populate Gallery
-const galleryContainer = document.getElementById('galeria');
-galleryData.forEach(image => {
-  const imageElement = document.createElement('div');
-  imageElement.className = 'galeria-item';
-  imageElement.innerHTML = `
-    <img src="${image.url}" alt="${image.title}">
-    <div class="galeria-overlay">
-      <h3>${image.title}</h3>
-      <p>${image.description}</p>
-    </div>
-  `;
-  galleryContainer.appendChild(imageElement);
-});
