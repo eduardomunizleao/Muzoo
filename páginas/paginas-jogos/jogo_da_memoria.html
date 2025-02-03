@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Memória</title>
+  <link rel="stylesheet" href="../estilos/estilos-dos-jogos/jogo_da_memoria.css">
+</head>
+<body>
+  <header>
+    <section id="titulo">
+      <img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo">
+      <h1>Museu de Taxidermia do IFMG</h1>
+      <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop" onclick="toggleSidebar()">menu</span>
+    </section>
+  </header>
+
+  <nav>
+    <ul id="barra-lateral">
+      <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
+      <li class="home"><a href="index.html"><span class="material-symbols-outlined">home</span> Página inicial </a></li>
+      <li><a href="animais.html">Animais</a></li>
+      <li><a href="#">Conheça o processo</a></li>
+      <li><a href="quemsomosnos.html">Quem somos nós?</a></li>
+      <li><a href="#">Jogos interativos</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="cadastro.html">Contato</a></li>
+    </ul>
+    <ul id="barra-navegacao" class="esconderNoMobile">
+      <li class="esconderNoMobile home"><a href="index.html"><span class="material-symbols-outlined">
+            home
+          </span></a></li>
+      <li class="esconderNoMobile"><a href="animais.html">Animais</a></li>
+      <li class="esconderNoMobile"><a href="#">Taxidermia</a></li>
+      <li class="esconderNoMobile"><a href="quemsomosnos.html">Quem somos?</a></li>
+      <li class="esconderNoMobile"><a href="#">Jogos interativos</a></li>
+      <li class="esconderNoMobile"><a href="feedback.html">Feedback</a></li>
+      <li class="esconderNoMobile"><a href="cadastro.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <br><br><br><br>
+
+  <h1>Jogo da Memória</h1>
+  <div id="difficulty-container">
+    <label id="difficulty-label" for="difficulty">Escolha o nível:</label>
+    <select id="difficulty">
+      <option value="easy">Fácil (3 x 4)</option>
+      <option value="medium">Médio (3 x 6)</option>
+      <option value="hard">Difícil (4 x 6)</option>
+    </select>
+  </div>
+  
+  <div id="timer">Tempo: 0s</div>
+
+  <div id="game-board"></div>
+  <div id="result" class="result">
+    <p id="result-message">Resolva o jogo para ver o resultado!</p>
+    <button id="play-again" onclick="startGame()">Jogar Novamente</button>
+  </div>
+
+  <footer>
+    <section id="footer-content">
+        <div class="footer-section">
+            <h3>Museu de Zoologia do IFMG</h3>
+            <p>&copy; 2024 Museu de Zoologia do IFMG Campus Bambuí</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Links Rápidos</h3>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="animais.html">Peças do Museu</a></li>
+                <li><a href="#">Conheça o Processo</a></li>
+                <li><a href="quemsomosnos.html">Quem somos nós</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="cadastro.html">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Nos Siga</h3>
+            <div class="social-icons">
+                <a target="_blanck" href="https://www.instagram.com/geas_ifmg/?hl=pt-br"><img src="../media/imagens/icones/448-4486682_instagram-logo-png-white-circle.png" alt="Instagram"></a>
+                
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contato</h3>
+            <p>Email: xxxxxxx@ifmg.edu.br</p>
+        </div>
+    </section>
+
+    <div id="footer-bottom">
+        <p>Desenvolvido por Estudantes do IFMG Campus Bambuí - Curso Técnico em Informática</p>
+    </div>
+</footer>
+  <script src="../javascript/jogo_da_memoria.js"></script>
+</body>
+</html>
