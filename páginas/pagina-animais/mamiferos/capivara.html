@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capivara(Hydrochoerus hydrochaeris Linnaeus, 1766)</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="shortcut icon" href="../../../media/imagens/logo/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="../../../estilos/style.css">
+    <link rel="stylesheet" href="../../../estilos/pagina-animal.css">
+
+    <link rel="stylesheet" href="../../../estilos/conteudo-especifico-animal.css">
+    <link rel="stylesheet" href="../../../estilos/sliders/slider-animalmuseu.css">
+</head>
+
+
+<body>
+    <header>
+        <section id="titulo">
+            <img src="../../../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo">
+            <h1>Museu de Taxidermia do IFMG</h1>
+            <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop"
+                onclick="toggleSidebar()">menu</span>
+        </section>
+    </header>
+
+    <nav>
+        <ul id="barra-lateral">
+            <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
+            <li class="home"><a href="../../index.html"><span class="material-symbols-outlined">home</span> Página inicial </a></li>
+            <li><a href="../../animais.html">Animais</a></li>
+            <li><a href="#">Conheça o processo</a></li>
+            <li><a href="../../quemsomosnos.html">Quem somos nós?</a></li>
+            <li><a href="#">Jogos interativos</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="../../cadastro.html">Contato</a></li>
+        </ul>
+        <ul id="barra-navegacao" class="esconderNoMobile">
+            <li class="esconderNoMobile home"><a href="../../index.html"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
+            <li class="esconderNoMobile"><a href="../../animais.html">Animais</a></li>
+            <li class="esconderNoMobile"><a href="#">Taxidermia</a></li>
+            <li class="esconderNoMobile"><a href="../../quemsomosnos.html">Quem somos?</a></li>
+            <li class="esconderNoMobile"><a href="#">Jogos interativos</a></li>
+            <li class="esconderNoMobile"><a href="../feedback.html">Feedback</a></li>
+            <li class="esconderNoMobile"><a href="../../cadastro.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <script src="../../../javascript/links_atuais.js" defer></script>
+
+    <main>
+
+        <div id="tituloEimagem">
+            <div id="imagem-animal" class="slider">
+                <div class="slider-track">
+                    <div class="slide" style="background-image: url('../../../media/imagens/animal-especifico/mamiferos/Hydrochoerus\ hydrochaeris/capivara.jpg');">
+                        <div class="caption">
+                            <span>Foto do animal na vida real</span>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('../../../media/imagens/animal-especifico/mamiferos/Hydrochoerus\ hydrochaeris/capivara-museu.jpeg');">
+                        <div class="caption">
+                            <span>Foto do animal no museu</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <button class="slider-btn prev">❮</button>
+                    <button class="slider-btn next">❯</button>
+                </div>
+            </div>
+
+            <script defer>
+                const slider = document.querySelector('.slider');
+                const track = document.querySelector('.slider-track');
+                const slides = Array.from(document.querySelectorAll('.slide'));
+                const prevBtn = document.querySelector('.prev');
+                const nextBtn = document.querySelector('.next');
+
+                let currentIndex = 0;
+                const totalSlides = slides.length;
+
+                // Atualizar a posição do slider
+                function updateSliderPosition() {
+                    const translateX = -currentIndex * 100;
+                    track.style.transform = `translateX(${translateX}%)`;
+                }
+
+                // Avançar slide
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    updateSliderPosition();
+                });
+
+                // Voltar slide
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                    updateSliderPosition();
+                });
+
+                // Funcionalidade de swipe
+                let startX = 0;
+                let endX = 0;
+
+                slider.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+
+                slider.addEventListener('touchmove', (e) => {
+                    endX = e.touches[0].clientX;
+                });
+
+                slider.addEventListener('touchend', () => {
+                    if (startX - endX > 50) {
+                        currentIndex = (currentIndex + 1) % totalSlides; // Avança
+                    } else if (endX - startX > 50) {
+                        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Retorna
+                    }
+                    updateSliderPosition();
+                });
+
+            </script>
+            
+            <div id="infogeral">
+                <div id="titulo-imagem">
+                    <h2>Capivara</h2>
+                    <h3><i>Hydrochoerus hydrochaeris</i></h3>
+                </div>
+                <div id="descricao">
+                    <div class="nature-title"><span>Introdução</span></div>
+                    <h2>Introdução</h2>
+                    <p>A <i>Hydrochoerus hydrochaeris</i>, mais conhecida como capivara, é o maior roedor do planeta e habita principalmente as regiões da América do Sul, encontrando-se em áreas com abundância de água, como rios, lagos e pântanos. Esses animais sociais formam grupos numerosos e possuem um papel ecológico importante, ajudando na regulação das plantas aquáticas e na manutenção dos ecossistemas. A capivara tem uma alimentação herbívora, com foco em gramíneas, e sua presença é essencial para a preservação do equilíbrio ambiental nas regiões onde vive.</p>
+                </div>
+            </div>
+        </div>    
+
+        <hr style="height: 4px; background-color: #283618; margin-bottom: 10px;">
+
+        <section id="conteudo-especifico">  <!-- Parte de texto puro -->
+
+
+
+            <div class="class-cien template">
+                <h2>1. Classificação Científica</h2>
+                <p>
+                    <strong class="f">Nome Científico:</strong> <i>Hydrochoerus hydrochaeris</i> (Linnaeus, 1766)<br>
+                    <strong class="f">Nomes Populares:</strong> Capivara<br>
+                    <strong>Classificação Taxonômica:</strong>
+                    <div class="classification-list">
+                        <p><strong class="preto">Domínio:</strong> <a href="https://www.infoescola.com/biologia/eucariontes/" target="_blank" rel="external">Eukaryota</a></p>
+            
+                        <p><strong class="preto">Reino:</strong> <a href="https://www.infoescola.com/biologia/introducao-ao-reino-animal/" target="_blank" rel="external">Animalia</a></p>
+            
+                        <p><strong class="preto">Filo:</strong> <a href="https://www.infoescola.com/biologia/cordados-chordata/" target="_blank" rel="external">Chordata</a></p>
+            
+                        <p><strong class="preto">Classe:</strong> <a href="https://www.infoescola.com/biologia/mamiferos/" target="_blank" rel="external">Mammalia</a></p>
+            
+                        <p><strong class="preto">Ordem:</strong> <a href="https://www.infoescola.com/biologia/roedores/" target="_blank" rel="external">Rodentia</a></p>
+            
+                        <p><strong class="preto">Família:</strong> <a href="https://pt.wikipedia.org/wiki/Caviidae" target="_blank" rel="external">Caviidae</a></p>
+            
+                        <p><strong class="preto">Gênero:</strong> <a href="https://pt.wikipedia.org/wiki/Hydrochoerus" target="_blank" rel="external">Hydrochoerus</a></p>
+            
+                        <p><strong class="preto">Espécie:</strong> <a href="https://pt.wikipedia.org/wiki/Capivara" target="_blank" rel="external">Hydrochoerus hydrochaeris</a></p>
+                    </div>
+                </p>
+            </div>
+            
+            <hr style="height: 4px; background-color: #283618; margin-bottom: 40px;">
+            
+            <div class="reproducao template">
+                <h2>2. Aspectos Reprodutivos</h2>
+                <div class="reproducao">
+                    <p>A capivara (<i>Hydrochoerus hydrochaeris</i>) apresenta um sistema reprodutivo poligínico. Os machos dominantes controlam o acesso às fêmeas em grupos sociais. A reprodução ocorre durante todo o ano, especialmente em regiões tropicais, e as fêmeas possuem um período de gestação de cerca de 150 dias. Cada ninhada pode variar de 2 a 8 filhotes, que nascem bem desenvolvidos, com pelagem e visão.</p>
+            
+                    <div class="caracteristicas">
+                        <p><strong>Características Reprodutivas:</strong></p>
+                        <ul>
+                            <li>Período de gestação: aproximadamente 150 dias.</li>
+                            <li>Ninhadas de 2 a 8 filhotes.</li>
+                            <li>Os filhotes nascem com pelagem e visão completamente desenvolvidas.</li>
+                            <li>A reprodução pode ocorrer durante todo o ano.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <hr style="height: 4px; background-color: #283618; margin-bottom: 40px;">
+            
+            <div class="extincao template">
+                <h2>3. Risco de Extinção</h2>
+                <p>
+                    A capivara é classificada como <strong>Pouco Preocupante (LC)</strong> pela IUCN devido à sua ampla distribuição na América do Sul e capacidade de adaptação a diferentes habitats. No entanto, enfrenta ameaças como caça ilegal e destruição de habitats em algumas áreas.
+                </p>
+            </div>
+            
+            <hr style="height: 4px; background-color: #283618; margin-bottom: 40px;">
+            
+            <div class="ocorrencia template">
+                <h2>4. Ocorrência</h2>
+                <p>A capivara é amplamente distribuída na América do Sul, com ocorrência em biomas como:</p>
+                <div class="bioma"><strong>Amazônia:</strong> Áreas alagadas e margens de rios.</div>
+                <div class="bioma"><strong>Cerrado:</strong> Regiões próximas a corpos d'água em savanas e vegetação arbustiva.</div>
+                <div class="bioma"><strong>Pantanal:</strong> Áreas alagadas e com alta biodiversidade.</div>
+                <div class="bioma"><strong>Mata Atlântica:</strong> Regiões ribeirinhas e florestas secundárias.</div>
+                <p>
+                    No Brasil, sua distribuição inclui estados como Amazonas, Mato Grosso, São Paulo, Minas Gerais e Rio Grande do Sul. É conhecida por habitar regiões próximas a corpos d'água e por sua capacidade de adaptação a ambientes modificados pelo homem.
+                </p>
+
+                <img src="../../../media/imagens/animal-especifico/mamiferos/Hydrochoerus hydrochaeris/distribution.jpg"
+                    alt="Distribuição da capivara">
+                <a class="mapa-completo" href="https://portal-espacial.sibbr.gov.br/spatial-hub/?q=lsid:129660"
+                    rel="external" target="_blank"
+                    onclick="alert('Esse recurso pode não funcionar bem em alguns dispositivos!')">
+                    Ver mapa interativo
+                </a>
+                
+            </div>
+            
+            <hr style="height: 4px; background-color: #283618; margin-bottom: 40px;">
+            
+            <div class="dieta template">
+                <h2>5. Dieta e Hábitos Alimentares</h2>
+                <p><strong class="diferente">Hábitos Alimentares:</strong> A capivara é herbívora e se alimenta principalmente de gramíneas e plantas aquáticas. É adaptada para consumir grandes quantidades de vegetação fibrosa e realiza <strong>coprofagia</strong> (ingestão de fezes) para melhor aproveitamento de nutrientes.</p>
+                <p><strong class="diferente">Principais Alimentos:</strong></p>
+                <ul>
+                    <li><strong>Gramíneas:</strong> A base de sua dieta.</li>
+                    <li><strong>Plantas aquáticas:</strong> Comum em áreas alagadas.</li>
+                    <li><strong>Cascas e folhas de árvores:</strong> Consumidas em períodos de escassez de gramíneas.</li>
+                </ul>
+
+                <div class="image-container">
+                    <img src="../../../media/imagens/animal-especifico/mamiferos/Hydrochoerus hydrochaeris/alimentacao.jpg"
+                        alt="Registro de uma capivara se alimentando de gramíneas">
+                    <div class="caption">Registro de uma capivara se alimentando de gramíneas</div>
+                </div>
+            </div>
+            
+            <hr style="height: 4px; background-color: #283618; margin-bottom: 40px;">
+            
+            <div class="morfologia template">
+                <h2>6. Coloração e Morfologia</h2>
+                <h3>Coloração:</h3>
+                <p>A <i>Hydrochoerus hydrochaeris</i> possui uma coloração que varia de marrom-claro a marrom-escuro, com pelos curtos e densos que ajudam na camuflagem em ambientes naturais, como margens de rios e lagos. Essa tonalidade facilita a sua integração ao ambiente, protegendo-a de predadores.</p>
+            
+                <h3>Morfologia:</h3>
+                <div class="highlight">
+                    <p><strong>Tamanho médio:</strong> mede de 50 a 60 cm de altura até os ombros, com um comprimento total de cerca de 1 a 1,3 m.</p>
+                    <p><strong>Peso médio:</strong> varia entre 35 a 65 kg, sendo o maior roedor do mundo.</p>
+                    <p><strong>Formato do corpo:</strong> compacto, com um dorso levemente arredondado e membros curtos adaptados para nadar e correr em áreas alagadas.</p>
+                    <p><strong>Cabeça:</strong> robusta e alongada, com olhos, narinas e orelhas posicionados no topo para facilitar a respiração e a visão enquanto estão submersas.</p>
+                    <p><strong>Dentição:</strong> possui dentes incisivos grandes e afiados, adaptados para roer vegetação, além de molares especializados para a mastigação de fibras vegetais.</p>
+                </div>
+                <p>Além disso, a capivara é uma excelente nadadora e pode permanecer submersa por vários minutos para escapar de predadores ou procurar alimento. Suas patas possuem membranas interdigitais, que aumentam sua eficiência em ambientes aquáticos.</p>
+            </div>
+            
+            <hr style="height: 4px; background-color: #283618; margin-bottom: 40px;">
+
+            <div class="nutricao template">
+                <h2>7. Nutrição</h2>
+                <p>A capivara possui uma dieta <strong>herbívora</strong>, composta principalmente por gramíneas, ervas aquáticas e frutos. Essa dieta rica em fibras é essencial para o funcionamento de seu sistema digestivo, que inclui um ceco volumoso e adaptado para a fermentação microbiana. Além disso, a espécie pratica cecotrofia, consumindo fezes especiais para reaproveitar nutrientes e melhorar a digestão.</p>
+            </div>
+
+            <hr style="height: 4px; background-color: #283618; margin-bottom: 40px;">
+
+            <div class="importancia template">
+                <h2>8. Papel ecológico</h2>
+                <p>A <i>Hydrochoerus hydrochaeris</i> desempenha um papel vital nos ecossistemas onde vive. Como consumidora primária, regula o crescimento de gramíneas e ervas aquáticas, contribuindo para a manutenção da dinâmica das áreas alagadas e promovendo a diversidade vegetal. Além disso, serve de fonte de alimento para diversos predadores, como onças, jacarés e aves de rapina, integrando-se de forma crucial às cadeias alimentares locais.</p>
+            </div>
+
+            <hr style="height: 4px; background-color: #283618; margin-bottom: 40px;">
+
+            
+            <div class="predadores template">
+                <h2>9. Predadores</h2>
+                <div class="predadores">
+                    <p>A capivara enfrenta diversos predadores em seu habitat natural. Entre eles, estão aves, mamíferos carnívoros e répteis maiores que a caçam principalmente em áreas próximas a rios, lagos e pântanos.</p>
+                    
+                    <div class="separador"></div>
+                    <div class="caracteristicas">
+                        <p><strong>Predadores Conhecidos:</strong></p>
+                        <ul>
+                            <li><strong>Aves:</strong> Gaviões e águias que atacam filhotes ou indivíduos menores.</li>
+                            <li><strong>Mamíferos:</strong> Grandes carnívoros, como onças-pintadas (<em>Panthera onca</em>), pumas (<em>Puma concolor</em>) e cães selvagens.</li>
+                            <li><strong>Répteis:</strong> Jacarés e sucuris, que frequentemente caçam capivaras adultas ou filhotes próximos à água.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+
+
+        </section>
+        <!-- Acabou  -->
+    </main>
+
+    <footer>
+        <section id="footer-content">
+            <div class="footer-section">
+                <h3>Museu de Zoologia do IFMG</h3>
+                <p>&copy; 2024 Museu de Zoologia do IFMG Campus Bambuí</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="../../animais.html">Animais</a></li>
+                    <li><a href="#">Conheça o processo</a></li>
+                    <li><a href="../../quemsomosnos.html">Quem somos nós?</a></li>
+                    <li><a href="#">Jogos interativos</a></li>
+                    <li><a href="../feedback.html">Feedback</a></li>
+                    <li><a href="../../cadastro.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Nos Siga</h3>
+                <div class="social-icons">
+                    <a target="_blank" href="https://www.instagram.com/geas_ifmg/?hl=pt-br"><img src="../../../media/imagens/icones/448-4486682_instagram-logo-png-white-circle.png" alt="Instagram"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: <a href="mailto:clarice.silva@ifmg.edu.br" style="text-decoration: none; color: #5B85AA">clarice.silva@ifmg.edu.br</a></p>
+            </div>
+        </section>
+
+        <div id="footer-bottom">
+            <p>Desenvolvido por Estudantes do IFMG Campus Bambuí - Curso Técnico em Informática</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
