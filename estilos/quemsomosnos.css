@@ -46,15 +46,7 @@ section#cabecalho-pagina div#caixa-de-texto {
     min-width: 70vw;
     height: 57px;
     margin-left: 10px;
-<<<<<<< HEAD
-
-    margin-bottom: 60px;
-
     margin-bottom: 30px;
-
-=======
-    margin-bottom: 30px;
->>>>>>> 1f53457bcf4c826ce214523b27a12eda934a1bd0
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -97,7 +89,6 @@ section#conteudo h2 {
     padding: 20px;
 }
 
-<<<<<<< HEAD
 
 p.idealizadores{
     margin-bottom: 50px;
@@ -111,8 +102,6 @@ div.principal{
     width: 1300px;
 
 }
-=======
->>>>>>> 1f53457bcf4c826ce214523b27a12eda934a1bd0
 div.texto{
     margin: auto;
     margin-bottom: 60px;
@@ -170,12 +159,4 @@ div.texto{
     section#conteudo h2 {
         font-size: 2em;
     }
-<<<<<<< HEAD
-
-    
-}
-footer{
-    width:100%;
-=======
->>>>>>> 1f53457bcf4c826ce214523b27a12eda934a1bd0
 }
