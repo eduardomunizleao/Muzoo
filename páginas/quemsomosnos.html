@@ -13,7 +13,8 @@
             type="image/x-icon">
         <link rel="stylesheet" href="../estilos/style.css">
         <link rel="stylesheet" href="../estilos/quemsomosnos.css">
-        <link rel="stylesheet" href="../estilos/sliders/slider-animais.css">
+        <link rel="stylesheet" href="../estilos/sliders/slider-animalmuseu.css">
+        <link rel="stylesheet" href="../estilos/pagina-animal.css">
     </head>
 
     <body class="home">
@@ -115,32 +116,21 @@
 
                 </div>
 
-                <div class="slider">
-                    <div class="list">
-                        <div class="item">
-                            <img
-                                src="../media/imagens/quemsomosnos/imagem1.jpeg"
-                                alt="Idealizadora Clarice"
-                                style="object-position: top;">
+                <div id="imagem-animal" class="slider">
+                    <div class="slider-track">
+                        <div class="slide" style="background-image: url('../media/imagens/quemsomosnos/imagem1.jpeg');">
+                        
                         </div>
-                        <div class="item">
-                            <img
-                                src="../media/imagens/quemsomosnos/imagem2.jpeg"
-                                alt style="object-position: top;">
+                        <div class="slide" style="background-image: url('../media/imagens/quemsomosnos/imagem2.jpeg');">
+                        
                         </div>
                     </div>
-                    <div class="buttons">
-                        <button id="prev"><</button>
-                        <button id="next">></button>
+                    <div class="slider-nav">
+                        <button class="slider-btn prev">❮</button>
+                        <button class="slider-btn next">❯</button>
                     </div>
-                    <ul class="dots">
-                        <li class="active"></li>
-                        <li></li>
-                    </ul>
-                </div>
             </div>
-
-            <script src="../javascript/slider-animais.js" defer></script>
+                <script src="../javascript/slider-animalmuseu.js"></script>
 
         </main>
 
