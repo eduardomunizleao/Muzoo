@@ -617,10 +617,10 @@ h1, h2 {
   padding-top: 100px; /* Espaço acima do conteúdo */
   padding-bottom: 100px; /* Espaço abaixo do conteúdo */
 } 
-.centro2{
+.centro2 {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 50px; /* Espaço acima do conteúdo */
     padding-bottom: 50px; /* Espaço abaixo do conteúdo */
-  } 
+} 
