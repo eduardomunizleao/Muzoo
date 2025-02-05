@@ -89,6 +89,19 @@ section#conteudo h2 {
     padding: 20px;
 }
 
+
+p.idealizadores{
+    margin-bottom: 50px;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+div.principal{
+    margin-right: auto;
+    margin-left: auto;
+    width: 1300px;
+
+}
 div.texto{
     margin: auto;
     margin-bottom: 60px;

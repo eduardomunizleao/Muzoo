@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Rokkitt:ital,wght@0,100..900;1,100..900&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+
+/*Variáveis*/
+
+:root{
+    --verde: #606C38;
+    --beige: #283618;
+    --azul: #FEFAE0;
+    --laranja: #DDA15E;
+    --esmeralda: #BC6C25;
+    /*
+        --verde: #5C683A;
+        --beige: #E7BD80;
+        --azul: #3F88C5;
+        --laranja: #4C230A;
+        --esmeralda: #59CD90;
+    */
+
+    --font1: "Wittgenstein", serif;
+    --font2: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --font3: "Rokkitt", Times, serif;
+    --font4: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font5: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+}
+
+/*Fim variáveis*/
+
+
+/* Configurações Gerais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body, html {
+    background-color: var(--azul);
+    scroll-behavior: smooth;
+}
+
+
+
+/* Configurações de Título */
+header {
+    color: white;
+    background-color: var(--verde);
+
+    overflow: hidden;
+    width: 100%;
+}
+
+header.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+header.sticky img {
+    content: url("../media/imagens/logo/logo-deitado.png");
+    width: 15vw;
+}
+
+header.sticky h1 {
+    display: none;
+}
+
+header.sticky section#titulo {
+    height: 8vh;
+    background-image: none;
+    background-color: var(--verde);
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    transition: height 0.3s ease-in-out;
+}
+
+header.sticky section#titulo > span {
+    position: fixed;
+    top: 1px;
+    right: 10px;
+}
+
+section#titulo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    height: 21vh;
+    background-image: linear-gradient(to bottom, var(--verde) 60%, #606C38);
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.322);
+    padding: 10px;
+    transition: none;
+    
+}
+
+#menu-icon {
+    margin-top: 20px;
+    font-size: 2.5em;
+    padding: 4px;
+    border-radius: 10px;
+    text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.432);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    z-index: 1000;
+
+    position: fixed;
+    top: -60px;
+    right: 20px;
+
+    transition: transform .2s, color .2s, opacity .6s, position .6s;
+
+    background-color: #555;
+
+    opacity: 0%;
+}
+
+#menu-icon:hover {
+    transform: scale(1.1);
+    color: rgb(114, 114, 114);
+}
+
+#menu-icon.sticky{
+    position: fixed;
+    transform: translate(0, 60px);
+    opacity: 100%;
+}
+
+section#titulo img {
+    width: 12vh;
+}
+
+section#titulo > h1 {
+    padding-left: 13px;
+    width: 50%;
+    text-align: center;
+    font-size: 1.2em;
+    text-wrap: balance;
+    font-family: var(--font2);
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.363);
+    margin: 5px 0 13px 0;
+}
+
+
+/* Configurações da Barra de Navegação */
+nav#barra-lateral {
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav#barra-lateral ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav #barra-lateral li {
+    height: 50px;
+    z-index: 99999999999999;
+    width: 100%;
+    
+    
+}
+
+nav #barra-lateral a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+#close{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    transition: 0.2s;
+}
+
+#close:hover{
+    background-color: rgba(0, 0, 0, 0.76);
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Estilo para o link ativo (atual) */
+nav #barra-lateral a.atual {
+    color: rgb(27, 27, 27);
+    outline: 2px solid #fefae088;
+    background-color: rgba(255, 255, 255, 0.76);
+}
+
+/* Estilo ao passar o mouse sobre outros links */
+nav #barra-lateral a:hover {
+    background-color: rgba(255, 255, 255, 0.76);
+    outline: 2px solid #fefae088;
+    color: rgb(27, 27, 27);
+}
+
+
+
+nav li.botao-menu a:hover{
+    transform: scale(1.1);
+    color: rgb(114, 114, 114);
+}
+
+ul.sticky{
+    position: absolute;
+    left: -999px;
+    top: -999px
+}
+
+#barra-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(104, 104, 104, 0.685);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    
+    /* Rolagem vertical */
+    overflow-y: auto;
+    
+    /* Mantém o menu inicialmente fora da tela */
+    transform: translateX(100vw);
+    opacity: 0;
+    transition: transform 0.25s ease, opacity 0.5s ease;
+    
+    z-index: 10001;
+}
+
+#barra-lateral.active {
+    transform: translateX(0); /* Traz o menu para a tela */
+    opacity: 1;
+}
+
+#barra-lateral span:not(#close){
+    font-size: 1.3em;
+    position: relative;
+    transform: translate(0, -1px);
+    margin-right: 3px;
+}
+
+
+ul#barra-navegacao{
+    height: 40px;
+    
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    
+    background-color: var(--beige);
+    list-style: none;
+    
+    border-top: 2px solid rgba(0, 0, 0, 0.144);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.144);
+}
+
+ul#barra-navegacao li{
+    flex: 1 1 50px;
+    border-left: 2px solid rgba(0, 0, 0, 0.144);
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    overflow: hidden;
+}
+
+
+ul#barra-navegacao li a{
+    transition: color .2s, transform .2s;
+    color: var(--azul);
+    font-family: var(--font3);
+}
+
+@media screen and (max-width: 800px) {
+    ul#barra-navegacao li a{
+        font-size: 14px;
+    }
+}
+
+ul#barra-navegacao li:hover{
+    cursor: pointer;
+}
+
+ul#barra-navegacao li:hover a{
+    transform: scale(1.1);
+    color: gray;
+}
+
+ul#barra-navegacao li.home{
+    flex: 0 0 60px;
+}
+
+ul#barra-navegacao a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-content: center; 
+    
+}
+
+ul#barra-navegacao a.exibida{
+    color: var(--esmeralda);
+}
+
+#close{
+    width: 100%;
+}
+
+@media(max-width: 600px) {
+    #barra-navegacao{
+        margin-bottom: -4vh;
+    }
+
+    ul#barra-navegacao .esconderNoMobile {
+        display: none;
+    }
+
+    .esconderNoMobile{
+        display: none;
+    }
+    
+    .botao-menu {
+        display: block;
+    }
+
+}
+
+
+@media(max-width: 600px) {
+    #barra-lateral {
+        width: 100%;
+    }
+
+    #menu-icon.material-symbols-outlined{
+        position: absolute;
+        top: 1px;
+        right: 20px;
+        opacity: 100%;
+
+        font-size: 2.2em;
+        padding: 2px;
+        border-radius: 9px;
+
+        background-color: #3e8f64c2;
+        color: rgb(255, 255, 255);
+    }
+
+    #menu-icon.material-symbols-outlined.sticky{
+        position: fixed;
+        transform: translate(0, 10px);
+    }
+}
+
+
+
+main{
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+
+    background-color: white;
+    width: 100vw;
+
+    margin: auto;
+    font-family: var(--font2);
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: justify;
+
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.404);
+}
+
+section#introducao{
+    border-radius: 20px;
+    padding: 10px;
+    width: 93vw;
+
+    margin: 20px auto;
+}
+
+section#introducao > h1{
+    margin-bottom: 15px;
+    font-family: var(--font2);
+}
+
+section#introducao > p{
+    text-indent: 1em;
+    margin-bottom: 1em;
+}
+
+
+  
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e4e1d2;
+    background-image: url('C:/Users/Usuario/Downloads/Gemini_Generated_Image_23g7md23g7md23g7(1).jpg'); /* Caminho da imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-position: center; /* Centraliza a imagem */
+    
+}
+footer {
+    background-color: #283618;
+    color: #e4e1d2;
+    padding: 30px 0;
+}
+#footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+.footer-section {
+    margin: 10px 0;
+    flex: 1 1 200px;
+    text-align: center;
+}
+.footer-section h3 {
+    margin-bottom: 10px;
+    color: #DDA15E;
+    font-size: 1.2em;
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin: 5px 0;
+}
+.footer-section ul li a {
+    color: #e4e1d2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-section ul li a:hover {
+    text-decoration: underline;
+    color: #BC6C25;
+}
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+#footer-bottom {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 20px;
+    border-top: 1px solid #606C38;
+    padding-top: 10px;
+    color: #e4e1d2; /* Alterado para uma cor mais clara */
+}
+/* Adicionando detalhes */
+.footer-section p {
+    margin: 5px 0;
+}
+.footer-section h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #DDA15E;
+    margin: 10px auto 0;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* color of the scroll thumb */
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* color of the scroll thumb on hover */
+}
+
+
+@media screen and (min-width: 800px){
+    section#titulo > h1{
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    section#titulo > h1{
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    section#titulo > h1{
+        font-size: 2.5em;
+    }
+}
+
+
+.start-container, .quiz-container{
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 600px;
+    max-width: 90%;
+
+}
+
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+#start-btn, #next-btn {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#start-btn:hover, #next-btn:hover {
+    background-color: #ff4757;
+    transform: scale(1.05);
+}
+
+.quiz-header {
+    margin-bottom: 20px;
+}
+
+.question-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.question {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.options button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 1em;
+    background-color: #606C38;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.options button:hover {
+    background-color: #283618;
+    transform: translateY(-3px);
+}
+
+.options button.correct {
+    background-color: #229A00;
+    
+}
+
+.options button.wrong {
+    background-color: #f51605;
+}
+.centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px; /* Espaço acima do conteúdo */
+  padding-bottom: 100px; /* Espaço abaixo do conteúdo */
+} 
+.centro2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px; /* Espaço acima do conteúdo */
+    padding-bottom: 50px; /* Espaço abaixo do conteúdo */
+  } 
