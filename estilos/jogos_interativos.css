@@ -1,129 +1,114 @@
-main .centro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 190px; /* Espaço acima do conteúdo */
-    padding-bottom: 190px; /* Espaço abaixo do conteúdo */
+.centro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 190px; /* Espaço acima do conteúdo */
+  padding-bottom: 190px; /* Espaço abaixo do conteúdo */
 }
-  
-main   .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-main   .carousel-item {
-    min-width: 100%;
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-main   .carousel-container {
-    position: relative;
-    width: 900px;
-    max-width: 90%;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    background: rgba(0, 0, 0, 0.8); /* Fundo mais transparente */
-    overflow: hidden;
-    padding-bottom: 30px;
-  }
-  
-main   .start-container, .quiz-container{
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    padding: 30px;
-    width: 600px;
-    max-width: 90%;
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carousel-container {
+  position: relative;
+  width: 900px;
+  max-width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.8); /* Fundo mais transparente */
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
+.start-container, .quiz-container{
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  width: 600px;
+  max-width: 90%;
 
 }
-  
-main   h3 {
-    font-size: 1.8em;
-    color: #2c3e50;
-    margin-top: 10px;
-    font-weight: bold;
+
+.play-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1.1em;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.play-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 2em;
+  padding: 15px 25px; /* Ajuste no tamanho */
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 8px; /* Bordas mais arredondadas */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.prev {
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 90%;
+    padding-bottom: 40px;
   }
-  
-main   p {
+
+  .carousel-item img {
+    max-height: 200px;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  p {
     font-size: 1.1em;
-    color: #7f8c8d;
-    line-height: 1.4;
-    margin-top: 10px;
   }
-  
- main  .play-button {
-    margin-top: 20px;
+
+  .play-button {
     padding: 12px 25px;
-    background-color: #3498db;
-    color: white;
     font-size: 1.1em;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   }
-  
-main   .play-button:hover {
-    background-color: #2980b9;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-main   button {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: none;
-    font-size: 2em;
-    padding: 15px 25px; /* Ajuste no tamanho */
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 8px; /* Bordas mais arredondadas */
-    transition: background-color 0.3s, transform 0.2s;
-  }
-  
-main   button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    transform: scale(1.1);
-  }
-  
-main   .prev {
-    left: 20px;
-    transform: translateY(-50%);
-  }
-  
-main   .next {
-    right: 20px;
-    transform: translateY(-50%);
-  }
-  
-  @media (max-width: 768px) {
-    main .carousel-container {
-      width: 90%;
-      padding-bottom: 40px;
-    }
-  
-    main .carousel-item img {
-      max-height: 200px;
-    }
-  
-    main h3 {
-      font-size: 1.5em;
-    }
-  
-    main p {
-      font-size: 1.1em;
-    }
-  
-    main .play-button {
-      padding: 12px 25px;
-      font-size: 1.1em;
-    }
-  }
-  
+}
