@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peças do Museu</title>
+    <title>Animais</title>
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <link rel="shortcut icon" href="../media/imagens/logo/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="../estilos/footer_e_header.css">
 
-    <link rel="stylesheet" href="../estilos/animais.css">
+    <link rel="stylesheet" href="../estilos/animais2.css">
 </head>
 <body class="Peças do museu">
     <header>
@@ -46,45 +46,204 @@
 
     <script src="../javascript/links_atuais.js" defer></script>
 
-    <main>
-        <div class="bg-vertical-horizontal">
-
-         <section id="cabecalho-pagina">
-            <div id="background">
-                <div id="caixa-de-texto"><h2 id="titulo-pagina">Peças do MUZOO</h2></div>
+    <main id="conteudoPrincipal">
+        <section id="introducao">
+            <div id="containerIntroducao">
+                <div id="ladoEsquerdo">
+                    <h1 id="tituloPrincipal">Reino Animal</h1>
+                    <p id="descricaoPrincipal">
+                        Explore a incrível diversidade do Reino Animal: seres que conquistaram todos os ambientes da Terra através de adaptações extraordinárias ao longo de milhões de anos.
+                    </p>
+                    <div id="numerosDestaque">
+                        <div class="numero">
+                            <span class="valor">1M+</span>
+                            <span class="rotulo">Espécies</span>
+                        </div>
+                        <div class="separador"></div>
+                        <div class="numero">
+                            <span class="valor">30</span>
+                            <span class="rotulo">Filos</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="ladoDireito">
+                    <div class="circuloAnimado c1"></div>
+                    <div class="circuloAnimado c2"></div>
+                    <div class="circuloAnimado c3"></div>
+                </div>
             </div>
-         </section>
+        </section>
 
-            <section id="conteudo">
-                <div id="cabecalho-conteudo">
-                    <h2>Escolha a classe de animal desejada: 
-                        <span id="info" class="material-symbols-outlined esconderNoMobile" data-tooltip="Selecione uma das opções abaixo para visualizar as informações sobre o animal da classe desejada.">help</span>
-                    </h2>
-
-                </div>
-    
-                <div id="animais">
-                    <a href="classes/mamiferos.html" id="mamiferos" class="representacao-animais" data-name="Mamíferos">
-                        <span>Mamíferos</span>
-                    </a>
-                    <a href="classes/repteis.html" id="repteis" class="representacao-animais" data-name="Répteis">
-                        <span>Répteis</span>
-                    </a>
-                    <a href="classes/aves.html" id="aves" class="representacao-animais" data-name="Aves">
-                        <span>Aves</span>
-                    </a>
-                    <a href="classes/anfibios.html" id="anfibios" class="representacao-animais" data-name="Anfíbios">
-                        <span>Anfíbios</span>
-                    </a>
-                    <a href="classes/peixes.html" id="peixes" class="representacao-animais" data-name="Peixes">
-                        <span>Peixes</span>
-                    </a>
-                </div>
-                
-                
-            </section>
-         </div>
+        <h1 id="explore">Explore Nossa Coleção</h1>
         
+        <section id="menuAnimais">
+            <a href="classes/mamiferos.html">
+                <div class="cartaoAnimal" data-categoria="mamiferos">
+                    <img src="../media/imagens/animal-especifico/mamiferos/Leopardus pardalis/jaguatirica.png" alt="Mamíferos">
+                    <h2>Mamíferos</h2>
+                </div>
+            </a>
+
+            <a href="classes/repteis.html">
+                <div class="cartaoAnimal" data-categoria="repteis">
+                    <img src="../media/imagens/animal-especifico/repteis/Erythrolamprus_aesculapii/Erythrolamprus aesculapii.jpeg" alt="Répteis">
+                    <h2>Répteis</h2>
+                </div>
+            </a>
+            
+            <a href="classes/aves.html">
+                <div class="cartaoAnimal" data-categoria="aves">
+                    <img src="../media/imagens/animal-especifico/aves/Ara ararauna/Ara ararauna.jpg" alt="Aves">
+                    <h2>Aves</h2>
+                </div>
+            </a>
+            
+            <a href="classes/anfibios.html">
+                <div class="cartaoAnimal" data-categoria="anfibios">
+                    <img src="../media/imagens/animal-especifico/anfibios/Rhinella sp/sapo-cururu.jpeg" alt="Anfíbios">
+                    <h2>Anfíbios</h2>
+                </div>
+            </a>
+
+            <a href="classes/peixes.html">
+                <div class="cartaoAnimal" data-categoria="peixes">
+                    <img src="../media/imagens/animal-especifico/peixes/Oreochromis niloticus/tilapia_do_nilo.jpg" alt="Peixes">
+                    <h2>Peixes</h2>
+                </div>
+            </a>
+            
+            
+        </section>
+
+        <section id="secaoSaibaMais">
+            <div id="iconeSaibaMais"></div>
+            <div id="conteudoSaibaMais">
+                <h2 id="tituloSaibaMais">Saiba Mais</h2>
+                <p id="descricaoSaibaMais">Ficou com dúvida em relação à classificação dos animais? Veja as informações abaixo para explorar mais sobre o assunto e entender como os animais são organizados em grupos com base em suas características!</p>
+            </div>
+        </section>
+
+        <section id="secaoMamiferos" class="classeAnimal">
+            <div class="cabecalhoClasse">
+                <a href="classes/mamiferos.html"><img src="https://images.unsplash.com/photo-1585468274952-66591eb14165?w=500" alt="Leão" class="imagemAnimal"></a>
+                <div class="infoClasse">
+                    <h2 class="tituloClasse">Mamíferos</h2>
+                    <p class="descricaoClasse">Os mamíferos representam um grupo extraordinário de vertebrados que revolucionou a história da vida na Terra. Com uma história evolutiva que remonta a mais de 200 milhões de anos, estes animais desenvolveram características únicas que lhes permitiram conquistar praticamente todos os ambientes do planeta, desde as profundezas dos oceanos até as alturas dos céus.</p>
+                </div>
+            </div>
+            <div class="caracteristicasClasse">
+                <h3 class="tituloCaracteristicas">Características Distintivas</h3>
+                <ul class="listaCaracteristicas">
+                    <li class="itemCaracteristica">Presença de glândulas mamárias que produzem leite para alimentação dos filhotes</li>
+                    <li class="itemCaracteristica">Corpo coberto por pelos que auxiliam na regulação térmica</li>
+                    <li class="itemCaracteristica">Sistema nervoso altamente desenvolvido com grande capacidade de aprendizado</li>
+                    <li class="itemCaracteristica">Endotermia (capacidade de manter temperatura corporal constante)</li>
+                    <li class="itemCaracteristica">Coração com quatro câmaras e circulação dupla completa</li>
+                    <li class="itemCaracteristica">Viviparidade na maioria das espécies</li>
+                </ul>
+            </div>
+            <div id="botaoContainer" class="botaoContainer">
+                <a href="classes/mamiferos.html"><button id="botaoSaibaMais" class="botaoSaibaMais">Explorar</button></a>
+            </div>
+        </section>
+        
+        <section id="secaoRepteis" class="classeAnimal">
+            <div class="cabecalhoClasse">
+                <a href="classes/repteis.html"><img src="../media/imagens/classes-animais/largato.png" alt="Cobra" class="imagemAnimal"></a>
+                <div class="infoClasse">
+                    <h2 class="tituloClasse">Répteis</h2>
+                    <p class="descricaoClasse">Os répteis são vertebrados que dominaram a Terra há milhões de anos, especialmente durante a era dos dinossauros. Adaptados a uma variedade de ambientes, desde desertos áridos até florestas tropicais, os répteis são conhecidos por sua pele escamosa e por serem ectotérmicos, dependendo de fontes externas para regular sua temperatura corporal.</p>
+                </div>
+            </div>
+            <div class="caracteristicasClasse">
+                <h3 class="tituloCaracteristicas">Características Distintivas</h3>
+                <ul class="listaCaracteristicas">
+                    <li class="itemCaracteristica">Pele coberta por escamas de queratina, que protegem contra a perda de água</li>
+                    <li class="itemCaracteristica">Ectotermia, dependendo do ambiente para regular a temperatura corporal</li>
+                    <li class="itemCaracteristica">Reprodução através de ovos amnióticos com casca resistente</li>
+                    <li class="itemCaracteristica">Pulmões bem desenvolvidos para respiração em terra</li>
+                    <li class="itemCaracteristica">Corpo adaptado para locomoção terrestre, com membros laterais ou ausentes</li>
+                    <li class="itemCaracteristica">Sistema circulatório com coração de três câmaras (exceto crocodilianos, que têm quatro)</li>
+                </ul>
+            </div>
+
+            <div id="botaoContainer" class="botaoContainer">
+                <a href="classes/repteis.html"><button id="botaoSaibaMais" class="botaoSaibaMais">Explorar</button></a>
+            </div>
+        </section>
+
+        <section id="secaoAves" class="classeAnimal">
+            <div class="cabecalhoClasse">
+                <a href="classes/aves.html"><img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?w=500" alt="Águia" class="imagemAnimal"></a>
+                <div class="infoClasse">
+                    <h2 class="tituloClasse">Aves</h2>
+                    <p class="descricaoClasse">As aves são vertebrados que conquistaram os céus através de adaptações extraordinárias ao longo de milhões de anos de evolução. Descendentes diretas dos dinossauros terópodes, elas desenvolveram características únicas que as tornaram um dos grupos mais bem-sucedidos do reino animal, com representantes em praticamente todos os ambientes do planeta.</p>
+                </div>
+            </div>
+            <div class="caracteristicasClasse">
+                <h3 class="tituloCaracteristicas">Características Distintivas</h3>
+                <ul class="listaCaracteristicas">
+                    <li class="itemCaracteristica">Corpo coberto por penas, estruturas únicas que permitem o voo e regulação térmica</li>
+                    <li class="itemCaracteristica">Ossos pneumáticos, leves e ocos, que facilitam o voo</li>
+                    <li class="itemCaracteristica">Bico córneo adaptado a diferentes tipos de alimentação</li>
+                    <li class="itemCaracteristica">Sistema respiratório altamente eficiente com sacos aéreos</li>
+                    <li class="itemCaracteristica">Endotermia com as mais altas temperaturas corporais entre os vertebrados</li>
+                    <li class="itemCaracteristica">Reprodução através de ovos com casca calcária</li>
+                </ul>
+            </div>
+            <div id="botaoContainer" class="botaoContainer">
+                <a href="classes/aves.html"><button id="botaoSaibaMais" class="botaoSaibaMais">Explorar</button></a>
+            </div>
+        </section>
+
+
+        <section id="secaoAnfibios" class="classeAnimal">
+            <div class="cabecalhoClasse">
+                <a href="classes/anfibios.html"><img src="../media/imagens/classes-animais/sapo.jpeg" alt="Sapo" class="imagemAnimal"></a>
+                <div class="infoClasse">
+                    <h2 class="tituloClasse">Anfíbios</h2>
+                    <p class="descricaoClasse">Os anfíbios são vertebrados que representam uma das primeiras transições da vida aquática para a terrestre. Com uma história evolutiva que remonta a mais de 300 milhões de anos, eles são conhecidos por sua dependência de ambientes úmidos e por possuírem ciclos de vida que geralmente envolvem uma fase aquática e outra terrestre. São animais fascinantes, com uma grande diversidade de formas e adaptações.</p>
+                </div>
+            </div>
+            <div class="caracteristicasClasse">
+                <h3 class="tituloCaracteristicas">Características Distintivas</h3>
+                <ul class="listaCaracteristicas">
+                    <li class="itemCaracteristica">Pele fina e úmida, permeável à água e gases, essencial para a respiração cutânea</li>
+                    <li class="itemCaracteristica">Ciclo de vida com metamorfose, passando de larvas aquáticas (girinos) para adultos terrestres ou semi-aquáticos</li>
+                    <li class="itemCaracteristica">Reprodução através de ovos sem casca, geralmente depositados em água</li>
+                    <li class="itemCaracteristica">Ectotermia, dependendo do ambiente para regular a temperatura corporal</li>
+                    <li class="itemCaracteristica">Membros adaptados para locomoção em terra e água, quando presentes</li>
+                    <li class="itemCaracteristica">Sistema circulatório com coração de três câmaras</li>
+                </ul>
+            </div>
+            <div id="botaoContainer" class="botaoContainer">
+                <a href="classes/anfibios.html"><button id="botaoSaibaMais" class="botaoSaibaMais">Explorar</button></a>
+            </div>
+        </section>
+
+        <section id="secaoPeixes" class="classeAnimal">
+            <div class="cabecalhoClasse">
+                <a href="classes/peixes.html"><img src="../media/imagens/classes-animais/peixe.jpg" alt="Peixe" class="imagemAnimal"></a>
+                <div class="infoClasse">
+                    <h2 class="tituloClasse">Peixes</h2>
+                    <p class="descricaoClasse">Os peixes são vertebrados aquáticos que habitam uma grande variedade de ambientes, desde oceanos profundos até rios e lagos de água doce. Com mais de 34.000 espécies conhecidas, eles representam a maior diversidade entre os vertebrados. Os peixes desempenham papéis ecológicos essenciais, sendo fundamentais para a cadeia alimentar aquática e para o equilíbrio dos ecossistemas.</p>
+                </div>
+            </div>
+            <div class="caracteristicasClasse">
+                <h3 class="tituloCaracteristicas">Características Distintivas</h3>
+                <ul class="listaCaracteristicas">
+                    <li class="itemCaracteristica">Corpo adaptado para a natação, com formas hidrodinâmicas e nadadeiras especializadas</li>
+                    <li class="itemCaracteristica">Respiração através de brânquias, que extraem oxigênio da água</li>
+                    <li class="itemCaracteristica">Pele coberta por escamas e muco, que reduzem o atrito na água e protegem contra infecções</li>
+                    <li class="itemCaracteristica">Sistema de linha lateral, que detecta vibrações e movimentos na água</li>
+                    <li class="itemCaracteristica">Reprodução variada, incluindo ovíparos, vivíparos e ovovivíparos</li>
+                    <li class="itemCaracteristica">Ectotermia, com temperatura corporal regulada pelo ambiente aquático</li>
+                </ul>
+            </div>
+            <div id="botaoContainer" class="botaoContainer">
+                <a href="classes/peixes.html"><button id="botaoSaibaMais" class="botaoSaibaMais">Explorar</button></a>
+            </div>
+        </section>
     </main>
 
     <footer>
