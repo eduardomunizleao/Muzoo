@@ -29,9 +29,6 @@
     --font5: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 }
 
-/*Fim variáveis*/
-
-
 /* Configurações Gerais */
 * {
     padding: 0;
@@ -49,7 +46,6 @@ body{
     height: 100vh;
     overflow-x: hidden;
 }
-
 /* Configurações de Título */
 header {
     color: white;
@@ -340,8 +336,9 @@ ul#barra-navegacao a.exibida{
 }
 
 @media(max-width: 600px) {
-    #barra-navegacao{
+    ul#barra-navegacao{
         margin-bottom: -4vh;
+        height: 22px;
     }
 
     ul#barra-navegacao .esconderNoMobile {
@@ -383,118 +380,93 @@ ul#barra-navegacao a.exibida{
         transform: translate(0, 10px);
     }
 }
-
-
-
-main{
-    display: flex;
-    align-items: center;
-    flex-flow: column wrap;
-
-    background-color: white;
-    width: 100vw;
-
-    margin: auto;
-    font-family: var(--font2);
-    font-size: 1em;
-    line-height: 1.5em;
-    text-align: justify;
-
-    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.404);
-}
-
-
-
-
-  
-
-  footer {
-    background-color: #2f2f2f;
-    color: #fff;
-    padding: 40px 0;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
+footer {
+  background-color: #2f2f2f;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
 
 }
 #footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 20px;
 }
 .footer-section {
-    margin: 10px 0;
-    flex: 1 1 200px;
-    text-align: center;
+  margin: 10px 0;
+  flex: 1 1 200px;
+  text-align: center;
 }
 .footer-section h3 {
-    margin-bottom: 10px;
-    color: #DDA15E;
-    font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #DDA15E;
+  font-size: 1.2em;
 }
 .footer-section ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 .footer-section ul li {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 .footer-section ul li a {
-    color: #e4e1d2;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: #e4e1d2;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 .footer-section ul li a:hover {
-    text-decoration: underline;
-    color: #BC6C25;
+  text-decoration: underline;
+  color: #BC6C25;
 }
 .social-icons img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    transition: transform 0.3s;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  transition: transform 0.3s;
 }
 .social-icons img:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 #footer-bottom {
-    text-align: center;
-    font-size: 0.9em;
-    margin-top: 20px;
-    border-top: 1px solid #606C38;
-    padding-top: 10px;
-    color: #e4e1d2; /* Alterado para uma cor mais clara */
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 20px;
+  border-top: 1px solid #606C38;
+  padding-top: 10px;
+  color: #e4e1d2; /* Alterado para uma cor mais clara */
 }
 /* Adicionando detalhes */
 .footer-section p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 .footer-section h3::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 2px;
-    background-color: #DDA15E;
-    margin: 10px auto 0;
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #DDA15E;
+  margin: 10px auto 0;
 }
 
 
 
 ::-webkit-scrollbar {
-    width: 10px; /* width of the entire scrollbar */
+  width: 10px; /* width of the entire scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* color of the tracking area */
+  background: #f1f1f1; /* color of the tracking area */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888; /* color of the scroll thumb */
-    border-radius: 3px;
+  background: #888; /* color of the scroll thumb */
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* color of the scroll thumb on hover */
+  background: #555; /* color of the scroll thumb on hover */
 }
 
 
@@ -515,4 +487,3 @@ main{
         font-size: 2.5em;
     }
 }
-
