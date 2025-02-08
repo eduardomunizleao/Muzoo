@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore o Museu de Taxidermia do IFMG, conheça as exposições e aprenda sobre a técnica milenar.">
+    <meta name="description"
+        content="Explore o Museu de Taxidermia do IFMG, conheça as exposições e aprenda sobre a técnica milenar.">
     <title>Museu de Zoologia do IFMG Campus Bambuí</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <link rel="shortcut icon" href="../media/imagens/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../estilos/style.css">
     <link rel="stylesheet" href="../estilos/sliders/carrosel.css">
 </head>
+
 <body class="home">
     <header>
         <section id="titulo">
             <a href="index.html"><img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo"></a>
             <h1>Museu de Taxidermia do IFMG</h1>
-            <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop" onclick="toggleSidebar()">menu</span>
+            <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop"
+                onclick="toggleSidebar()">menu</span>
         </section>
     </header>
 
     <nav>
         <ul id="barra-lateral">
             <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
-            <li class="home"><a href="index.html"><span class="material-symbols-outlined">home</span> Página inicial </a></li>
+            <li class="home"><a href="index.html"><span class="material-symbols-outlined">home</span> Página inicial
+                </a></li>
             <li><a href="animais.html">Animais</a></li>
-            <li><a href="taxidermia.html">Conheça o processo</a></li>
+            <li><a href="taxidermia.html">Taxidermia</a></li>
             <li><a href="quemsomosnos.html">Quem somos nós?</a></li>
             <li><a href="Jogos_interativos.html">Jogos interativos</a></li>
             <li><a href="feedback.html">Feedback</a></li>
@@ -32,8 +37,8 @@
         </ul>
         <ul id="barra-navegacao" class="esconderNoMobile">
             <li class="esconderNoMobile home"><a href="index.html"><span class="material-symbols-outlined">
-                home
-                </span></a></li>
+                        home
+                    </span></a></li>
             <li class="esconderNoMobile"><a href="animais.html">Animais</a></li>
             <li class="esconderNoMobile"><a href="taxidermia.html">Taxidermia</a></li>
             <li class="esconderNoMobile"><a href="quemsomosnos.html">Quem somos?</a></li>
@@ -44,175 +49,126 @@
     </nav>
 
     <script src="../javascript/links_atuais.js" defer></script>
-    
-    <main>
-       <section id="carroseldeimagens">
-           <div class="carousel">
-       
-               <div class="list">
-       
-                   <div class="item" style="background-image: url(../media/imagens/carrossel-imagens/eagel1.jpg);">
-                       <div class="content">
-                           <div class="title">SEÇÃO</div>
-                           <div class="name">EAGLE</div>
-                           <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                           <div class="btn">
-                               <button><a href="../páginas/animais.html">Ver mais</a></button>
-                           </div>
-                       </div>
-                   </div>
-       
-                   <div class="item pecas">
-                       
-                       <div class="content">
-                           <div class="title">SEÇÃO</div>
-                           <div class="name">ANIMAIS</div>
-                           <div class="des"><strong>EXPLORE</strong> uma coleção fascinante de animais taxidermizados, cada um com informações e curiosidades únicas. Descubra detalhes sobre seus habitats, comportamentos e o processo de preservação.</div>
-                           <div class="btn">
-                            <button><a href="animais.html">Ver mais</a></button>
-                        </div>
-                       </div>
-       
-                   </div>
-       
-                   <div class="item taxidermia">
-       
-                       <div class="content">
-                           <div class="title">SEÇÃO</div>
-                           <div class="name">TAXIDERMIA</div>
-                           <div class="des"><strong>EXPLORE</strong> como essa técnica milenar evoluiu e continua a encantar visitantes com sua capacidade de eternizar a beleza da vida selvagem.</div>
-                           <div class="btn">
-                               <button><a href="taxidermia.html">Ver mais</a></button>
-                           </div>
-                       </div>
-       
-                   </div>
-       
-                   <div class="item" style="background-image: url(../media/imagens/carrossel-imagens/butterfly1.jpeg);">
-                       
-                       <div class="content">
-                           <div class="title">SEÇÃO</div>
-                           <div class="name">BUTTERFLY</div>
-                           <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                           <div class="btn">
-                                <button>Ver mais</button>
-                           </div>
-                       </div>
-       
-                   </div>
-       
-                   <div class="item" style="background-image: url(../media/imagens/carrossel-imagens/owl2.jpg);">
-                       
-                       <div class="content">
-                           <div class="title">SEÇÃO</div>
-                           <div class="name">OWL</div>
-                           <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                           <div class="btn">
-                                <button>Ver mais</button>
-                           </div>
-                       </div>
-       
-                   </div>
-       
-                   <div class="item" style="background-image: url(../media/imagens/carrossel-imagens/eagel3.jpg);">
-                       
-                       <div class="content">
-                           <div class="title">SEÇÃO</div>
-                           <div class="name">EAGLE</div>
-                           <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                           <div class="btn">
-                            <button>Ver mais</button>
-                           </div>
-                       </div>
-       
-                   </div>
-       
-                   <div class="item" style="background-image: url(../media/imagens/carrossel-imagens/kingfirser2.jpeg);">
-                       
-                       <div class="content">
-                           <div class="title">SEÇÃO</div>
-                           <div class="name">KINGFISHER</div>
-                           <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                           <div class="btn">
-                            <button>Ver mais</button>
-                           </div>
-                       </div>
-       
-                   </div>
-       
-                   <div class="item" style="background-image: url(../media/imagens/carrossel-imagens/parrot2.jpg);">
-                       
-                       <div class="content">
-                           <div class="title">SEÇÃO</div>
-                           <div class="name">PARROT</div>
-                           <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                           <div class="btn">
-                            <button>Ver mais</button>
-                           </div>
-                       </div>
-       
-                   </div>
-       
-                   <div class="item" style="background-image: url(../media/imagens/carrossel-imagens/heron.jpeg);">
-                       
-                       <div class="content">
-                           <div class="title">SEÇÃO</div>
-                           <div class="name">HERON</div>
-                           <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                           <div class="btn">
-                            <button>Ver mais</button>
-                           </div>
-                       </div>
-       
-                   </div>
-       
-                   <div class="item" style="background-image: url(../media/imagens/carrossel-imagens/butterfly2.jpg);">
-                       
-                       <div class="content">
-                           <div class="title">SEÇÃO</div>
-                           <div class="name">BUTTERFLY</div>
-                           <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                           <div class="btn">
-                            <button>Ver mais</button>
-                           </div>
-                       </div>
-       
-                   </div>
-       
-                   <div class="item" style="background-image: url(../media/imagens/carrossel-imagens/parrot2.jpg);">
-                       
-                       <div class="content">
-                           <div class="title">SEÇÃO</div>
-                           <div class="name">PARROT</div>
-                           <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                           <div class="btn">
-                            <button>Ver mais</button>
-                           </div>
-                       </div>
-       
-                   </div>
-       
-               </div>
-       
-               <!--next prev button-->
-               <div class="arrows">
-                   <button class="prev"><</button>
-                   <button class="next">></button>
-               </div>
-       
-       
-               <!-- time running -->
-               <div class="timeRunning"></div>
-       
-           </div>
-       
-           <script src="../javascript/carrossel.js" defer></script>
-       </section>
 
-       <section id="introducao">
-            <p>Bem-vindo ao site do <strong>Muzoo</strong> (Museu de Taxidermia do IFMG Campus Bambuí)! Aqui, você encontrará informações sobre todos os animais em exposição, incluindo detalhes sobre suas principais presas e predadores, o status de risco de extinção da espécie e seus habitats.</p>
-            
-            <p>Além disso, oferecemos áreas interativas, como quizzes e jogos de memória, para que você possa aprender se divertindo um pouco.</p>
+    <main>
+        <section id="carroseldeimagens">
+            <div class="carousel">
+
+                <div class="list">
+
+                    <div class="item" style="background-image: url(../media/imagens/carrossel-imagens/Museu-muzoo.jpg);">
+
+                        <div class="content">
+                            <div class="title">SEÇÃO</div>
+                            <div class="name">Contato</div>
+                            <div class="des"><strong>INTERESSADO EM FAZER UMA VISITA INCRÍVEL?</strong> Entre em contato
+                                conosco e prepare-se para uma experiência inesquecível!</div>
+                            <div class="btn">
+                                <button><a href="cadastro.html">Ver mais</a></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item pecas">
+
+                        <div class="content">
+                            <div class="title">SEÇÃO</div>
+                            <div class="name">ANIMAIS</div>
+                            <div class="des"><strong>EXPLORE</strong> uma coleção fascinante de animais taxidermizados,
+                                cada um com informações e curiosidades únicas. Descubra detalhes sobre seus habitats,
+                                comportamentos e o processo de preservação.</div>
+                            <div class="btn">
+                                <button><a href="animais.html">Ver mais</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="item taxidermia">
+
+                        <div class="content">
+                            <div class="title">SEÇÃO</div>
+                            <div class="name">TAXIDERMIA</div>
+                            <div class="des"><strong>EXPLORE</strong> como essa técnica milenar evoluiu e continua a
+                                encantar visitantes com sua capacidade de eternizar a beleza da vida selvagem.</div>
+                            <div class="btn">
+                                <button><a href="taxidermia.html">Ver mais</a></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item"
+                        style="background-image: url(../media/imagens/carrossel-imagens/butterfly1.jpeg);">
+
+                        <div class="content">
+                            <div class="title">SEÇÃO</div>
+                            <div class="name">Quem somos nós?</div>
+                            <div class="des"><strong>EXPLORE</strong> o menu para conhecer os idealizadores e as mentes
+                                brilhantes por trás do nosso museu.</div>
+                            <div class="btn">
+                                <button><a href="quemsomosnos.html">Ver mais</a></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item" style="background-image: url(../media/imagens/carrossel-imagens/owl2.jpg);">
+
+                        <div class="content">
+                            <div class="title">SEÇÃO</div>
+                            <div class="name">Jogos</div>
+                            <div class="des"><strong>Experimente</strong> testar seu conhecimento com quizzes
+                                emocionantes
+                                sobre o reino animal e se divertir com jogos fascinantes!</div>
+                            <div class="btn">
+                                <button><a href="Jogos_interativos.html">Ver mais</a></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item" style="background-image: url(../media/imagens/carrossel-imagens/eagel3.jpg);">
+
+                        <div class="content">
+                            <div class="title">SEÇÃO</div>
+                            <div class="name">Feedback</div>
+                            <div class="des"><strong>AVALIE</strong> o museu e o web site para que possamos lhe oferecer
+                                uma
+                                experiência cada vez melhor!</div>
+                            <div class="btn">
+                                <button><a href="feedback.html">Ver mais</a></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            <!--next prev button-->
+            <div class="arrows">
+                <button class="prev"><</button>
+                <button class="next">></button>
+            </div>
+
+
+            <!-- time running -->
+            <div class="timeRunning"></div>
+
+            </div>
+
+            <script src="../javascript/carrossel.js" defer></script>
+        </section>
+
+        <section id="introducao">
+            <p>Bem-vindo ao site do <strong>Muzoo</strong> (Museu de Taxidermia do IFMG Campus Bambuí)! Aqui, você
+                encontrará informações sobre todos os animais em exposição, incluindo detalhes sobre suas principais
+                presas e predadores, o status de risco de extinção da espécie e seus habitats.</p>
+
+            <p>Além disso, oferecemos áreas interativas, como quizzes e jogos de memória, para que você possa aprender
+                se divertindo um pouco.</p>
         </section>
 
     </main>
@@ -228,7 +184,7 @@
                 <h3>Links Rápidos</h3>
                 <ul>
                     <li><a href="animais.html">Animais</a></li>
-                    <li><a href="taxidermia.html">Conheça o processo</a></li>
+                    <li><a href="taxidermia.html">Taxidermia</a></li>
                     <li><a href="quemsomosnos.html">Quem somos nós?</a></li>
                     <li><a href="Jogos_interativos.html">Jogos interativos</a></li>
                     <li><a href="feedback.html">Feedback</a></li>
@@ -239,13 +195,16 @@
             <div class="footer-section">
                 <h3>Nos Siga</h3>
                 <div class="social-icons">
-                    <a target="_blank" href="https://www.instagram.com/geas_ifmg/?hl=pt-br"><img src="../media/imagens/icones/448-4486682_instagram-logo-png-white-circle.png" alt="Instagram"></a>
+                    <a target="_blank" href="https://www.instagram.com/geas_ifmg/?hl=pt-br"><img
+                            src="../media/imagens/icones/448-4486682_instagram-logo-png-white-circle.png"
+                            alt="Instagram"></a>
                 </div>
             </div>
 
             <div class="footer-section">
                 <h3>Contato</h3>
-                <p>Email: <a href="mailto:clarice.silva@ifmg.edu.br" style="text-decoration: none; color: #5B85AA">clarice.silva@ifmg.edu.br</a></p>
+                <p>Email: <a href="mailto:clarice.silva@ifmg.edu.br"
+                        style="text-decoration: none; color: #5B85AA">clarice.silva@ifmg.edu.br</a></p>
             </div>
         </section>
 
@@ -253,6 +212,7 @@
             <p>Desenvolvido por Estudantes do IFMG Campus Bambuí - Curso Técnico em Informática</p>
         </div>
     </footer>
-    
+
 </body>
+
 </html>
