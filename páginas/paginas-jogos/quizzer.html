@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizzer</title>
     <link rel="stylesheet" href="../../estilos/estilos-dos-jogos/quizzer.css">
+    <link rel="stylesheet" href="../../estilos/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
 <body>
     <header>
         <section id="titulo">
-            <img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo">
+            <a href="index.html"><img src="../../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo"></a>
             <h1>Museu de Taxidermia do IFMG</h1>
             <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop" onclick="toggleSidebar()">menu</span>
         </section>
@@ -19,33 +21,26 @@
         <ul id="barra-lateral">
             <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
             <li class="home"><a href="index.html"><span class="material-symbols-outlined">home</span> Página inicial </a></li>
-            <li><a href="animais.html">Peças do museu</a></li>
-            <li><a href="#">Conheça o processo</a></li>
-            <li><a href="quemsomosnos.html">Quem somos nós?</a></li>
-            <li><a href="#">Quizzes</a></li>
-            <li><a href="#">Feedback</a></li>
-            <li><a href="cadastro.html">Contato</a></li>
+            <li><a href="../animais.html">Animais</a></li>
+            <li><a href="../taxidermia.html">Conheça o processo</a></li>
+            <li><a href="../quemsomosnos.html">Quem somos nós?</a></li>
+            <li><a href="../Jogos_interativos.html">Jogos interativos</a></li>
+            <li><a href="../feedback.html">Feedback</a></li>
+            <li><a href="../cadastro.html">Contato</a></li>
         </ul>
         <ul id="barra-navegacao" class="esconderNoMobile">
             <li class="esconderNoMobile home"><a href="index.html"><span class="material-symbols-outlined">
                 home
                 </span></a></li>
-            <li class="esconderNoMobile"><a href="animais.html">Peças do museu</a></li>
-            <li class="esconderNoMobile"><a href="#">Taxidermia</a></li>
-            <li class="esconderNoMobile"><a href="quemsomosnos.html">Quem somos?</a></li>
-            <li class="esconderNoMobile"><a href="#">Quizzes</a></li>
-            <li class="esconderNoMobile"><a href="#">Feedback</a></li>
-            <li class="esconderNoMobile"><a href="cadastro.html">Contato</a></li>
+            <li class="esconderNoMobile"><a href="../animais.html">Animais</a></li>
+            <li class="esconderNoMobile"><a href="../taxidermia.html">Taxidermia</a></li>
+            <li class="esconderNoMobile"><a href="../quemsomosnos.html">Quem somos?</a></li>
+            <li class="esconderNoMobile"><a href="../Jogos_interativos.html">Jogos interativos</a></li>
+            <li class="esconderNoMobile"><a href="../feedback.html">Feedback</a></li>
+            <li class="esconderNoMobile"><a href="../cadastro.html">Contato</a></li>
         </ul>
     </nav>
 
-    
-    <div class="centro">
-        <div class="start-container">
-            <h1>Bem-vindo ao Quiz!</h1>
-            <button id="start-btn">Iniciar Quiz</button>
-        </div>
-    </div>
     <div class="centro2">
         <div class="quiz-container">
             <div class="quiz-header">
@@ -62,6 +57,13 @@
             <button id="next-btn">Próxima</button>
         </div>
     </div>
+    <div class="centro">
+        <div class="start-container">
+            <h1>Bem-vindo ao Quiz!</h1>
+            <button id="start-btn">Iniciar Quiz</button>
+        </div>
+    </div>
+    
 
 
     <footer>
@@ -86,7 +88,7 @@
             <div class="footer-section">
                 <h3>Nos Siga</h3>
                 <div class="social-icons">
-                    <a target="_blanck" href="https://www.instagram.com/geas_ifmg/?hl=pt-br"><img src="../media/imagens/icones/448-4486682_instagram-logo-png-white-circle.png" alt="Instagram"></a>
+                    <a target="_blanck" href="https://www.instagram.com/geas_ifmg/?hl=pt-br"><img src="../../media/imagens/icones/448-4486682_instagram-logo-png-white-circle.png" alt="Instagram"></a>
                     
                 </div>
             </div>
@@ -102,5 +104,6 @@
         </div>
     </footer>
     <script src="../../javascript/quizzer.js"></script>
+    <script src="../../javascript/links_atuais.js"></script>
 </body>
 </html>

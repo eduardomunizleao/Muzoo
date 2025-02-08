@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+    
+    <meta name="description" content="Explore o Museu de Taxidermia do IFMG, conheça as exposições e aprenda sobre a técnica milenar.">
+    <title>Museu de Zoologia do IFMG Campus Bambuí</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="shortcut icon" href="../media/imagens/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="../estilos/quemsomosnos.css">
+</head>
+<body class="home">
+    <header>
+        <section id="titulo">
+            <img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo">
+            <h1>Museu de Taxidermia do IFMG</h1>
+            <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop" onclick="toggleSidebar()">menu</span>
+        </section>
+    </header>
+
+    <nav>
+        <ul id="barra-lateral">
+            <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
+            <li class="home"><a href="index.html"><span class="material-symbols-outlined">home</span> Página inicial </a></li>
+            <li><a href="animais.html">Animais</a></li>
+            <li><a href="taxidermia.html">Conheça o processo</a></li>
+            <li><a href="quemsomosnos.html">Quem somos nós?</a></li>
+            <li><a href="Jogos_interativos.html">Jogos interativos</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="cadastro.html">Contato</a></li>
+        </ul>
+        <ul id="barra-navegacao" class="esconderNoMobile">
+            <li class="esconderNoMobile home"><a href="index.html"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
+            <li class="esconderNoMobile"><a href="animais.html">Animais</a></li>
+            <li class="esconderNoMobile"><a href="taxidermia.html">Taxidermia</a></li>
+            <li class="esconderNoMobile"><a href="quemsomosnos.html">Quem somos?</a></li>
+            <li class="esconderNoMobile"><a href="Jogos_interativos.html">Jogos interativos</a></li>
+            <li class="esconderNoMobile"><a href="feedback.html">Feedback</a></li>
+            <li class="esconderNoMobile"><a href="cadastro.html">Contato</a></li>
+        </ul>
+    </nav>
+    <script src="../javascript/links_atuais.js" defer></script>
+
+    <section id="cabecalho-pagina">
+        <div id="background">
+            <div id="caixa-de-texto"><h2 id="titulo-pagina">Dê seu Feedback: </h2></div>
+        </div>
+     </section>
+     
+</head>
+<body>
+    <form method="post" name="index" action="http://localhost/Feedback/cadcliente.php">
+        <table width="100%">
+            <tr>
+                <th width="18%">1: Insira seu nome:</th>
+                <th width="82%"><input type="text" name="txtnome">
+                </td>
+            </tr>
+        <tr>
+            <th>2: De qual classe é sua peça favorita?</th><br>
+            <td>
+            <select name="listclasses">
+                <option value="Aves" >Aves</option>
+                <option value="Anfíbios">Anfíbios</option>
+                <option value="Mamíferos">Mamíferos</option>
+                <option value="Répteis">Répteis</option>
+                <option value="Peixes">Peixes</option>
+            </select> </td>
+        </tr>
+        <table width="100%">
+            <tr>
+                <th width="18%">3: O que você mais gostou no nosso site?</th><br>
+                <th width="82%"><input type="text" name="txtclientegostou">
+                </td>
+            </tr>
+        <table width="100%">
+            <tr>
+                <th width="18%">4: O que você achou dos jogos/quizzes do site? </th><br>
+                <th width="82%"><input type="text" name="txtmuzoo">
+                </td>
+            </tr>
+        <table width="100%">
+                <tr>
+                    <th width="18%">5: Você recomendaria nosso site a outras pessoas? Por quê? </th><br>
+                    <th width="82%"><input type="text" name="txtsite">
+                    </td>
+                </tr>
+              <th>6: Avalie com estrelas: </th><br> <!--Adicionar estrelas para avaliações-->
+             <td>
+               <div class="star-rating">
+                    <input type="radio" id="5-stars" name="rating" value="5" />
+                    <label for="5-stars" class="star" title="5 estrelas">&#9733;</label>
+                    <input type="radio" id="4-stars" name="rating" value="4" />
+                    <label for="4-stars" class="star" title="4 estrelas">&#9733;</label>
+                    <input type="radio" id="3-stars" name="rating" value="3" />
+                    <label for="3-stars" class="star" title="3 estrelas">&#9733;</label>
+                    <input type="radio" id="2-stars" name="rating" value="2" />
+                    <label for="2-stars" class="star" title="2 estrelas">&#9733;</label>
+                    <input type="radio" id="1-star" name="rating" value="1" />
+                    <label for="1-star" class="star" title="1 estrela">&#9733;</label>
+             </div>
+           <p id="rating-value">Avaliação: 0 estrela(s)</p>
+    <script>
+        const starRating = document.querySelector('.star-rating');
+        const ratingValue = document.getElementById('rating-value');
+
+        starRating.addEventListener('change', function(event) {
+            const selectedRating = event.target.value;
+            ratingValue.textContent = `Avaliação: ${selectedRating} estrela(s)`;
+        });
+    </script>
+                </td>         
+                <tr>
+                        <td>
+                            <input type="submit" name="btnEnviar" value="Enviar">
+                        </td>
+                        <td>
+                            <input type="reset" name="btnLimpar" value="Limpar">
+                        </td>
+                    </td>
+                    </tr>
+        </table>     
+        
+    </table>
+</form>
+<footer>
+    <section id="footer-content">
+        <div class="footer-section">
+            <h3>Museu de Zoologia do IFMG</h3>
+            <p>&copy; 2024 Museu de Zoologia do IFMG Campus Bambuí</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Links Rápidos</h3>
+            <ul>
+                <li><a href="animais.html">Animais</a></li>
+                <li><a href="taxidermia.html">Conheça o processo</a></li>
+                <li><a href="quemsomosnos.html">Quem somos nós?</a></li>
+                <li><a href="Jogos_interativos.html">Jogos interativos</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="cadastro.html">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Nos Siga</h3>
+            <div class="social-icons">
+                <a target="_blank" href="https://www.instagram.com/geas_ifmg/?hl=pt-br"><img src="../media/imagens/icones/448-4486682_instagram-logo-png-white-circle.png" alt="Instagram"></a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contato</h3>
+            <p>Email: <a href="mailto:clarice.silva@ifmg.edu.br" style="text-decoration: none; color: #5B85AA">clarice.silva@ifmg.edu.br</a></p>
+        </div>
+    </section>
+
+    <div id="footer-bottom">
+        <p>Desenvolvido por Estudantes do IFMG Campus Bambuí - Curso Técnico em Informática</p>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>

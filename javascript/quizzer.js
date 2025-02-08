@@ -66,7 +66,7 @@ let score = 0;
 
 const startBtn = document.getElementById("start-btn");
 const quizContainer = document.querySelector(".quiz-container").style.display = "none";
-const quizContainer1 = document.querySelector(".centro2").style.padding = "0 0px";
+const quizContainer1 = document.querySelector(".centro2");
 const questionEl = document.getElementById("question");
 const optionsEl = document.querySelectorAll(".option");
 const questionImageEl = document.getElementById("question-image");
@@ -75,7 +75,6 @@ const nextBtn = document.getElementById("next-btn");
 
 startBtn.addEventListener("click", () => {
   
-  
   document.querySelector(".centro").style.display = "none";
 
   document.addEventListener('DOMContentLoaded', function () {
@@ -83,10 +82,12 @@ startBtn.addEventListener("click", () => {
     div1.style.padding = "0 0px";
   });
 
-  const quizContainr1 = document.querySelector(".centro2").style.padding = "50 0px";
+  
+  
 
   document.querySelector(".quiz-container").style.display = "block";
-
+  quizContainer1.style.paddingTop = "160px";
+  quizContainer1.style.paddingBottom = "160px";
   loadQuestion();
 });
 
