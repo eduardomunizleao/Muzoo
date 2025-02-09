@@ -2,28 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dados das espécies
     const especies = [
         {
-            nome: "Cobra-coral",
-            descricao: "A Ilusionista do Cerrado, Dominando a Arte do Mimetismo para Sobreviver",
-            imagem: "../media/imagens/animal-especifico/repteis/Erythrolamprus_aesculapii/Erythrolamprus aesculapii.jpeg",
-            href: "pagina-animais/repteis/cobra-coral.html",
-            icone: "fas fa-cat"
-        },
-        {
-            nome: "Jacaré-do-Papo-Amarelo",
-            descricao: "O Caçador Imparável das Águas, Especialista em Estratégias de Defesa e Ataque",
-            imagem: "../media/imagens/animal-especifico/repteis/Caiman latirostris/jacare-do-papo-amarelo.jpg",
-            href: "pagina-animais/repteis/jacare-do-papo-amarelo.html",
-            icone: "fas fa-feather-alt"
-        },
-        {
-            nome: "Capivara",
-            descricao: "O Maior Roedor do Mundo, Vivendo em Harmonia com a Natureza e Suas Comunidades",
-            imagem: "../media/imagens/animal-especifico/mamiferos/Hydrochoerus hydrochaeris/capivara-quadrado.jpg",
-            href: "pagina-animais/mamiferos/capivara.html",
-            icone: "fas fa-dog"
-        },
-
-        {
             nome: "Lobo-guará",
             descricao: "O Guardião do Cerrado, Uma Espécie Rara e Magnífica em Perigo de Extinção",
             imagem: "../media/imagens/animal-especifico/mamiferos/Chrysocyon brachyurus/loboguaravidareal.jpg",
@@ -38,11 +16,32 @@ document.addEventListener('DOMContentLoaded', function() {
             icone: "fas fa-crow"
         },
         {
-            nome: "Jaguar",
-            descricao: "O Predador Supremo da Floresta, Uma Força Imparável da Natureza",
-            imagem: "../media/imagens/animal-especifico/mamiferos/Leopardus pardalis/jaguatirica.png",
-            href: "pagina-animais/mamiferos/jaguatirica.html",
-            icone: "fas fa-paw"
+            nome: "Sapo-cururu",
+            descricao: "O Habitante das Águas Doce, Conhecido por Seu Som Inconfundível e Grande Tamanho",
+            imagem: "../media/imagens/animal-especifico/anfibios/Rhinella sp/sapo-cururu.jpeg",
+            href: "pagina-animais/anfibios/sapo-cururu.html",
+            icone: "fas fa-frog"
+        },
+        {
+            nome: "Lontra",
+            descricao: "O Mestre das Águas, Ágil e Inteligente, Uma Espécie Fascinante e Protegida",
+            imagem: "../media/imagens/animal-especifico/mamiferos/Lontra longicaudis/Lontra longicaudis.jpg",
+            href: "pagina-animais/mamiferos/lontra.html",
+            icone: "fa-solid fa-otter"
+        },
+        {
+            nome: "Tilápia-do-Nilo",
+            descricao: "Uma das Espécies de Peixe Mais Conhecidas do Mundo, Importante para a Pesca Comercial",
+            imagem: "../media/imagens/animal-especifico/peixes/Oreochromis niloticus/tilapia_do_nilo.jpg",
+            href: "pagina-animais/peixes/tilapia-do-nilo.html",
+            icone: "fas fa-fish"
+        },
+        {
+            nome: "Beija-flor-tesoura",
+            descricao: "O Pequeno Aviador do Cerrado, Conhecido pela Sua Agilidade e Bico Longo",
+            imagem: "../media/imagens/animal-especifico/aves/eupetomena macroura/beija-flor.jpg",
+            href: "pagina-animais/aves/beija-flor.html",
+            icone: "fa-solid fa-dove"
         }
     ];
 
