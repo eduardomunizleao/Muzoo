@@ -35,6 +35,10 @@ main#conteudoPrincipal {
     padding: 0;
 }
 
+main#conteudoPrincipal a{
+    text-decoration: none;
+}
+
 /* Decorações */
 div.decoracaoTopo {
     height: 15px;
@@ -161,7 +165,7 @@ div.jogoCard {
 /* Botões */
 button.botaoJogar,
 button.botaoParticipar,
-a.redeSocialLink {
+a.redeSocialLink, a.linkAnimais {
     background: linear-gradient(135deg, var(--cor-laranja-claro), var(--cor-laranja-escuro));
     color: white;
     border: none;
@@ -181,7 +185,7 @@ a.redeSocialLink {
 
 button.botaoJogar:hover,
 button.botaoParticipar:hover,
-a.redeSocialLink:hover {
+a.redeSocialLink:hover, a.linkAnimais:hover {
     filter: brightness(70%)
 }
 
@@ -315,22 +319,205 @@ div#galeriaEspecies .especieCard p {
     margin: auto;
 }
 
-/* Carrossel de Testemunhos */
-div#carrosselTestemunhos .testemunhoCard {
-    display: none;
-    background: rgba(255,255,255,0.1);
-    padding: 2rem;
-    border-radius: var(--borda-radius);
-    text-align: center;
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-div#carrosselTestemunhos .testemunhoCard.ativo {
+a.linkAnimais{
     display: block;
+    margin: auto;
+    max-width: 300px;
+    text-align: center;
 }
 
-/* Mitos e Verdades */
+/* Carrossel de Testemunhos */
+
+div#carrosselTestemunhos {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 4rem 2rem 2rem;
+    box-shadow: 
+        0 10px 30px rgba(40, 54, 24, 0.1),
+        0 20px 60px rgba(221, 161, 94, 0.1);
+    z-index: 1;
+    margin: auto;
+}
+
+div#carrosselTestemunhos::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: linear-gradient(45deg, rgba(221, 161, 94, 0.1), rgba(96, 108, 56, 0.1));
+    border-radius: 30px;
+    z-index: -1;
+}
+
+div#carrosselTestemunhos div.iconeDestaqueTopo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: #606C38;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(40, 54, 24, 0.2);
+}
+
+div#carrosselTestemunhos div.iconeDestaqueTopo i {
+    color: #FEFAE0;
+    font-size: 1.5rem;
+}
+
+div#slidesContainer {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+div#slidesContainer div.testemunhoCard {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+}
+
+div#slidesContainer div.testemunhoCard.ativo {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+div#slidesContainer div.testemunhoCard div.conteudoTestemunho {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(to bottom, rgba(254, 250, 224, 0.3), transparent);
+    border-radius: 15px;
+}
+
+div#slidesContainer div.testemunhoCard div.iconeTestemunho {
+    margin-bottom: 1.5rem;
+}
+
+div#slidesContainer div.testemunhoCard div.iconeTestemunho i.iconeDestaque {
+    font-size: 3.5rem;
+    color: #DDA15E;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(188, 108, 37, 0.2);
+}
+
+div#slidesContainer div.testemunhoCard p.textoTestemunho {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #283618;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+div#slidesContainer div.testemunhoCard div.autorTestemunho h4.nomeAutor {
+    color: #283618;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+div#slidesContainer div.testemunhoCard div.autorTestemunho span.dataTestemunho {
+    color: #606C38;
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+div#controlesCarrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+div#controlesCarrossel button.btnNavegacao {
+    background-color: #606C38;
+    color: #FEFAE0;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(40, 54, 24, 0.2);
+}
+
+div#controlesCarrossel button.btnNavegacao:hover {
+    background-color: #283618;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(40, 54, 24, 0.3);
+}
+
+div#controlesCarrossel div.indicadores {
+    display: flex;
+    gap: 0.5rem;
+}
+
+div#controlesCarrossel div.indicadores span.indicador {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #DDA15E;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(221, 161, 94, 0.3);
+}
+
+div#controlesCarrossel div.indicadores span.indicador.ativo {
+    opacity: 1;
+    width: 24px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(221, 161, 94, 0.4);
+}
+
+@media (max-width: 768px) {
+    div#carrosselTestemunhos {
+        padding: 3rem 1rem 1.5rem;
+    }
+
+    div#slidesContainer div.testemunhoCard p.textoTestemunho {
+        font-size: 1rem;
+    }
+}
+
+.iconeTestemunho i {
+    font-size: 1.5rem; /* Tamanho das estrelas */
+    color: #DDA15E; /* Cor das estrelas ativas */
+}
+
+.iconeTestemunho i.estrelaInativa {
+    color: #ccc; /* Cor das estrelas inativas */
+}
+
+.avaliacaoTestemunho {
+    margin-top: 0.5rem; /* Espaçamento acima do texto de avaliação */
+    font-size: 1rem; /* Tamanho do texto de avaliação */
+    color: #606C38; /* Cor do texto de avaliação */
+}
+
+/* Estilos para a seção de Mitos e Verdades */
+/* Estilos para a seção de Mitos e Verdades */
+
+
+.descricaoSecao {
+    text-align: center;
+    font-size: 1.125rem;
+    color: #606C38;
+    margin-bottom: 2rem;
+}
+
 div#mitosVerdades {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -338,10 +525,41 @@ div#mitosVerdades {
 }
 
 div#mitosVerdades .mitoVerdadeCard {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
-    border-radius: var(--borda-radius);
+    border-radius: 10px;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+div#mitosVerdades .mitoVerdadeCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+div#mitosVerdades .mitoVerdadeCard i.iconeDestaque {
+    font-size: 2rem;
+    color: #DDA15E;
+    margin-bottom: 1rem;
+}
+
+div#mitosVerdades .mitoVerdadeCard h3 {
+    font-size: 1.5rem;
+    color: #283618;
+    margin: 0.5rem 0;
+}
+
+div#mitosVerdades .mitoVerdadeCard h4 {
+    font-size: 1.25rem;
+    color: #606C38;
+    margin: 0.5rem 0;
+}
+
+div#mitosVerdades .mitoVerdadeCard p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
 }
 
 /* Formas de Participação */

@@ -1,3 +1,27 @@
+.fotos-jogos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+}
+
+.h1jogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  color: #2E3A59; /* Azul escuro elegante */
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  border-bottom: 3px solid #4CAF50; /* Linha verde para dar destaque */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+
+}
+
 .centro {
   display: flex;
   justify-content: center;
@@ -10,6 +34,7 @@
 .game-selection {
   display: flex;
   gap: 20px;
+  
 }
 
 .game-card {
@@ -41,4 +66,45 @@
 .game-card p {
   margin: 0 10px 20px;
   color: #555555;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom,transparent 55%,black),url(../media/imagens/backgrounds/back-geral.jpeg);
+  background-size: cover;
+  background-position: center center;
+  height: calc(100% - 200px);
+}
+.content h2 {
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 130px;
+}
+.content h2 span {
+	-webkit-text-fill-color: transparent;
+}
+@media (max-width:991px){
+    .content h2 {
+        font-size: 70px;
+    }
+}
+
+
+.jogos {
+  background: linear-gradient(to bottom,#606C38, var(--azul));
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 250px;
+  padding-top: 250px;
+  margin: 0 auto;
+  border-radius: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
