@@ -43,34 +43,26 @@
     </nav>
    
 
-    <main>
-        <div class="centro">
-            <section class="carousel-container">
-                <div class="carousel">
-                  <div class="carousel-item">
-                    <img src="" alt="Quizzer">
-                    <h3>Quizzer</h3>
-                    <p>Descrição jogo</p>
-                    <a href="../páginas/paginas-jogos/quizzer.html" class="play-button">Jogar</a>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="game2.jpg" alt="Jogo 2">
-                    <h3>Jogo Da Memória</h3>
-                    <p>Descrição jogo</p>
-                    <a href="../páginas/paginas-jogos/jogo_da_memoria.html" class="play-button">Jogar</a>
-                  </div>
-                  <div class="carousel-item">
-                    <img src="game3.jpg" alt="Jogo 3">
-                    <h3>Jogo 3</h3>
-                    <p>Descrição jogo</p>
-                    <a href="game3.html" class="play-button">Jogar</a>
-                  </div>
-                </div>
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
-            </section>
-        </div>
-    </main>
+    <div class="centro">
+        <div class="game-selection">
+            <div class="game-card" data-src="../páginas/paginas-jogos/quizzer.html" onclick="playGame(this)">
+                <img src="caminho/para/imagem1.jpg" alt="Jogo 1">
+                <h3>quizzer</h3>
+                <p>Descrição do Jogo 1</p>
+            </div>
+            <div class="game-card" data-src="../páginas/paginas-jogos/jogo_da_memoria.html" onclick="playGame(this)">
+                <img src="caminho/para/imagem2.jpg" alt="Jogo 2">
+                <h3>Jogo da memoria</h3>
+                <p>Descrição do Jogo 2</p>
+            </div>
+            <div class="game-card" onclick="playGame(this)">
+                <img src="caminho/para/imagem3.jpg" alt="Jogo 3">
+                <h3>Jogo 3</h3>
+                <p>Descrição do Jogo 3</p>
+            </div>
+        </div> 
+    </div>   
+    
     
     
     <footer>
@@ -110,7 +102,7 @@
         </div>
     </footer>
     
-    <script src="../javascript/carrossel_jogos.js"></script>
+    <script src="../javascript/jogos_interativos.js"></script>
     <script src="../javascript/links_atuais.js" defer></script>
 </body>
 </html>

@@ -4,13 +4,14 @@ const resultMessage = document.getElementById('result-message');
 const playAgainButton = document.getElementById('play-again');
 const timerDisplay = document.getElementById('timer');
 
+let cardImages = ['img.1png', 'img2.png', 'img3.png', 'img4.png', 'img5.png', 'img6.png', 'img7.png', 'img8.png', 'img9.png', 'img10.png', 'img11.png', 'img12.png'];
 let cardValues = [];
 let flippedCards = [];
 let matches = 0;
 let isChecking = false;
 let timer = 0;
 let timerInterval;
-let hasStarted = false; // Indica se o jogo já começou
+let hasStarted = false;
 
 function startGame() {
   const difficulty = difficultySelect.value;
@@ -18,17 +19,16 @@ function startGame() {
   let rows;
   let cols;
 
-  // Configuração dos pares e dimensões da grade com base na dificuldade
   if (difficulty === "easy") {
-    pairs = 6; // 6 pares = 12 cartas
+    pairs = 6;
     rows = 3;
     cols = 4;
   } else if (difficulty === "medium") {
-    pairs = 9; // 9 pares = 18 cartas
+    pairs = 9;
     rows = 3;
     cols = 6;
   } else if (difficulty === "hard") {
-    pairs = 12; // 12 pares = 24 cartas
+    pairs = 12;
     rows = 4;
     cols = 6;
   }
@@ -36,51 +36,50 @@ function startGame() {
   matches = 0;
   flippedCards = [];
   isChecking = false;
-  hasStarted = false; // Reinicia a flag de início do jogo
+  hasStarted = false;
   gameBoard.innerHTML = '';
   resultMessage.textContent = 'Resolva o jogo para ver o resultado!';
-  playAgainButton.style.display = 'none'; // Esconde o botão no início do jogo
+  playAgainButton.style.display = 'none';
   cardValues = generateCardValues(pairs);
   resetTimer();
 
-  // Define o layout da grade
   gameBoard.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
   gameBoard.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
 
-  // Cria as cartas
   cardValues.forEach((value) => {
     const card = document.createElement('div');
     card.className = 'card';
     card.dataset.value = value;
+
+    const img = document.createElement('img');
+    img.src = `imagem/${value}`;
+    card.appendChild(img);
+    
     card.addEventListener('click', () => flipCard(card));
     gameBoard.appendChild(card);
   });
 }
 
 function generateCardValues(pairs) {
-  const values = [];
-  for (let i = 1; i <= pairs; i++) {
-    values.push(i, i); // Adiciona um par de valores iguais
-  }
-  return values.sort(() => Math.random() - 0.5); // Embaralha os valores
+  let selectedImages = cardImages.slice(0, pairs);
+  const values = selectedImages.concat(selectedImages);
+  return values.sort(() => Math.random() - 0.5);
 }
 
 function flipCard(card) {
   if (isChecking || card.classList.contains('flipped') || flippedCards.length === 2) return;
 
-  // Inicia o timer na primeira carta virada
   if (!hasStarted) {
     hasStarted = true;
     startTimer();
   }
 
   card.classList.add('flipped');
-  card.textContent = card.dataset.value;
   flippedCards.push(card);
 
   if (flippedCards.length === 2) {
     isChecking = true;
-    setTimeout(() => checkMatch(), 300); // Adiciona um pequeno delay para ver a segunda carta
+    setTimeout(() => checkMatch(), 300);
   }
 }
 
@@ -98,8 +97,6 @@ function checkMatch() {
   } else {
     card1.classList.remove('flipped');
     card2.classList.remove('flipped');
-    card1.textContent = '';
-    card2.textContent = '';
   }
 
   flippedCards = [];
@@ -117,7 +114,7 @@ function startTimer() {
   timerInterval = setInterval(() => {
     timer++;
     timerDisplay.textContent = `Tempo: ${formatTime(timer)}`;
-  }, 10); // Atualiza a cada 10ms (milissegundos)
+  }, 1000);
 }
 
 function stopTimer() {
@@ -130,17 +127,13 @@ function resetTimer() {
   timerDisplay.textContent = `Tempo: ${formatTime(timer)}`;
 }
 
-function formatTime(milliseconds) {
-  const seconds = Math.floor(milliseconds / 100);
-  const ms = milliseconds % 100;
-  return `${seconds}.${ms < 10 ? '0' + ms : ms}s`; // Exibe milissegundos
+function formatTime(seconds) {
+  return `${seconds}s`;
 }
 
-// Inicia o jogo automaticamente no nível fácil
 document.addEventListener('DOMContentLoaded', () => {
   startGame();
 });
 
-// Reinicia o jogo ao selecionar um nível
 difficultySelect.addEventListener('change', startGame);
 playAgainButton.addEventListener('click', startGame);
