@@ -45,24 +45,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
-    // Dados dos testemunhos
-    const testemunhos = [
-        {
-            nome: "Maria Silva",
-            texto: "Uma experiência incrível! Aprendi muito sobre a importância da conservação.",
-            data: "10/03/2024",
-            icone: "fas fa-user-graduate"
-        },
-        {
-            nome: "João Santos",
-            texto: "As exposições são fascinantes e muito bem organizadas.",
-            data: "15/03/2024",
-            icone: "fas fa-user-tie"
-        }
-    ];
-
     // Dados dos mitos e verdades
     const mitosVerdades = [
+        {
+            titulo: "Verdade",
+            texto: "A taxidermia ajuda na pesquisa científica",
+            explicacao: "Os espécimes preservados são fundamentais para estudos científicos.",
+            icone: "fas fa-check"
+        },
+        {
+            titulo: "Verdade",
+            texto: "A taxidermia é uma forma de arte",
+            explicacao: "A taxidermia requer habilidades artísticas e técnicas para preservar a aparência natural dos animais.",
+            icone: "fas fa-check"
+        },
+        {
+            titulo: "Verdade",
+            texto: "A taxidermia pode ajudar na educação",
+            explicacao: "Espécimes taxidermizados são usados em museus e instituições educacionais para ensinar sobre a vida selvagem.",
+            icone: "fas fa-check"
+        },
         {
             titulo: "Mito",
             texto: "A taxidermia machuca os animais",
@@ -70,46 +72,42 @@ document.addEventListener('DOMContentLoaded', function() {
             icone: "fas fa-times"
         },
         {
-            titulo: "Verdade",
-            texto: "A taxidermia ajuda na pesquisa científica",
-            explicacao: "Os espécimes preservados são fundamentais para estudos científicos.",
-            icone: "fas fa-check"
+            titulo: "Mito",
+            texto: "Taxidermistas usam animais em extinção",
+            explicacao: "A taxidermia é regulada por leis que proíbem o uso de espécies ameaçadas.",
+            icone: "fas fa-times"
+        },
+        {
+            titulo: "Mito",
+            texto: "Taxidermia é apenas para animais grandes",
+            explicacao: "Qualquer animal, grande ou pequeno, pode ser preservado através da taxidermia.",
+            icone: "fas fa-times"
         }
     ];
 
     // Função para criar cards de espécies
     function criarGaleriaEspecies() {
         const galeria = document.getElementById('galeriaEspecies');
+        const galeriapai = document.getElementById('especies');
         especies.forEach(especie => {
             const card = document.createElement('div');
             card.className = 'especieCard';
             card.innerHTML = `<a href="${especie.href}">
-                <i class="${especie.icone} iconeDestaque"></i>
-                <img src="${especie.imagem}" alt="${especie.nome}">
-                <h3>${especie.nome}</h3>
-                <p>${especie.descricao}</p></a>
+            <i class="${especie.icone} iconeDestaque"></i>
+            <img src="${especie.imagem}" alt="${especie.nome}">
+            <h3>${especie.nome}</h3>
+            <p>${especie.descricao}</p></a>
             `;
             galeria.appendChild(card);
         });
+        const botao = document.createElement('a');
+        botao.className = 'linkAnimais';
+        botao.href = 'animais.html';
+        botao.innerHTML = `
+        <i class="fa-regular fa-eye"></i> Ver mais
+        `;
+        galeriapai.appendChild(botao);
     }
-
-    // Função para criar carrossel de testemunhos
-    function criarCarrosselTestemunhos() {
-        const carrossel = document.getElementById('carrosselTestemunhos');
-        testemunhos.forEach(testemunho => {
-            const card = document.createElement('div');
-            card.className = 'testemunhoCard';
-            card.innerHTML = `
-                <i class="${testemunho.icone} iconeDestaque"></i>
-                <p>${testemunho.texto}</p>
-                <h4>${testemunho.nome}</h4>
-                <span>${testemunho.data}</span>
-            `;
-            carrossel.appendChild(card);
-        });
-    }
-
-    // Função para criar seção de mitos e verdades
     function criarMitosVerdades() {
         const container = document.getElementById('mitosVerdades');
         mitosVerdades.forEach(item => {
@@ -127,35 +125,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Inicializar todas as seções
     criarGaleriaEspecies();
-    criarCarrosselTestemunhos();
     criarMitosVerdades();
-
-    // Controles do carrossel
-    let slideAtual = 0;
-    const slides = document.querySelectorAll('.testemunhoCard');
-    const btnAnterior = document.getElementById('anterior');
-    const btnProximo = document.getElementById('proximo');
-
-    function atualizarCarrossel() {
-        slides.forEach((slide, index) => {
-            if (index === slideAtual) {
-                slide.style.display = 'block';
-            } else {
-                slide.style.display = 'none';
-            }
-        });
-    }
-
-    btnAnterior.addEventListener('click', () => {
-        slideAtual = (slideAtual - 1 + slides.length) % slides.length;
-        atualizarCarrossel();
-    });
-
-    btnProximo.addEventListener('click', () => {
-        slideAtual = (slideAtual + 1) % slides.length;
-        atualizarCarrossel();
-    });
-
-    // Inicializar carrossel
-    atualizarCarrossel();
 });
