@@ -308,13 +308,29 @@ div.membro::before {
 }
 
 div.membro img {
-    width: 180px;
-    height: 180px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     margin-bottom: 1.5rem;
-    border: 3px solid #DDA15E;
+    border: 6px solid #DDA15E;
     padding: 5px;
     object-fit: cover;
+} 
+
+@media (max-width: 700px) {
+    div.missao, div.visao{
+         padding: 2rem 1rem;
+    }
+
+    div.membro img {
+        width: calc(97.526699029126%); /* Ajusta a largura da imagem para 100% do contêiner */
+        height: 400px; /* Mantém a proporção da imagem */
+        border-radius: 118px;
+        margin-bottom: 1.5rem;
+        border: 6px solid #DDA15E;
+        padding: 0px;
+        object-fit: cover;
+    }
 }
 
 main div#imagem-animal {
@@ -528,7 +544,7 @@ div.apoiador p {
     div.membrosEquipe,
     div.conservacaoGrid,
     div.apoiadores {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
     
     main section {
@@ -538,6 +554,7 @@ div.apoiador p {
     section#introducao h1 {
         font-size: 2.8rem;
     }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -551,10 +568,7 @@ div.apoiador p {
         font-size: 2.4rem;
     }
     
-    div.membro img {
-        width: 150px;
-        height: 150px;
-    }
+
 
     .infoCard {
         padding: 1.5rem;
@@ -563,5 +577,14 @@ div.apoiador p {
     .infoHeader {
         flex-direction: column;
         text-align: center;
+    }
+
+    section#equipe{
+        width: 100vw;
+        padding: 0;
+    }
+    div.membro img{
+        max-width: 100%;
+
     }
 }
