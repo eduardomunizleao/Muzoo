@@ -348,7 +348,7 @@ ul#barra-navegacao a.exibida{
         display: none;
     }
 
-    .esconderNoMobile{
+    nav .esconderNoMobile{
         display: none;
     }
     

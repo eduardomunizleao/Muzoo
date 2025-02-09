@@ -5,7 +5,7 @@
 
 
 .carousel{
-    width: 73.221757322176vw;
+    max-width: 1400px;
     height: 100vh;
     overflow: hidden;
     position: relative;
