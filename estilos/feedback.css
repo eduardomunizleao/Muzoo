@@ -20,6 +20,16 @@ body {
     line-height: 1.5;
 }
 
+@media screen and (max-width:600px) {
+    nav ul#barra-navegacao{
+        height: 0;
+    }
+
+    h1{
+        margin-top: 1rem;
+    }
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
