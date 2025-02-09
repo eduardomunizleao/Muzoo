@@ -1,0 +1,460 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Rokkitt:ital,wght@0,100..900;1,100..900&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+/* Variáveis de cores e estilos */
+:root {
+    --cor-verde-escuro: #283618;
+    --cor-verde-medio: #606C38;
+    --cor-bege-claro: #FEFAE0;
+    --cor-laranja-claro: #DDA15E;
+    --cor-laranja-escuro: #BC6C25;
+    --gradiente-verde: linear-gradient(135deg, var(--cor-verde-escuro), var(--cor-verde-medio));
+    --gradiente-bege: linear-gradient(135deg, var(--cor-bege-claro), #fff);
+    --sombra-suave: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --sombra-media: 0 6px 12px rgba(0, 0, 0, 0.15);
+    --borda-radius: 10px;
+    --transicao-padrao: all 0.3s ease;
+
+    --font1: "Wittgenstein", serif;
+    --font2: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --font3: "Rokkitt", Times, serif;
+    --font4: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --font5: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+
+}
+
+
+main#conteudoPrincipal {
+    max-width: 1400px;
+    box-shadow: none;
+    margin: 0px auto;
+    padding: 0;
+}
+
+/* Decorações */
+div.decoracaoTopo {
+    height: 15px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--cor-laranja-claro) 25%, 
+        var(--cor-laranja-escuro) 50%, 
+        var(--cor-laranja-claro) 75%, 
+        transparent 100%
+    );
+    opacity: 0.5;
+    margin-bottom: 2rem;
+}
+
+div.decoracaoBase {
+    height: 15px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--cor-laranja-claro) 25%, 
+        var(--cor-laranja-escuro) 50%, 
+        var(--cor-laranja-claro) 75%, 
+        transparent 100%
+    );
+    opacity: 0.5;
+    margin-top: 2rem;
+}
+
+section.verde div.decoracaoTopo {
+    height: 15px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--cor-verde-escuro) 25%, 
+        var(--cor-verde-escuro) 50%, 
+        var(--cor-verde-escuro) 75%, 
+        transparent 100%
+    );
+    opacity: 0.5;
+    margin-bottom: 2rem;
+}
+
+section.verde div.decoracaoBase {
+    height: 15px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--cor-verde-escuro) 25%, 
+        var(--cor-verde-escuro) 50%, 
+        var(--cor-verde-escuro) 75%, 
+        transparent 100%
+    );
+    opacity: 0.5;
+    margin-top: 2rem;
+}
+
+/* Seções */
+section.secao {
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+    background: var(--gradiente-verde);
+    color: var(--cor-bege-claro);
+}
+
+section.secao:nth-child(odd) {
+    background: var(--gradiente-bege);
+    color: var(--cor-verde-escuro);
+}
+
+div.conteudo {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Títulos e Texto */
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: inherit;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+h2 i {
+    margin-right: 0.5rem;
+    color: var(--cor-laranja-claro);
+}
+
+p.destaque {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    border-left: 4px solid var(--cor-laranja-claro);
+    background: rgba(255,255,255,0.1);
+    border-radius: 0 var(--borda-radius) var(--borda-radius) 0;
+}
+
+/* Ícones */
+i.iconeDestaque {
+    font-size: 2.5rem;
+    color: var(--cor-laranja-claro);
+    margin-bottom: 1rem;
+}
+
+/* Cards */
+div.cartaoCuriosidade,
+div.exemploCultura,
+div.participacaoCard,
+div.jogoCard {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-suave);
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Botões */
+button.botaoJogar,
+button.botaoParticipar,
+a.redeSocialLink {
+    background: linear-gradient(135deg, var(--cor-laranja-claro), var(--cor-laranja-escuro));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: var(--sombra-suave);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+button.botaoJogar:hover,
+button.botaoParticipar:hover,
+a.redeSocialLink:hover {
+    background: linear-gradient(135deg, var(--cor-laranja-escuro), var(--cor-laranja-claro));
+}
+
+/* Carrossel */
+div.controlesCarrossel {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+button.botaoCarrossel {
+    background: var(--cor-laranja-claro);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.botaoCarrossel:hover {
+    background: var(--cor-laranja-escuro);
+}
+
+/* Comparação */
+div.comparacao {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+div.coluna {
+    flex: 1;
+    padding: 2rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-suave);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Listas */
+ul#listaTaxidermia,
+ul#listaEmpalhamento {
+    list-style: none;
+    padding: 0;
+}
+
+ul#listaTaxidermia li,
+ul#listaEmpalhamento li {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+ul#listaTaxidermia li::before,
+ul#listaEmpalhamento li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--cor-laranja-claro);
+}
+
+/* Galeria de Espécies */
+div#galeriaEspecies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+div#galeriaEspecies i.iconeDestaque {
+    margin: 0;
+}
+
+div#galeriaEspecies .especieCard {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 0.8rem;
+    border-radius: var(--borda-radius);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+div#galeriaEspecies .especieCard a{
+    text-decoration: none;
+    color: white;
+}
+
+div#galeriaEspecies .especieCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    filter: brightness(60%);
+    cursor: pointer;
+}
+
+div#galeriaEspecies .especieCard img {
+    width: 100%;
+    height: 280px;
+    border-radius: var(--borda-radius);
+    margin: 1rem 0;
+    object-fit: cover;
+}
+
+div#galeriaEspecies .especieCard h3 {
+    color: var(--cor-laranja-escuro);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-family: var(--font5);
+    font-size: 1.4rem;
+}
+
+div#galeriaEspecies .especieCard h3::after {
+    content: '';
+    width: 80%;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 1rem;
+    background-color: var(--cor-verde-escuro);
+    display: block;
+}
+
+div#galeriaEspecies .especieCard p {
+    line-height: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+    margin: auto;
+}
+
+/* Carrossel de Testemunhos */
+div#carrosselTestemunhos .testemunhoCard {
+    display: none;
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: var(--borda-radius);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+div#carrosselTestemunhos .testemunhoCard.ativo {
+    display: block;
+}
+
+/* Mitos e Verdades */
+div#mitosVerdades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+div#mitosVerdades .mitoVerdadeCard {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: var(--borda-radius);
+    text-align: center;
+}
+
+/* Formas de Participação */
+div#formasParticipacao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Redes Sociais */
+div#redesSociais {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+section#secaoVoceSabia .curiosidades {
+    max-width: 100%;
+    width: auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: stretch;
+    margin: 0 auto;
+}
+
+
+.curiosidades .cartaoCuriosidade {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: var(--borda-radius);
+    box-shadow: var(--sombra-suave);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+
+    max-width: 400px;
+    padding: 0;
+}
+
+
+section#secaoVoceSabia .ultimo{
+    max-width: 100%;
+}
+
+.curiosidades .cartaoCuriosidade .iconeDestaque {
+    color: var(--cor-laranja-escuro);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.curiosidades .cartaoCuriosidade h3 {
+    color: var(--cor-laranja-escuro);
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+    font-size: 1.75rem;
+}
+.curiosidades .cartaoCuriosidade h3::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: var(--cor-verde-medio);
+}
+.curiosidades .cartaoCuriosidade p {
+    color: var(--cor-verde-escuro);
+    z-index: 2;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.6;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    div.comparacao {
+        flex-direction: column;
+    }
+
+    div#curiosidades,
+    div#formasParticipacao {
+        grid-template-columns: 1fr;
+    }
+
+    div#redesSociais {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    main#conteudoPrincipal{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+
+

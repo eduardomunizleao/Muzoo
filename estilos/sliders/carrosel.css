@@ -5,10 +5,15 @@
 
 
 .carousel{
-    width: 86vw;
+    width: 73.221757322176vw;
     height: 100vh;
     overflow: hidden;
     position: relative;
+
+    font-family: var(--font2);
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: justify;
  }
  
  .carousel .list .item{
