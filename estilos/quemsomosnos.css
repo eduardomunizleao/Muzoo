@@ -308,8 +308,8 @@ div.membro::before {
 }
 
 div.membro img {
-    width: 180px;
-    height: 180px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     margin-bottom: 1.5rem;
     border: 6px solid #DDA15E;
@@ -318,7 +318,10 @@ div.membro img {
 } 
 
 @media (max-width: 700px) {
-    
+    div.missao, div.visao{
+         padding: 2rem 1rem;
+    }
+
     div.membro img {
         width: calc(97.526699029126%); /* Ajusta a largura da imagem para 100% do contêiner */
         height: 400px; /* Mantém a proporção da imagem */
