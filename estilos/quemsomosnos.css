@@ -160,3 +160,8 @@ div.texto{
         font-size: 2em;
     }
 }
+.imagem-muzoo{
+    margin: auto;
+    margin-bottom: 60px;
+    width: 80vw;
+}
