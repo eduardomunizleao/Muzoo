@@ -1,0 +1,275 @@
+@charset "UTF-8";
+
+/* Estilos Globais */
+
+main {
+    line-height: 1.6;
+    color: #283618;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section#secaoIntroducao p{
+ max-width: 800px;
+ margin: auto;   
+ text-align: center;
+}
+
+/* Classes de Seções */
+section#secaoIntroducao.secaoClara,
+section#secaoFormulario.secaoClara,
+section#secaoSocial.secaoClara {
+    background-color: #FEFAE0;
+    padding: 4rem 2rem;
+}
+
+section#secaoContato.secaoEscura,
+section#secaoAdicional.secaoEscura,
+section#secaoFaq.secaoEscura {
+    background-color: #283618;
+    color: #FEFAE0;
+    padding: 4rem 2rem;
+}
+
+/* Títulos */
+h1#tituloIntroducao {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #283618;
+    text-align: center;
+    position: relative;
+}
+
+h1#tituloIntroducao::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #DDA15E;
+    margin: 1rem auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: inherit;
+}
+
+/* Blocos de Informação */
+div#conteudoContato {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+div.blocoInfo {
+    background-color: rgba(254, 250, 224, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+div.blocoInfo:hover {
+    transform: translateY(-5px);
+}
+
+div.blocoInfo i {
+    font-size: 2.5rem;
+    color: #DDA15E;
+    margin-bottom: 1rem;
+}
+
+/* Formulário */
+form#formularioAgendamento {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+div.grupoCampo {
+    margin-bottom: 1.5rem;
+}
+
+div.grupoCampo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #283618;
+    font-weight: 600;
+}
+
+div.grupoCampo input,
+div.grupoCampo select,
+div.grupoCampo textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #DDA15E;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+div.grupoCampo input:focus,
+div.grupoCampo select:focus,
+div.grupoCampo textarea:focus {
+    outline: none;
+    border-color: #606C38;
+}
+
+button#botaoEnviar {
+    background-color: #606C38;
+    color: #FEFAE0;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button#botaoEnviar:hover {
+    background-color: #283618;
+}
+
+button#botaoEnviar i {
+    margin-right: 0.5rem;
+}
+
+/* Informações Adicionais */
+div.blocoAdicional {
+    background-color: rgba(254, 250, 224, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+div.blocoAdicional i {
+    font-size: 2rem;
+    color: #DDA15E;
+    margin-bottom: 1rem;
+}
+
+ul#listaDicas,
+ul#listaAcessibilidade,
+ul#listaCancelamento {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+ul#listaDicas li,
+ul#listaAcessibilidade li,
+ul#listaCancelamento li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+ul#listaDicas li::before,
+ul#listaAcessibilidade li::before,
+ul#listaCancelamento li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #DDA15E;
+}
+
+/* Redes Sociais */
+div#redesSociais {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+a.linkSocial {
+    font-size: 2rem;
+    color: #283618;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+a.linkSocial:hover {
+    transform: scale(1.2);
+    color: #BC6C25;
+}
+
+/* FAQ */
+div#listaFaq {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+div.perguntaFaq {
+    background-color: rgba(254, 250, 224, 0.1);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+div.perguntaFaq button {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #FEFAE0;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.perguntaFaq button::after {
+    content: '+';
+    font-size: 1.5rem;
+}
+
+div.perguntaFaq button.ativo::after {
+    content: '-';
+}
+
+div.respostaFaq {
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+div.respostaFaq.ativa {
+    padding: 1rem;
+    max-height: 500px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1#tituloIntroducao {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    div#conteudoContato {
+        grid-template-columns: 1fr;
+    }
+
+    form#formularioAgendamento {
+        padding: 1rem;
+    }
+
+    div#redesSociais {
+        gap: 1rem;
+    }
+}
