@@ -33,7 +33,7 @@ const quizData = [
       question: "6. Um dos símbolos do Cerrado brasileiro, esse mamífero tem pernas longas e um pelo avermelhado. Quem é ele? 🦊🔥",
       options: ["Lobo-guará", "Jaguatirica", "Cachorro-do-mato ", "Tamanduá-mirim"],
       correct: 0,
-      image: ""
+      image: "../../media/imagens/animal-especifico/mamiferos/Chrysocyon brachyurus/loboguaravidareal.jpg"
   },
   {
       question: "7. Essa ave adora ficar em áreas alagadas e tem penas brancas bem chamativas. Qual é ela? 🏞🦢",
