@@ -18,6 +18,12 @@ body {
     padding: 0;
 }
 
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
 
 main#conteudoPrincipal {
     max-width: 1400px;
@@ -496,6 +502,16 @@ button#botaoSaibaMais.botaoSaibaMais:active {
 
     div#iconeSaibaMais::before {
         font-size: 1.5rem;
+    }
+
+
+    div.caracteristicasClasse{
+        padding: 0;
+    }
+
+    ul.listaCaracteristicas{
+        grid-template-columns: repeat(auto-fit, minmax(204px, 1fr));
+        margin-bottom: 1.6rem;
     }
 
     

@@ -27,6 +27,11 @@ html {
   scroll-behavior: smooth;
 }
 
+main:not(#conteudoPrincipal){
+    display: block;
+    background-color: var(--azul);
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   line-height: 1.6;

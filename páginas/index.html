@@ -11,6 +11,9 @@
     <link rel="shortcut icon" href="../media/imagens/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../estilos/style.css">
     <link rel="stylesheet" href="../estilos/sliders/carrosel.css">
+
+    <link rel="stylesheet" href="../estilos/homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body class="home">
@@ -50,7 +53,7 @@
 
     <script src="../javascript/links_atuais.js" defer></script>
 
-    <main>
+    <main id="conteudoPrincipal">
         <section id="carroseldeimagens">
             <div class="carousel">
 
@@ -114,7 +117,7 @@
 
                     </div>
 
-                    <div class="item" style="background-image: url(../media/imagens/carrossel-imagens/Museu-muzoo.jpg);">
+                    <div class="item" style="background-image: url(../media/imagens/carrossel-imagens/Jogos.jpg);">
 
                         <div class="content">
                             <div class="title">SEÇÃO</div>
@@ -161,17 +164,150 @@
 
             <script src="../javascript/carrossel.js" defer></script>
         </section>
+        <section id="secaoTaxidermiaEmpalhamento" class="secao">
+            <div class="decoracaoTopo"></div>
+            <h2><i class="fas fa-balance-scale"></i> Taxidermia X Empalhamento: Existe Diferença?</h2>
+            <div class="conteudo">
+                <p class="destaque">A taxidermia é uma técnica científica que preserva a pele do animal mantendo sua aparência natural, enquanto o empalhamento é um termo popular incorreto que sugere simplesmente "encher" o animal.</p>
+                <div class="comparacao">
+                    <div class="coluna">
+                        <h3><i class="fas fa-microscope"></i> Taxidermia</h3>
+                        <ul id="listaTaxidermia" class="listaComparacao">
+                            <li>Processo científico detalhado</li>
+                            <li>Preserva características anatômicas</li>
+                            <li>Utiliza técnicas modernas de conservação</li>
+                            <li>Mantém medidas e proporções exatas</li>
+                        </ul>
+                    </div>
+                    <div class="coluna">
+                        <h3><i class="fas fa-times-circle"></i> Empalhamento</h3>
+                        <ul id="listaEmpalhamento" class="listaComparacao">
+                            <li>Termo popular incorreto</li>
+                            <li>Não segue padrões científicos</li>
+                            <li>Pode deformar a aparência natural</li>
+                            <li>Técnica ultrapassada</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="decoracaoBase"></div>
+        </section>
 
-        <section id="introducao">
-            <p>Bem-vindo ao site do <strong>Muzoo</strong> (Museu de Taxidermia do IFMG Campus Bambuí)! Aqui, você
-                encontrará informações sobre todos os animais em exposição, incluindo detalhes sobre suas principais
-                presas e predadores, o status de risco de extinção da espécie e seus habitats.</p>
+        <section id="secaoVoceSabia" class="secao verde">
+            <div class="decoracaoTopo"></div>
+            <h2><i class="fas fa-lightbulb"></i> Você Sabia? Curiosidades sobre a Taxidermia</h2>
+            <div class="conteudo">
+                <div id="curiosidades" class="curiosidades">
+                    <div class="cartaoCuriosidade">
+                        <i class="fas fa-font iconeDestaque"></i>
+                        <h3>A Origem do Nome</h3>
+                        <p>A palavra "taxidermia" vem do grego: "taxis" (arranjo, organização) e "derma" (pele), significando literalmente "arranjo da pele".</p>
+                    </div>
+                    <div class="cartaoCuriosidade">
+                        <i class="fas fa-clock iconeDestaque"></i>
+                        <h3>Prática Milenar</h3>
+                        <p>Registros indicam que a taxidermia já era praticada no Antigo Egito, onde técnicas de preservação foram aplicadas para embalsamar animais sagrados como gatos e falcões.</p>
+                    </div>
+                    <div class="cartaoCuriosidade ultimo">
+                            <i class="fas fa-cube iconeDestaque"></i>
+                            <h3>Técnica Moderna</h3>
+                            <p>Atualmente, a tecnologia 3D é amplamente utilizada para criar moldes extremamente precisos, permitindo um ajuste perfeito dos espécimes antes de sua preparação, o que resulta em um nível de realismo e preservação muito mais detalhado.</p>
+                        </div>
+                </div>
+            </div>
+            <div class="decoracaoBase"></div>
+        </section>
 
-            <p>Além disso, oferecemos áreas interativas, como quizzes e jogos de memória, para que você possa aprender
-                se divertindo um pouco.</p>
+        <section id="secaoEspecies" class="secao">
+            <div class="decoracaoTopo"></div>
+            <h2><i class="fas fa-paw"></i> Conheça as Espécies do Museu</h2>
+            <div class="conteudo">
+                <div id="galeriaEspecies" class="galeriaEspecies">
+                    <!-- Preenchido via JavaScript -->
+                </div>
+            </div>
+            <div class="decoracaoBase"></div>
+        </section>
+
+        <section id="secaoTestemunhos" class="secao verde">
+            <div class="decoracaoTopo"></div>
+            <h2><i class="fas fa-comments"></i> Testemunhos e Experiências</h2>
+            <div class="conteudo">
+                <div id="carrosselTestemunhos" class="carrosselTestemunhos">
+                    <!-- Preenchido via JavaScript -->
+                </div>
+                <div class="controlesCarrossel">
+                    <button id="anterior" class="botaoCarrossel"><i class="fas fa-chevron-left"></i></button>
+                    <button id="proximo" class="botaoCarrossel"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div class="decoracaoBase"></div>
+        </section>
+
+        <section id="secaoMitosVerdades" class="secao">
+            <div class="decoracaoTopo"></div>
+            <h2><i class="fas fa-check-circle"></i> Mitos e Verdades sobre a Taxidermia</h2>
+            <div class="conteudo">
+                <div id="mitosVerdades" class="mitosVerdades">
+                    <!-- Preenchido via JavaScript -->
+                </div>
+            </div>
+            <div class="decoracaoBase"></div>
+        </section>
+
+        <section id="secaoParticipe" class="secao verde">
+            <div class="decoracaoTopo"></div>
+            <h2><i class="fas fa-hands-helping"></i> Participe! Como Você Pode Ajudar o Museu</h2>
+            <div class="conteudo">
+                <div id="formasParticipacao" class="formasParticipacao">
+                    <div class="participacaoCard">
+                        <i class="fas fa-gift iconeDestaque"></i>
+                        <h3>Doe</h3>
+                        <p>Sua contribuição ajuda a manter nossas exposições e pesquisas</p>
+                        <button class="botaoParticipar">
+                            <i class="fas fa-heart"></i>
+                            Fazer Doação
+                        </button>
+                    </div>
+                    <div class="participacaoCard">
+                        <i class="fas fa-hand-holding-heart iconeDestaque"></i>
+                        <h3>Voluntarie-se</h3>
+                        <p>Participe de nossas atividades educativas</p>
+                        <button class="botaoParticipar">
+                            <i class="fas fa-user-plus"></i>
+                            Ser Voluntário
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="decoracaoBase"></div>
+        </section>
+
+        <section id="secaoRedesSociais" class="secao">
+            <div class="decoracaoTopo"></div>
+            <h2><i class="fas fa-share-alt"></i> Nos Siga nas Redes Sociais!</h2>
+            <div class="conteudo">
+                <div id="redesSociais" class="redesSociais">
+                    <a href="#" class="redeSocialLink" id="instagram">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                    </a>
+                    <a href="#" class="redeSocialLink" id="facebook">
+                        <i class="fab fa-facebook"></i>
+                        Facebook
+                    </a>
+                    <a href="#" class="redeSocialLink" id="youtube">
+                        <i class="fab fa-youtube"></i>
+                        YouTube
+                    </a>
+                </div>
+            </div>
+            <div class="decoracaoBase"></div>
         </section>
 
     </main>
+
+    <script src="../javascript/homepage.js"></script>
 
     <footer>
         <section id="footer-content">

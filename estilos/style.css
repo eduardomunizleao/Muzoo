@@ -348,7 +348,7 @@ ul#barra-navegacao a.exibida{
         display: none;
     }
 
-    .esconderNoMobile{
+    nav .esconderNoMobile{
         display: none;
     }
     
@@ -386,12 +386,12 @@ ul#barra-navegacao a.exibida{
 
 
 
-main{
+main:not(#conteudoPrincipal){
     display: flex;
     align-items: center;
     flex-flow: column wrap;
 
-    background-color: white;
+    background-color: var(--azul);
     width: 100vw;
 
     margin: auto;
