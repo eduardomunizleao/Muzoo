@@ -82,7 +82,7 @@
                                 cada um com informações e curiosidades únicas. Descubra detalhes sobre seus habitats,
                                 comportamentos e o processo de preservação.</div>
                             <div class="btn">
-                                <button><a href="animais.html">Ver mais</a></button>
+                                <a href="animais.html"><button>Ver mais</button></a>
                             </div>
                         </div>
                     </div>
@@ -221,7 +221,7 @@
         <section id="secaoEspecies" class="secao">
             <div class="decoracaoTopo"></div>
             <h2><i class="fas fa-paw"></i> Conheça as Espécies do Museu</h2>
-            <div class="conteudo">
+            <div id="especies" class="conteudo">
                 <div id="galeriaEspecies" class="galeriaEspecies">
                     <!-- Preenchido via JavaScript -->
                 </div>
@@ -234,19 +234,35 @@
             <h2><i class="fas fa-comments"></i> Testemunhos e Experiências</h2>
             <div class="conteudo">
                 <div id="carrosselTestemunhos" class="carrosselTestemunhos">
-                    <!-- Preenchido via JavaScript -->
-                </div>
-                <div class="controlesCarrossel">
-                    <button id="anterior" class="botaoCarrossel"><i class="fas fa-chevron-left"></i></button>
-                    <button id="proximo" class="botaoCarrossel"><i class="fas fa-chevron-right"></i></button>
+                    <div class="iconeDestaqueTopo">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    
+                    <div id="slidesContainer" class="slidesContainer">
+                        <!-- Os slides serão inseridos aqui via JavaScript -->
+                    </div>
+        
+                    <div id="controlesCarrossel" class="controlesCarrossel">
+                        <button id="btnAnterior" class="btnNavegacao">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div id="indicadores" class="indicadores">
+                            <!-- Os indicadores serão inseridos aqui via JavaScript -->
+                        </div>
+                        <button id="btnProximo" class="btnNavegacao">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="decoracaoBase"></div>
         </section>
+        <script src="../javascript/testemunho.js"></script>
 
         <section id="secaoMitosVerdades" class="secao">
             <div class="decoracaoTopo"></div>
             <h2><i class="fas fa-check-circle"></i> Mitos e Verdades sobre a Taxidermia</h2>
+            <p class="descricaoSecao">Descubra a verdade por trás da taxidermia e desmistifique algumas ideias erradas. Aqui estão alguns mitos e verdades que você precisa saber.</p>
             <div class="conteudo">
                 <div id="mitosVerdades" class="mitosVerdades">
                     <!-- Preenchido via JavaScript -->
@@ -288,17 +304,9 @@
             <h2><i class="fas fa-share-alt"></i> Nos Siga nas Redes Sociais!</h2>
             <div class="conteudo">
                 <div id="redesSociais" class="redesSociais">
-                    <a href="#" class="redeSocialLink" id="instagram">
+                    <a href="https://www.instagram.com/geas_ifmg/?hl=pt-br" class="redeSocialLink" id="instagram">
                         <i class="fab fa-instagram"></i>
                         Instagram
-                    </a>
-                    <a href="#" class="redeSocialLink" id="facebook">
-                        <i class="fab fa-facebook"></i>
-                        Facebook
-                    </a>
-                    <a href="#" class="redeSocialLink" id="youtube">
-                        <i class="fab fa-youtube"></i>
-                        YouTube
                     </a>
                 </div>
             </div>
