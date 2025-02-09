@@ -14,7 +14,7 @@ h1, h2 {
 }
 
 #start-btn, #next-btn {
-    background-color: #ff6b6b;
+    background-color: #606C38;
     color: white;
     padding: 15px 30px;
     font-size: 1.2em;
@@ -27,6 +27,7 @@ h1, h2 {
 #start-btn:hover, #next-btn:hover {
     background-color: #ff4757;
     transform: scale(1.05);
+    
 }
 
 .quiz-header {
@@ -66,7 +67,6 @@ h1, h2 {
 
 .options button.correct {
     background-color: #229A00;
-    
 }
 
 .options button.wrong {
