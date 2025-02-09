@@ -176,13 +176,13 @@ a.redeSocialLink {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    transition: background 0.3s ease;
+    transition: filter 0.3s ease;
 }
 
 button.botaoJogar:hover,
 button.botaoParticipar:hover,
 a.redeSocialLink:hover {
-    background: linear-gradient(135deg, var(--cor-laranja-escuro), var(--cor-laranja-claro));
+    filter: brightness(70%)
 }
 
 /* Carrossel */
@@ -349,6 +349,19 @@ div#formasParticipacao {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+}
+
+/* Alinhamento dos Cards */
+.participacaoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Isso garante que o conteúdo dentro do card se espalhe */
+    height: 100%; /* Faz com que o card ocupe toda a altura disponível */
+}
+
+/* Botões */
+button.botaoParticipar {
+    margin-top: auto; /* Isso empurra o botão para a parte inferior do card */
 }
 
 /* Redes Sociais */
