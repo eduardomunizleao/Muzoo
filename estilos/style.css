@@ -348,7 +348,7 @@ ul#barra-navegacao a.exibida{
         display: none;
     }
 
-    .esconderNoMobile{
+    nav .esconderNoMobile{
         display: none;
     }
     
@@ -386,12 +386,12 @@ ul#barra-navegacao a.exibida{
 
 
 
-main{
+main:not(#conteudoPrincipal){
     display: flex;
     align-items: center;
     flex-flow: column wrap;
 
-    background-color: white;
+    background-color: var(--azul);
     width: 100vw;
 
     margin: auto;
@@ -403,23 +403,7 @@ main{
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.404);
 }
 
-section#introducao{
-    border-radius: 20px;
-    padding: 10px;
-    width: 93vw;
 
-    margin: 20px auto;
-}
-
-section#introducao > h1{
-    margin-bottom: 15px;
-    font-family: var(--font2);
-}
-
-section#introducao > p{
-    text-indent: 1em;
-    margin-bottom: 1em;
-}
 
 
   

@@ -172,11 +172,16 @@ div.dieta li {
 
 .image-container {
     position: relative;
-    display: inline-block;
+    display: flex; /* Usar flexbox para centralizar */
+    flex-direction: column; /* Colocar os itens em coluna */
+    align-items: center; /* Centralizar horizontalmente */
+    justify-content: center; /* Centralizar verticalmente */
+    margin: 0 auto; /* Centralizar o contêiner na página */
 }
+
 .image-container img {
     max-width: 100%;
-    height: auto;
+    height: 410px;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -184,19 +189,15 @@ div.dieta li {
 }
 
 .image-container .caption {
-    position: absolute;
-    margin: auto;
-
+    position: relative; /* Alterar para relative para que a legenda fique abaixo da imagem */
     width: 90%;
-    top: 15px;
-    left: 0px;
-    right: 0px;
     background: rgba(0, 0, 0, 0.6);
     color: #fff;
     padding: 10px;
     border-radius: 10px;
     font-size: 14px;
     text-align: center;
+    margin-top: 10px; /* Espaçamento entre a imagem e a legenda */
 }
 
 

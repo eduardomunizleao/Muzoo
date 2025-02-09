@@ -1,129 +1,110 @@
-main .centro{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 190px; /* Espaço acima do conteúdo */
-    padding-bottom: 190px; /* Espaço abaixo do conteúdo */
+.fotos-jogos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
 }
-  
-main   .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-main   .carousel-item {
-    min-width: 100%;
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-main   .carousel-container {
-    position: relative;
-    width: 900px;
-    max-width: 90%;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    background: rgba(0, 0, 0, 0.8); /* Fundo mais transparente */
-    overflow: hidden;
-    padding-bottom: 30px;
-  }
-  
-main   .start-container, .quiz-container{
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    padding: 30px;
-    width: 600px;
-    max-width: 90%;
+
+.h1jogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  color: #2E3A59; /* Azul escuro elegante */
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  border-bottom: 3px solid #4CAF50; /* Linha verde para dar destaque */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 
 }
+
+.centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 260px; /* Espaço acima do conteúdo */
+  padding-bottom: 260px; /* Espaço abaixo do conteúdo */
+}
+
+
+.game-selection {
+  display: flex;
+  gap: 20px;
   
-main   h3 {
-    font-size: 1.8em;
-    color: #2c3e50;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-main   p {
-    font-size: 1.1em;
-    color: #7f8c8d;
-    line-height: 1.4;
-    margin-top: 10px;
-  }
-  
- main  .play-button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #3498db;
-    color: white;
-    font-size: 1.1em;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-main   .play-button:hover {
-    background-color: #2980b9;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-main   button {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: none;
-    font-size: 2em;
-    padding: 15px 25px; /* Ajuste no tamanho */
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 8px; /* Bordas mais arredondadas */
-    transition: background-color 0.3s, transform 0.2s;
-  }
-  
-main   button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    transform: scale(1.1);
-  }
-  
-main   .prev {
-    left: 20px;
-    transform: translateY(-50%);
-  }
-  
-main   .next {
-    right: 20px;
-    transform: translateY(-50%);
-  }
-  
-  @media (max-width: 768px) {
-    main .carousel-container {
-      width: 90%;
-      padding-bottom: 40px;
+}
+
+.game-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: 220px;
+  padding: 10px;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+.game-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.game-card h3 {
+  margin: 15px 0;
+}
+
+.game-card p {
+  margin: 0 10px 20px;
+  color: #555555;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom,transparent 55%,black),url(../media/imagens/backgrounds/back-geral.jpeg);
+  background-size: cover;
+  background-position: center center;
+  height: calc(100% - 200px);
+}
+.content h2 {
+	-webkit-text-fill-color: white;
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 130px;
+}
+.content h2 span {
+	-webkit-text-fill-color: transparent;
+}
+@media (max-width:991px){
+    .content h2 {
+        font-size: 70px;
     }
-  
-    main .carousel-item img {
-      max-height: 200px;
-    }
-  
-    main h3 {
-      font-size: 1.5em;
-    }
-  
-    main p {
-      font-size: 1.1em;
-    }
-  
-    main .play-button {
-      padding: 12px 25px;
-      font-size: 1.1em;
-    }
-  }
-  
+}
+
+
+.jogos {
+  background: linear-gradient(to bottom,#606C38, var(--azul));
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 250px;
+  padding-top: 250px;
+  margin: 0 auto;
+  border-radius: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}

@@ -13,7 +13,8 @@
             type="image/x-icon">
         <link rel="stylesheet" href="../estilos/style.css">
         <link rel="stylesheet" href="../estilos/quemsomosnos.css">
-        <link rel="stylesheet" href="../estilos/sliders/slider-animais.css">
+        <link rel="stylesheet" href="../estilos/sliders/slider-animalmuseu.css">
+        <link rel="stylesheet" href="../estilos/pagina-animal.css">
     </head>
 
     <body class="home">
@@ -79,7 +80,7 @@
 
                     <p class="idealizadores">
 
-                        O Muzoo foi idealizado por Clarice, Gabriel Jacques e
+                        O Museu de Zoologia (Muzoo), foi idealizado por Clarice, Gabriel Jacques e
                         Lívia, com o apoio de estudantes dos cursos de Medicina
                         Veterinária, Biologia e Zootecnia do IFMG - Campus
                         Bambuí. Desde 2016, as peças do acervo foram criadas em
@@ -93,6 +94,8 @@
                         comunidade, interna e externa, pudesse apreciá-las.
 
                     </p>
+
+                    <img id="idealizadores-imagem" src="../media/imagens/quemsomosnos/imagem-muzoo.jpeg" alt="Imagem do Muzoo">
 
                     <h2>Objetivos:</h2>
                     <p class="idealizadores">
@@ -115,32 +118,21 @@
 
                 </div>
 
-                <div class="slider">
-                    <div class="list">
-                        <div class="item">
-                            <img
-                                src="../media/imagens/quemsomosnos/imagem1.jpeg"
-                                alt="Idealizadora Clarice"
-                                style="object-position: top;">
+                <div id="imagem-animal" class="slider">
+                    <div class="slider-track">
+                        <div class="slide" style="background-image: url('../media/imagens/quemsomosnos/imagem1-equipe.jpeg');">
+                        
                         </div>
-                        <div class="item">
-                            <img
-                                src="../media/imagens/quemsomosnos/imagem2.jpeg"
-                                alt style="object-position: top;">
+                        <div class="slide" style="background-image: url('../media/imagens/quemsomosnos/imagem2-equipe.jpeg');">
+                        
                         </div>
                     </div>
-                    <div class="buttons">
-                        <button id="prev"><</button>
-                        <button id="next">></button>
+                    <div class="slider-nav">
+                        <button class="slider-btn prev">❮</button>
+                        <button class="slider-btn next">❯</button>
                     </div>
-                    <ul class="dots">
-                        <li class="active"></li>
-                        <li></li>
-                    </ul>
-                </div>
             </div>
-
-            <script src="../javascript/slider-animais.js" defer></script>
+                <script src="../javascript/slider-animalmuseu.js"></script>
 
         </main>
 

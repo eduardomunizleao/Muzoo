@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peças do Museu</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="shortcut icon" href="../media/imagens/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/style.css">
+
+    <link rel="stylesheet" href="../estilos/animais.css">
+</head>
+<body class="Peças do museu">
+    <header>
+        <section id="titulo">
+            <img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo">
+            <h1>Museu de Taxidermia do IFMG</h1>
+            <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop" onclick="toggleSidebar()">menu</span>
+        </section>
+    </header>
+
+    <nav>
+        <ul id="barra-lateral">
+            <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
+            <li class="home"><a href="index.html"><span class="material-symbols-outlined">home</span> Página inicial </a></li>
+            <li><a href="animais.html">Animais</a></li>
+            <li><a href="taxidermia.html">Conheça o processo</a></li>
+            <li><a href="quemsomosnos.html">Quem somos nós?</a></li>
+            <li><a href="Jogos_interativos.html">Jogos interativos</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="cadastro.html">Contato</a></li>
+        </ul>
+        <ul id="barra-navegacao" class="esconderNoMobile">
+            <li class="esconderNoMobile home"><a href="index.html"><span class="material-symbols-outlined">
+                home
+                </span></a></li>
+            <li class="esconderNoMobile"><a href="animais.html">Animais</a></li>
+            <li class="esconderNoMobile"><a href="taxidermia.html">Taxidermia</a></li>
+            <li class="esconderNoMobile"><a href="quemsomosnos.html">Quem somos?</a></li>
+            <li class="esconderNoMobile"><a href="Jogos_interativos.html">Jogos interativos</a></li>
+            <li class="esconderNoMobile"><a href="feedback.html">Feedback</a></li>
+            <li class="esconderNoMobile"><a href="cadastro.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <script src="../javascript/links_atuais.js" defer></script>
+
+    <main>
+        <div class="bg-vertical-horizontal">
+
+         <section id="cabecalho-pagina">
+            <div id="background">
+                <div id="caixa-de-texto"><h2 id="titulo-pagina">Peças do MUZOO</h2></div>
+            </div>
+         </section>
+
+            <section id="conteudo">
+                <div id="cabecalho-conteudo">
+                    <h2>Escolha a classe de animal desejada: 
+                        <span id="info" class="material-symbols-outlined esconderNoMobile" data-tooltip="Selecione uma das opções abaixo para visualizar as informações sobre o animal da classe desejada.">help</span>
+                    </h2>
+
+                </div>
+    
+                <div id="animais">
+                    <a href="classes/mamiferos.html" id="mamiferos" class="representacao-animais" data-name="Mamíferos">
+                        <span>Mamíferos</span>
+                    </a>
+                    <a href="classes/repteis.html" id="repteis" class="representacao-animais" data-name="Répteis">
+                        <span>Répteis</span>
+                    </a>
+                    <a href="classes/aves.html" id="aves" class="representacao-animais" data-name="Aves">
+                        <span>Aves</span>
+                    </a>
+                    <a href="classes/anfibios.html" id="anfibios" class="representacao-animais" data-name="Anfíbios">
+                        <span>Anfíbios</span>
+                    </a>
+                    <a href="classes/peixes.html" id="peixes" class="representacao-animais" data-name="Peixes">
+                        <span>Peixes</span>
+                    </a>
+                </div>
+                
+                
+            </section>
+         </div>
+        
+    </main>
+
+    <footer>
+        <section id="footer-content">
+            <div class="footer-section">
+                <h3>Museu de Zoologia do IFMG</h3>
+                <p>&copy; 2024 Museu de Zoologia do IFMG Campus Bambuí</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="animais.html">Animais</a></li>
+                    <li><a href="taxidermia.html">Conheça o processo</a></li>
+                    <li><a href="quemsomosnos.html">Quem somos nós?</a></li>
+                    <li><a href="Jogos_interativos.html">Jogos interativos</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="cadastro.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Nos Siga</h3>
+                <div class="social-icons">
+                    <a target="_blank" href="https://www.instagram.com/geas_ifmg/?hl=pt-br"><img src="../media/imagens/icones/448-4486682_instagram-logo-png-white-circle.png" alt="Instagram"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: <a href="mailto:clarice.silva@ifmg.edu.br" style="text-decoration: none; color: #5B85AA">clarice.silva@ifmg.edu.br</a></p>
+            </div>
+        </section>
+
+        <div id="footer-bottom">
+            <p>Desenvolvido por Estudantes do IFMG Campus Bambuí - Curso Técnico em Informática</p>
+        </div>
+    </footer>
+</body>
+</html>

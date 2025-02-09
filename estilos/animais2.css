@@ -1,0 +1,620 @@
+:root {
+    --cor-verde-claro: #606C38;
+    --cor-verde-escuro: #283618;
+    --cor-creme: #FEFAE0;
+    --cor-caramelo: #DDA15E;
+    --cor-marrom: #BC6C25;
+    --transicao-padrao: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --sombra-suave: 0 4px 20px rgba(40, 54, 24, 0.15);
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--cor-creme);
+    color: var(--cor-verde-escuro);
+    line-height: 1.8;
+
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+main#conteudoPrincipal {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    box-shadow: none;
+}
+
+section#introducao {
+    position: relative;
+    margin: 2rem auto 6rem;
+    background: none;
+    overflow: visible;
+}
+
+div#containerIntroducao {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    padding: 4rem;
+    background: #35471f;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 20px 40px rgba(40, 54, 24, 0.2),
+        inset 0 0 100px rgba(221, 161, 94, 0.1);
+}
+
+div#ladoEsquerdo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+h1#tituloPrincipal {
+    font-size: 6rem;
+    margin: 0;
+    color: var(--cor-creme);
+    line-height: 1;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+h1#tituloPrincipal::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 6px;
+    background: var(--cor-caramelo);
+    margin-top: 2rem;
+    border-radius: 3px;
+}
+
+p#descricaoPrincipal {
+    font-size: 1.4rem;
+    color: var(--cor-creme);
+    margin: 2rem 0;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+div#numerosDestaque {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+div.numero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+span.valor {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--cor-caramelo);
+    line-height: 1;
+}
+
+span.rotulo {
+    font-size: 1.2rem;
+    color: var(--cor-creme);
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+div.separador {
+    width: 2px;
+    height: 60px;
+    background: var(--cor-caramelo);
+    opacity: 0.3;
+}
+
+div#ladoDireito {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.circuloAnimado {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+}
+
+div.circuloAnimado.c1 {
+    width: 300px;
+    height: 300px;
+    background: var(--cor-caramelo);
+    animation: flutuar 8s ease-in-out infinite;
+}
+
+div.circuloAnimado.c2 {
+    width: 200px;
+    height: 200px;
+    background: var(--cor-verde-claro);
+    animation: flutuar 12s ease-in-out infinite reverse;
+}
+
+div.circuloAnimado.c3 {
+    width: 150px;
+    height: 150px;
+    background: var(--cor-marrom);
+    animation: flutuar 10s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-20px, -20px) scale(1.1); }
+}
+
+@keyframes gradientShift {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+section.classeAnimal {
+    margin-bottom: 8rem;
+    padding: 4rem;
+    position: relative;
+    background: white;
+    border-radius: 30px;
+    box-shadow: var(--sombra-suave);
+    overflow: hidden;
+}
+
+section.classeAnimal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: var(--cor-verde-escuro);
+}
+
+section.classeAnimal:nth-child(odd)::before {
+    background: var(--cor-verde-claro);
+}
+
+div.cabecalhoClasse {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+img.imagemAnimal {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid var(--cor-creme);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicao-padrao);
+}
+
+img.imagemAnimal:hover {
+    transform: scale(1.05);
+    border-color: var(--cor-marrom);
+}
+
+div.infoClasse {
+    flex: 1;
+}
+
+h2.tituloClasse {
+    font-size: 3rem;
+    color: var(--cor-marrom);
+    margin: 0 0 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+p.descricaoClasse {
+    font-size: 1.2rem;
+    color: var(--cor-verde-escuro);
+    margin: 0;
+    line-height: 1.8;
+}
+
+div.caracteristicasClasse {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--cor-creme);
+    border-radius: 15px;
+}
+
+h3.tituloCaracteristicas {
+    color: var(--cor-marrom);
+    font-size: 1.8rem;
+    margin: 0 0 1.5rem;
+
+    border-bottom: 4px solid var(--cor-marrom);
+    border-radius: 10px;
+}
+
+ul.listaCaracteristicas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+
+    border-left: 5px solid var(--cor-verde-escuro);
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+section.classeAnimal:nth-child(odd) ul.listaCaracteristicas{
+    border-left: 5px solid var(--cor-verde-claro);
+}
+
+li.itemCaracteristica {
+    position: relative;
+    padding-left: 1.2rem;
+    font-size: 1.1rem;
+    color: var(--cor-verde-escuro);
+}
+
+li.itemCaracteristica::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--cor-caramelo);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+
+h1#explore {
+    color: var(--cor-verde-escuro);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+
+}
+
+h1#explore::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--cor-marrom);
+}
+
+section#menuAnimais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+div.cartaoAnimal {
+    background-color: var(--cor-verde-claro);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    cursor: pointer;
+    position: relative;
+}
+
+div.cartaoAnimal:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(40, 54, 24, 0.2);
+    filter: brightness(0.5);
+}
+
+div.cartaoAnimal img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+div.cartaoAnimal:hover img {
+    filter: brightness(1.1);
+}
+
+div.cartaoAnimal h2 {
+    color: var(--cor-creme);
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.2rem;
+    background-color: rgba(40, 54, 24, 0.9);
+}
+
+section#secaoSaibaMais {
+    background-color: var(--cor-verde-escuro);
+    border-radius: 20px;
+    padding: 4rem 3rem 3rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(40, 54, 24, 0.15);
+    transition: transform 0.3s ease;
+    border-top: 5px solid var(--cor-caramelo);
+}
+
+section#secaoSaibaMais::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, var(--cor-caramelo) 0%, transparent 70%);
+    opacity: 0.1;
+    border-radius: 50%;
+    transform: translate(30%, 30%);
+}
+
+div#conteudoSaibaMais {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h2#tituloSaibaMais {
+    color: var(--cor-caramelo);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+h2#tituloSaibaMais::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--cor-caramelo), transparent);
+    transition: width 0.3s ease;
+}
+
+p#descricaoSaibaMais {
+    color: var(--cor-creme);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 90%;
+    opacity: 0.9;
+    transition: all 0.5s ease;
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: linear-gradient(
+        to right,
+        rgba(96, 108, 56, 0.1) 0%,
+        rgba(96, 108, 56, 0.2) 100%
+    );
+}
+
+div#iconeSaibaMais {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: var(--cor-caramelo);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(221, 161, 94, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+div#iconeSaibaMais::before {
+    content: '?';
+    color: var(--cor-verde-escuro);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+section#secaoSaibaMais:hover div#iconeSaibaMais {
+    transform: translateX(-50%) rotate(360deg);
+}
+
+section#secaoSaibaMais:hover h2#tituloSaibaMais::after {
+    width: 80%;
+}
+
+div#botaoContainer.botaoContainer {
+    text-align: center;
+}
+
+button#botaoSaibaMais.botaoSaibaMais {
+    background-color: var(--cor-verde-escuro);
+    color: var(--cor-creme);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 54, 24, 0.15);
+}
+
+button#botaoSaibaMais.botaoSaibaMais:hover {
+    background-color: var(--cor-marrom);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 54, 24, 0.2);
+}
+
+button#botaoSaibaMais.botaoSaibaMais:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    section#menuAnimais {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    section#secaoSaibaMais {
+        padding: 3.5rem 2rem 2rem;
+    }
+
+    h2#tituloSaibaMais {
+        font-size: 2rem;
+    }
+
+    p#descricaoSaibaMais {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+
+    div#iconeSaibaMais {
+        width: 40px;
+        height: 40px;
+        top: -20px;
+    }
+
+    div#iconeSaibaMais::before {
+        font-size: 1.5rem;
+    }
+
+
+    div.caracteristicasClasse{
+        padding: 0;
+    }
+
+    ul.listaCaracteristicas{
+        grid-template-columns: repeat(auto-fit, minmax(204px, 1fr));
+        margin-bottom: 1.6rem;
+    }
+
+    
+}
+
+@media (max-width: 1200px) {
+    div#containerIntroducao {
+        grid-template-columns: 1fr;
+        padding: 3rem;
+    }
+
+    div#ladoDireito {
+        display: none;
+    }
+
+    h1#explore {
+        font-size: 4rem;
+    }
+
+    p#descricaoPrincipal {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+@media (max-width: 1024px) {
+    main#conteudoPrincipal {
+        padding: 2rem 1rem;
+    }
+
+    section.classeAnimal {
+        padding: 3rem 2rem;
+    }
+
+    div.cabecalhoClasse {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    img.imagemAnimal {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    section#introducao {
+        margin: 1rem auto 4rem;
+    }
+
+    div#containerIntroducao {
+        padding: 2rem;
+        width: 100vw;
+        margin: -2rem -1rem;
+        border-radius: 0px;
+    }
+
+    h1#tituloPrincipal {
+        font-size: 3rem;
+    }
+
+    p#descricaoPrincipal {
+        font-size: 1.1rem;
+    }
+
+    div#numerosDestaque {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        gap: 2rem;
+        font-size: 2rem;
+    }
+
+    div.separador {
+        display: none;
+    }
+
+    span.valor {
+        font-size: 2.8rem;
+    }
+    span.rotulo {
+        font-size: 1.2rem;
+    }
+
+    div#estatisticasAnimalia {
+        grid-template-columns: 1fr;
+    }
+
+    h2.tituloClasse {
+        font-size: 2.5rem;
+    }
+
+    h1#explore{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    button#botaoSaibaMais.botaoSaibaMais {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}

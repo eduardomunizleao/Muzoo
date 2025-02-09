@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback</title>
-    <link rel="stylesheet" href="feedback.css">
-    
+    <link rel="stylesheet" href="../estilos/feedback.css">
     <meta name="description" content="Explore o Museu de Taxidermia do IFMG, conheça as exposições e aprenda sobre a técnica milenar.">
-    <title>Museu de Zoologia do IFMG Campus Bambuí</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <link rel="shortcut icon" href="../media/imagens/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../estilos/style.css">
-    <link rel="stylesheet" href="../estilos/quemsomosnos.css">
 </head>
-<body class="home">
+<body>
     <header>
         <section id="titulo">
-            <img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo">
+            <a href="index.html"><img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo"></a>
             <h1>Museu de Taxidermia do IFMG</h1>
             <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop" onclick="toggleSidebar()">menu</span>
         </section>
@@ -45,127 +42,161 @@
             <li class="esconderNoMobile"><a href="cadastro.html">Contato</a></li>
         </ul>
     </nav>
+
     <script src="../javascript/links_atuais.js" defer></script>
 
-    <section id="cabecalho-pagina">
-        <div id="background">
-            <div id="caixa-de-texto"><h2 id="titulo-pagina">Dê seu Feedback: </h2></div>
-        </div>
-     </section>
-     
-</head>
-<body>
-    <form method="post" name="index" action="http://localhost/Feedback/cadcliente.php">
-        <table width="100%">
-            <tr>
-                <th width="18%">1: Insira seu nome:</th>
-                <th width="82%"><input type="text" name="txtnome">
-                </td>
-            </tr>
-        <tr>
-            <th>2: De qual classe é sua peça favorita?</th><br>
-            <td>
-            <select name="listclasses">
-                <option value="Aves" >Aves</option>
-                <option value="Anfíbios">Anfíbios</option>
-                <option value="Mamíferos">Mamíferos</option>
-                <option value="Répteis">Répteis</option>
-                <option value="Peixes">Peixes</option>
-            </select> </td>
-        </tr>
-        <table width="100%">
-            <tr>
-                <th width="18%">3: O que você mais gostou no nosso site?</th><br>
-                <th width="82%"><input type="text" name="txtclientegostou">
-                </td>
-            </tr>
-        <table width="100%">
-            <tr>
-                <th width="18%">4: O que você achou dos jogos/quizzes do site? </th><br>
-                <th width="82%"><input type="text" name="txtmuzoo">
-                </td>
-            </tr>
-        <table width="100%">
-                <tr>
-                    <th width="18%">5: Você recomendaria nosso site a outras pessoas? Por quê? </th><br>
-                    <th width="82%"><input type="text" name="txtsite">
-                    </td>
-                </tr>
-              <th>6: Avalie com estrelas: </th><br> <!--Adicionar estrelas para avaliações-->
-             <td>
-               <div class="star-rating">
-                    <input type="radio" id="5-stars" name="rating" value="5" />
-                    <label for="5-stars" class="star" title="5 estrelas">&#9733;</label>
-                    <input type="radio" id="4-stars" name="rating" value="4" />
-                    <label for="4-stars" class="star" title="4 estrelas">&#9733;</label>
-                    <input type="radio" id="3-stars" name="rating" value="3" />
-                    <label for="3-stars" class="star" title="3 estrelas">&#9733;</label>
-                    <input type="radio" id="2-stars" name="rating" value="2" />
-                    <label for="2-stars" class="star" title="2 estrelas">&#9733;</label>
-                    <input type="radio" id="1-star" name="rating" value="1" />
-                    <label for="1-star" class="star" title="1 estrela">&#9733;</label>
-             </div>
-           <p id="rating-value">Avaliação: 0 estrela(s)</p>
-    <script>
-        const starRating = document.querySelector('.star-rating');
-        const ratingValue = document.getElementById('rating-value');
-
-        starRating.addEventListener('change', function(event) {
-            const selectedRating = event.target.value;
-            ratingValue.textContent = `Avaliação: ${selectedRating} estrela(s)`;
-        });
-    </script>
-                </td>         
-                <tr>
-                        <td>
-                            <input type="submit" name="btnEnviar" value="Enviar">
-                        </td>
-                        <td>
-                            <input type="reset" name="btnLimpar" value="Limpar">
-                        </td>
-                    </td>
-                    </tr>
-        </table>     
-        
-    </table>
-</form>
-<footer>
-    <section id="footer-content">
-        <div class="footer-section">
-            <h3>Museu de Zoologia do IFMG</h3>
-            <p>&copy; 2024 Museu de Zoologia do IFMG Campus Bambuí</p>
+    <div class="container">
+        <div class="header">
+            <h1>Avaliação do Museu</h1>
+            <p>Ajude-nos a melhorar sua experiência compartilhando seu feedback</p>
         </div>
 
-        <div class="footer-section">
-            <h3>Links Rápidos</h3>
-            <ul>
-                <li><a href="animais.html">Animais</a></li>
-                <li><a href="taxidermia.html">Conheça o processo</a></li>
-                <li><a href="quemsomosnos.html">Quem somos nós?</a></li>
-                <li><a href="Jogos_interativos.html">Jogos interativos</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="cadastro.html">Contato</a></li>
-            </ul>
-        </div>
+        <form id="feedbackForm">
+            <section class="feedback-section">
+                <h2>Museu Físico</h2>
+                <div class="topics-grid">
+                    <div class="topic-card">
+                        <div class="topic-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h8"></path><path d="M3 22h18"></path><path d="M14 22a7 7 0 1 0 0-14h-1"></path><path d="M9 14h2"></path><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"></path><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"></path></svg>
+                            <h3>Qualidade dos Animais Taxidermizados</h3>
+                        </div>
+                        <div class="rating-container">
+                            <div class="stars" data-topic="specimens"></div>
+                            <span class="rating-text" data-rating-text="specimens"></span>
+                        </div>
+                        <textarea placeholder="Deixe seu comentário sobre este aspecto..." data-comment="specimens"></textarea>
+                    </div>
 
-        <div class="footer-section">
-            <h3>Nos Siga</h3>
-            <div class="social-icons">
-                <a target="_blank" href="https://www.instagram.com/geas_ifmg/?hl=pt-br"><img src="../media/imagens/icones/448-4486682_instagram-logo-png-white-circle.png" alt="Instagram"></a>
-            </div>
-        </div>
+                    <div class="topic-card">
+                        <div class="topic-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"></path><path d="m7 16.5-4.74-2.85"></path><path d="m7 16.5 5-3"></path><path d="M7 16.5v5.17"></path><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"></path><path d="m17 16.5-5-3"></path><path d="m17 16.5 4.74-2.85"></path><path d="M17 16.5v5.17"></path><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"></path><path d="M12 8 7.26 5.15"></path><path d="m12 8 4.74-2.85"></path><path d="M12 13.5V8"></path></svg>
+                            <h3>Organização e Ambiente</h3>
+                        </div>
+                        <div class="rating-container">
+                            <div class="stars" data-topic="organization"></div>
+                            <span class="rating-text" data-rating-text="organization"></span>
+                        </div>
+                        <textarea placeholder="Deixe seu comentário sobre este aspecto..." data-comment="organization"></textarea>
+                    </div>
 
-        <div class="footer-section">
-            <h3>Contato</h3>
-            <p>Email: <a href="mailto:clarice.silva@ifmg.edu.br" style="text-decoration: none; color: #5B85AA">clarice.silva@ifmg.edu.br</a></p>
-        </div>
-    </section>
+                    <div class="topic-card">
+                        <div class="topic-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"></path><path d="M10 2h4"></path><path d="M10 6h4"></path><path d="M10 10h4"></path></svg>
+                            <h3>Instalações e tecnologias que sustentam o museu.</h3>
+                        </div>
+                        <div class="rating-container">
+                            <div class="stars" data-topic="infrastructure"></div>
+                            <span class="rating-text" data-rating-text="infrastructure"></span>
+                        </div>
+                        <textarea placeholder="Deixe seu comentário sobre este aspecto..." data-comment="infrastructure"></textarea>
+                    </div>
+                </div>
+            </section>
 
-    <div id="footer-bottom">
-        <p>Desenvolvido por Estudantes do IFMG Campus Bambuí - Curso Técnico em Informática</p>
+            <section class="feedback-section">
+                <h2>Website</h2>
+                <div class="topics-grid">
+                    <div class="topic-card">
+                        <div class="topic-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><line x1="3" x2="21" y1="9" y2="9"></line><line x1="9" x2="9" y1="21" y2="9"></line></svg>
+                            <h3>Design e Usabilidade</h3>
+                        </div>
+                        <div class="rating-container">
+                            <div class="stars" data-topic="design"></div>
+                            <span class="rating-text" data-rating-text="design"></span>
+                        </div>
+                        <textarea placeholder="Deixe seu comentário sobre este aspecto..." data-comment="design"></textarea>
+                    </div>
+
+                    <div class="topic-card">
+                        <div class="topic-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                            <h3>Conteúdo Informativo</h3>
+                        </div>
+                        <div class="rating-container">
+                            <div class="stars" data-topic="content"></div>
+                            <span class="rating-text" data-rating-text="content"></span>
+                        </div>
+                        <textarea placeholder="Deixe seu comentário sobre este aspecto..." data-comment="content"></textarea>
+                    </div>
+
+                    <div class="topic-card">
+                        <div class="topic-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="2" x2="22" y1="7" y2="7"></line><line x1="2" x2="7" y1="11" y2="11"></line><line x1="9" x2="14" y1="11" y2="11"></line><line x1="16" x2="21" y1="11" y2="11"></line><line x1="2" x2="7" y1="15" y2="15"></line><line x1="9" x2="14" y1="15" y2="15"></line><line x1="16" x2="21" y1="15" y2="15"></line></svg>
+                            <h3>Jogos interativos</h3>
+                        </div>
+                        <div class="rating-container">
+                            <div class="stars" data-topic="interactive"></div>
+                            <span class="rating-text" data-rating-text="interactive"></span>
+                        </div>
+                        <textarea placeholder="Deixe seu comentário sobre este aspecto..." data-comment="interactive"></textarea>
+                    </div>
+
+                    <div class="topic-card">
+                        <div class="topic-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></svg>
+                            <h3>Performance Técnica</h3>
+                        </div>
+                        <div class="rating-container">
+                            <div class="stars" data-topic="performance"></div>
+                            <span class="rating-text" data-rating-text="performance"></span>
+                        </div>
+                        <textarea placeholder="Deixe seu comentário sobre este aspecto..." data-comment="performance"></textarea>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feedback-section">
+                <h2>Conte-nos como foi sua esperiência ao visitar o museu</h2>
+                <div class="topics-grid">
+                    <div class="topic-card">
+                        <textarea placeholder="Deixe seu comentário sobre este aspecto..." data-comment="design"></textarea>
+                    </div>
+            </section>
+
+            <button type="submit" class="submit-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+                Enviar Avaliação
+            </button>
+        </form>
     </div>
-</footer>
+    <script src="../javascript/feedback.js"></script>
 
-</div>
+    <footer>
+        <section id="footer-content">
+            <div class="footer-section">
+                <h3>Museu de Zoologia do IFMG</h3>
+                <p>&copy; 2024 Museu de Zoologia do IFMG Campus Bambuí</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="animais.html">Animais</a></li>
+                    <li><a href="taxidermia.html">Conheça o processo</a></li>
+                    <li><a href="quemsomosnos.html">Quem somos nós?</a></li>
+                    <li><a href="Jogos_interativos.html">Jogos interativos</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="cadastro.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Nos Siga</h3>
+                <div class="social-icons">
+                    <a target="_blank" href="https://www.instagram.com/geas_ifmg/?hl=pt-br"><img src="../media/imagens/icones/448-4486682_instagram-logo-png-white-circle.png" alt="Instagram"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: <a href="mailto:clarice.silva@ifmg.edu.br" style="text-decoration: none; color: #5B85AA">clarice.silva@ifmg.edu.br</a></p>
+            </div>
+        </section>
+
+        <div id="footer-bottom">
+            <p>Desenvolvido por Estudantes do IFMG Campus Bambuí - Curso Técnico em Informática</p>
+        </div>
+    </footer>
 </body>
 </html>
