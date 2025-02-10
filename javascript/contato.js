@@ -2,7 +2,7 @@
 const faqDados = [
     {
         pergunta: "Qual o valor da entrada?",
-        resposta: "O valor da entrada é combinado diretamente com o cliente, seja ele uma pessoa física, uma pessoa jurídica ou uma instituição de ensino. Entre em contato conosco para discutir as opções e condições específicas para sua visita."
+        resposta: "Não precisa pagar para visitar o Museu."
     },
     {
         pergunta: "É permitido tirar fotos?",
