@@ -4,7 +4,7 @@ const resultMessage = document.getElementById('result-message');
 const playAgainButton = document.getElementById('play-again');
 const timerDisplay = document.getElementById('timer');
 
-let cardImages = ['img.1png', 'img2.png', 'img3.png', 'img4.png', 'img5.png', 'img6.png', 'img7.png', 'img8.png', 'img9.png', 'img10.png', 'img11.png', 'img12.png'];
+let cardImages = ['../../../media/imagens/animal-especifico/mamiferos/Hydrochoerus hydrochaeris/capivara.jpg', '../../../media/imagens/animal-especifico/repteis/Caiman latirostris/jacare-do-papo-amarelo.jpg', '../../../media/imagens/animal-especifico/aves/Bubo virginianus/jacurutu-vidareal.jpg', '../../../media/imagens/animal-especifico/mamiferos/Myrmecophaga tridactyla/tamanduabandeira.jpg', '../../../media/imagens/animal-especifico/aves/Ara ararauna/Ara ararauna.jpg', '../../../media/imagens/animal-especifico/aves/Ramphastos toco/tucano.jpg', '../../../media/imagens/animal-especifico/anfibios/Rhinella sp/sapo-cururu.jpeg', '../../../media/imagens/animal-especifico/peixes/Oreochromis niloticus/tilapia_do_nilo.jpg', '../../../media/imagens/animal-especifico/mamiferos/Euphractus sexcinctus/tatu-peba.jpg', '../../../media/imagens/animal-especifico/mamiferos/Dasypus novemcinctus/tatu-galinha.jpg', '../../../media/imagens/animal-especifico/mamiferos/Leopardus pardalis/jaguatirica.png', '../../../media/imagens/animal-especifico/mamiferos/Conepatus semistriatus/jarataca.jpg'];
 let cardValues = [];
 let flippedCards = [];
 let matches = 0;
