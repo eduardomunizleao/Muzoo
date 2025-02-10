@@ -618,3 +618,7 @@ button#botaoSaibaMais.botaoSaibaMais:active {
         font-size: 1rem;
     }
 }
+
+.logo-if {
+    transform: scale(0.7);
+}
