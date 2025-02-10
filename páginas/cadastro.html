@@ -1,56 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/cadastro.css" type="text/css">
     <title>Cadastro</title>
-    <style>
-       
-      H1 {
-      margin: 30px;
-      }
-
-    form {
-        margin: 30px;
-        
-    }
-
-    input, textarea{
-        padding: 3px;
-        margin-bottom: 1em;
-    }
-
-    iframe {
-        margin: 50px;
-    }
-    </style>
-   
-
-   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore o Museu de Taxidermia do IFMG, conheça as exposições e aprenda sobre a técnica milenar.">
-    <title>Museu de Zoologia do IFMG Campus Bambuí</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <link rel="shortcut icon" href="../media/imagens/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
     <link rel="stylesheet" href="../estilos/style.css">
-    <link rel="stylesheet" href="../estilos/quemsomosnos.css">
+    <link rel="stylesheet" href="../estilos/contato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="home">
+
+<body>
     <header>
         <section id="titulo">
-            <img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo">
+            <a href="index.html"><img src="../media/imagens/logo/logo-recortada.png" alt="Logo do Muzoo"></a>
             <h1>Museu de Taxidermia do IFMG</h1>
-            <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop" onclick="toggleSidebar()">menu</span>
+            <span id="menu-icon" class="material-symbols-outlined esconderNoDesktop"
+                onclick="toggleSidebar()">menu</span>
         </section>
     </header>
 
     <nav>
         <ul id="barra-lateral">
             <li onclick="toggleSidebar()"><span id="close" class="material-symbols-outlined">close</span></li>
-            <li class="home"><a href="index.html"><span class="material-symbols-outlined">home</span> Página inicial </a></li>
+            <li class="home"><a href="index.html"><span class="material-symbols-outlined">home</span> Página inicial
+                </a></li>
             <li><a href="animais.html">Animais</a></li>
-            <li><a href="taxidermia.html">Conheça o processo</a></li>
+            <li><a href="taxidermia.html">Taxidermia</a></li>
             <li><a href="quemsomosnos.html">Quem somos nós?</a></li>
             <li><a href="Jogos_interativos.html">Jogos interativos</a></li>
             <li><a href="feedback.html">Feedback</a></li>
@@ -58,8 +36,8 @@
         </ul>
         <ul id="barra-navegacao" class="esconderNoMobile">
             <li class="esconderNoMobile home"><a href="index.html"><span class="material-symbols-outlined">
-                home
-                </span></a></li>
+                        home
+                    </span></a></li>
             <li class="esconderNoMobile"><a href="animais.html">Animais</a></li>
             <li class="esconderNoMobile"><a href="taxidermia.html">Taxidermia</a></li>
             <li class="esconderNoMobile"><a href="quemsomosnos.html">Quem somos?</a></li>
@@ -68,91 +46,185 @@
             <li class="esconderNoMobile"><a href="cadastro.html">Contato</a></li>
         </ul>
     </nav>
+
     <script src="../javascript/links_atuais.js" defer></script>
 
+    <main id="conteudoPrincipal">
+        <!-- Seção de Introdução -->
+        <section id="secaoIntroducao" class="secaoClara">
+            <h1 id="tituloIntroducao">Contato e Agendamento</h1>
+            <p id="descricaoIntroducao">Bem-vindo à nossa página de agendamento. Aqui você poderá marcar sua visita para conhecer nossa extraordinária coleção de espécimes preservados através da arte da taxidermia natural. Cada visita é uma oportunidade única de aprendizado e descoberta.</p>
+        </section>
 
-    <div class="bg-vertical-horizontal">
+        <!-- Seção de Informações de Contato -->
+        <section id="secaoContato" class="secaoEscura">
+            <h2 id="tituloContato">Informações de Contato</h2>
+            <div id="conteudoContato">
+                <div id="blocoEndereco" class="blocoInfo">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Endereço</h3>
+                    <p>Faz. Varginha</p>
+                    <p>Bambui-MG</p>
+                    <p>1° Andar do Prédio da CGTI</p>
+                </div>
 
-        <section id="cabecalho-pagina">
-            <div id="background">
-                <div id="caixa-de-texto"><h2 id="titulo-pagina">Contato</h2></div>
+                <div id="blocoEmail" class="blocoInfo">
+                    <i class="fas fa-envelope"></i>
+                    <h3>E-mail</h3>
+                    <p><a href="mailto:geas.bambui@ifmg.edu.br" style="text-decoration: none; color: #5B85AA">geas.bambui@ifmg.edu.br</a></p>
+                </div>
+
+                <div id="blocoHorario" class="blocoInfo">
+                    <i class="fas fa-clock"></i>
+                    <h3>Horário de Atendimento</h3>
+                    <p>Segunda a Sexta</p>
+                    <p>09:00 - 18:00</p>
+                </div>
             </div>
-         </section>
+        </section>
 
-</head>
-<body>
-    <h1>Deseja realizar uma visita ao Muzoo?</h1>
-    <form action="enviaremail.php" method="post" name="form_mail"> 
-        
-        <label for="Nome">Nome:</label>
-        <input type="text" id="Nome"> <br>
-
-        <label for="Idade">Idade: (+18 ou acompanhado por um adulto)</label>
-        <input type="number" id="Idade"> <br>
-
-        <label for="email">E-mail:</label>
-        <input type="email" id="email"> <br>
-        
-        <label for="numero">Número de telefone:</label>
-        <input type="number" id="numero"> <br>
-
-        <label for="endereco">Endereço:</label>
-        <input type="text" id="endereco"> <br>
-
-        <label for="data">Data desejada para a visita:</label>
-        <input type="number" id="data"> <br>
-
-        <label for="Estadoepaís">Estado e País:</label>
-        <input type="text" id="Estadoepaís"> <br>
-
-        <label for="numerodepessoas">Quantas pessoas irão:</label>
-        <input type="number" id="numerodepessoas"> <br>
-
-        <label for="Obs">Observações:</label>
-        <textarea name="obs" id="Obs" ></textarea> <br>
-        <button>Enviar solicitação de visita!</button>
-    </form> 
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.41347988917!2d-46.012102025146135!3d-20.03311654152706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b3e93b6265b15b%3A0x5c7e8f490ffc60b6!2sIFMG%20Campus%20Bambu%C3%AD!5e0!3m2!1spt-BR!2sbr!4v1730597053478!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
-        <footer>
-            <section id="footer-content">
-                <div class="footer-section">
-                    <h3>Museu de Zoologia do IFMG</h3>
-                    <p>&copy; 2024 Museu de Zoologia do IFMG Campus Bambuí</p>
+        <!-- Seção de Formulário -->
+        <section id="secaoFormulario" class="secaoClara">
+            <h2 id="tituloFormulario">Agende sua Visita</h2>
+            <form id="formularioAgendamento">
+                <div id="grupoNome" class="grupoCampo">
+                    <label for="campoNome">Nome Completo</label>
+                    <input type="text" id="campoNome" required>
                 </div>
-    
-                <div class="footer-section">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="animais.html">Animais</a></li>
-                        <li><a href="taxidermia.html">Conheça o processo</a></li>
-                        <li><a href="quemsomosnos.html">Quem somos nós?</a></li>
-                        <li><a href="Jogos_interativos.html">Jogos interativos</a></li>
-                        <li><a href="feedback.html">Feedback</a></li>
-                        <li><a href="cadastro.html">Contato</a></li>
-                    </ul>
+
+                <div id="grupoIdade" class="grupoCampo">
+                    <label>Faixa Etária</label>
+                    <select id="campoIdade" required>
+                        <option value="">Selecione sua faixa etária</option>
+                        <option value="menor">Menor de 18 anos</option>
+                        <option value="adulto">Maior de 18 anos</option>
+                    </select>
                 </div>
-    
-                <div class="footer-section">
-                    <h3>Nos Siga</h3>
-                    <div class="social-icons">
-                        <a target="_blank" href="https://www.instagram.com/geas_ifmg/?hl=pt-br"><img src="../media/imagens/icones/448-4486682_instagram-logo-png-white-circle.png" alt="Instagram"></a>
-                    </div>
+
+                <div id="grupoEmail" class="grupoCampo">
+                    <label for="campoEmail">E-mail</label>
+                    <input type="email" id="campoEmail" required>
                 </div>
-    
-                <div class="footer-section">
-                    <h3>Contato</h3>
-                    <p>Email: <a href="mailto:clarice.silva@ifmg.edu.br" style="text-decoration: none; color: #5B85AA">clarice.silva@ifmg.edu.br</a></p>
+
+                <div id="grupoTelefone" class="grupoCampo">
+                    <label for="campoTelefone">Telefone</label>
+                    <input type="tel" id="campoTelefone" required>
                 </div>
-            </section>
-    
-            <div id="footer-bottom">
-                <p>Desenvolvido por Estudantes do IFMG Campus Bambuí - Curso Técnico em Informática</p>
+
+                <div id="grupoEndereco" class="grupoCampo">
+                    <label for="campoEndereco">Endereço Completo</label>
+                    <input type="text" id="campoEndereco" required>
+                </div>
+
+                <div id="grupoData" class="grupoCampo">
+                    <label for="campoData">Data Desejada</label>
+                    <input type="date" id="campoData" required>
+                </div>
+
+                <div id="grupoQuantidade" class="grupoCampo">
+                    <label for="campoQuantidade">Número de Visitantes</label>
+                    <input type="number" id="campoQuantidade" min="1" required>
+                </div>
+
+                <div id="grupoObservacoes" class="grupoCampo">
+                    <label for="campoObservacoes">Observações</label>
+                    <textarea id="campoObservacoes" rows="4"></textarea>
+                </div>
+
+                <button type="submit" id="botaoEnviar">
+                    <i class="fas fa-paper-plane"></i>
+                    Enviar Solicitação
+                </button>
+            </form>
+        </section>
+
+        <!-- Seção de Informações Adicionais -->
+        <section id="secaoAdicional" class="secaoEscura">
+            <h2 id="tituloAdicional">Informações Adicionais</h2>
+            
+            <div id="blocoDicas" class="blocoAdicional">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Dicas para sua Visita</h3>
+                <ul id="listaDicas">
+                    <li>Chegue com 15 minutos de antecedência</li>
+                    <li>Traga documento de identificação</li>
+                    <li>Fotografias são permitidas</li>
+                </ul>
             </div>
-        </footer>
-    
+
+            <div id="blocoCancelamento" class="blocoAdicional">
+                <i class="fas fa-exclamation-circle"></i>
+                <h3>Política de Cancelamento</h3>
+                <ul id="listaCancelamento">
+                    <li>Cancelamentos devem ser feitos com 24h de antecedência</li>
+                    <li>Remarcações são permitidas uma vez sem custo</li>
+                    <li>Em caso de falta, nova visita só após 30 dias</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção de Redes Sociais -->
+        <section id="secaoSocial" class="secaoClara">
+            <h2 id="tituloSocial">Siga-nos nas Redes Sociais</h2>
+            <div id="redesSociais">
+                <a href="https://www.instagram.com/geas_ifmg/?hl=pt-br" class="linkSocial" id="linkInstagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção FAQ -->
+        <section id="secaoFaq" class="secaoEscura">
+            <h2 id="tituloFaq">Perguntas Frequentes</h2>
+            <div id="listaFaq">
+                <!-- Perguntas serão adicionadas via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <script src="../javascript/contato.js"></script>
+
+
+    <footer>
+        <section id="footer-content">
+            <div class="footer-section">
+                <h3>Museu de Zoologia do IFMG</h3>
+                <p>&copy; 2024 Museu de Zoologia do IFMG Campus Bambuí</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="animais.html">Animais</a></li>
+                    <li><a href="taxidermia.html">Taxidermia</a></li>
+                    <li><a href="quemsomosnos.html">Quem somos nós?</a></li>
+                    <li><a href="Jogos_interativos.html">Jogos interativos</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="cadastro.html">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Nos Siga</h3>
+                <div class="social-icons">
+                    <a target="_blank" href="https://www.instagram.com/geas_ifmg/?hl=pt-br"><img
+                            src="../media/imagens/icones/448-4486682_instagram-logo-png-white-circle.png"
+                            alt="Instagram"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: <a href="mailto:geas.bambui@ifmg.edu.br" style="text-decoration: none; color: #5B85AA">geas.bambui@ifmg.edu.br</a></p>
+            </div>
+        </section>
+
+        <div id="footer-bottom">
+            <p>Desenvolvido por Estudantes do IFMG Campus Bambuí - Curso Técnico em Informática</p>
+        </div>
+    </footer>
+
 
 </body>
+
 </html>
