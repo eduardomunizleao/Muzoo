@@ -5,12 +5,14 @@
     padding: 30px;
     width: 600px;
     max-width: 90%;
+    background-color: #283618;
 
 }
 
 
 h1, h2 {
     margin-bottom: 20px;
+    color: #FEFAE0
 }
 
 #start-btn, #next-btn {
@@ -36,6 +38,7 @@ h1, h2 {
 
 .question-image {
     width: 100%;
+    height: auto;
     border-radius: 12px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -44,6 +47,7 @@ h1, h2 {
 .question {
     font-size: 1.4em;
     margin-bottom: 20px;
+    color: #FEFAE0;
 }
 
 .options button {
@@ -53,7 +57,7 @@ h1, h2 {
     padding: 15px;
     font-size: 1em;
     background-color: #606C38;
-    color: #fff;
+    color: #FEFAE0;
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -61,7 +65,7 @@ h1, h2 {
 }
 
 .options button:hover {
-    background-color: #283618;
+    background-color: #261836;
     transform: translateY(-3px);
 }
 

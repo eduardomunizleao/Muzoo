@@ -48,16 +48,16 @@
   align-items: center;
   gap: 15px;
   width: 100%;
-  max-width: 400px;
-  padding: 10px;
+  max-width: 500px;
+  padding: 20px;
   flex-direction: row;
 }
 .game-card:hover {
   transform: scale(1.05);
 }
 .game-card img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border-radius: 25%;
 }
@@ -75,8 +75,8 @@
       align-items: center;
   }
   .game-card img {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
   }
 }
 
@@ -88,7 +88,7 @@
   background-image: linear-gradient(to bottom,transparent 55%,black),url(../media/imagens/backgrounds/fundo-jogo.jpg);
   background-size: cover;
   background-position: center center;
-  height: calc(100% - 200px);
+  height: calc(100% - 290px);
 }
 .content h2 {
 	-webkit-text-fill-color: #FFEDCC;
@@ -107,13 +107,19 @@
 }
 
 .jogos {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 0;
-  margin: 50px auto;
-  border-radius: 25px;
-  background: linear-gradient(to bottom,#606C38, var(--azul));
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    margin: 50px auto;
+    border-radius: 25px;
+  background: #606C38;
 }
 
+.separador {
+  background-color: #283618;
+  margin: 0;
+  padding: auto;
+  padding-top: 40px;
+}
